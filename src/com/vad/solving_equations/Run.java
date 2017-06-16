@@ -26,7 +26,7 @@ public class Run {
 		JTextField b = new JTextField(4);
 		JTextField c = new JTextField(4);
 		JTextField d = new JTextField(4);
-		JTextField e = new JTextField(4);
+		JTextField e = new JTextField(4);	
 		
 		JPanel panel1 = new JPanel();
 		panel1.setLayout(new FlowLayout());		
@@ -50,6 +50,18 @@ public class Run {
 		frame.setSize(450, 100);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocation(400, 400);
+		
+		String st_a = a.getText();
+		String st_b = b.getText();
+		String st_c = c.getText();
+		String st_d = d.getText();
+		String st_e = e.getText();
+		
+		int int_a = Integer.parseInt(st_a);
+		int int_b = Integer.parseInt(st_b);
+		int int_c = Integer.parseInt(st_c);
+		int int_d = Integer.parseInt(st_d);
+		int int_e = Integer.parseInt(st_e);
 
 		equations.slovFra(2, 3);
 		equations.slovFra2(4, 5);
