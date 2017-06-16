@@ -12,31 +12,44 @@ public class Run {
 		
 		JFrame frame = new JFrame();
 		
-		JTextField result = new JTextField();		
-		JButton enter = new JButton();
+		JTextField result = new JTextField(4);		
+		JButton enter = new JButton("Enter");
 		
-		JTextField a = new JTextField();
-		JTextField b = new JTextField();
-		JTextField c = new JTextField();
-		JTextField d = new JTextField();
-		JTextField e = new JTextField();
+		JLabel l_a = new JLabel("a: ");
+		JLabel l_b = new JLabel("b: ");
+		JLabel l_c = new JLabel("c: ");
+		JLabel l_d = new JLabel("d: ");
+		JLabel l_e = new JLabel("e: ");
+		JLabel l_result = new JLabel("result: ");
+		
+		JTextField a = new JTextField(4);
+		JTextField b = new JTextField(4);
+		JTextField c = new JTextField(4);
+		JTextField d = new JTextField(4);
+		JTextField e = new JTextField(4);
 		
 		JPanel panel1 = new JPanel();
-		panel1.setLayout(new FlowLayout());
-		
+		panel1.setLayout(new FlowLayout());		
 		
 		panel1.add(enter);
+		panel1.add(l_a);
 		panel1.add(a);
+		panel1.add(l_b);		
 		panel1.add(b);
+		panel1.add(l_c);
 		panel1.add(c);
+		panel1.add(l_d);
 		panel1.add(d);
+		panel1.add(l_e);
 		panel1.add(e);
+		panel1.add(l_result);
 		panel1.add(result);
 		
 		frame.add(panel1);
 		frame.setVisible(true);
-		frame.setSize(400, 400);
+		frame.setSize(450, 100);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocation(400, 400);
 
 		equations.slovFra(2, 3);
 		equations.slovFra2(4, 5);
