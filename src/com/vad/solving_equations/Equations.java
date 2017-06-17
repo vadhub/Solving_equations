@@ -27,44 +27,51 @@ public class Equations {
 	}
 
 	// x/b=a
-	public void slovFra(int a, int b) {
+	public int slovFra(int a, int b) {
 		int x = b * a;
 
 		print(x);
+		
+		return x;
 	}
 
 	// b/x=a
-	public void slovFra2(double a, double b) {
+	public double slovFra2(double a, double b) {
 		double x = a / b;
 
 		print(x);
+		return x;
 	}
 
 	// a*x=b
-	public void slovMul(double a, double b) {
+	public double slovMul(double a, double b) {
 		double x = b / a;
 		print(x);
+		
+		return x;
 	}
 
 	// a+x/b = c
-	public void slovFra3(double a, double b, double c) {
+	public double slovFra3(double a, double b, double c) {
 		double phase_1 = c * -1;
 		double phase_2 = phase_1 * b;
 		double phase_3 = a + phase_2;
 		double x = phase_3 * -1;
 
 		print(x);
+		
+		return x;
 	}
 
 	// a^2+b+c/d=e
-	public void slovFra4(int a, int b, int c, int d, int e) {
+	public double slovFra4(int a, int b, int c, int d, int e) {
 		double phase_1 = e * -1;
 		double phase_2 = phase_1 * d;
 		int d_3 = (int) (c + phase_2);
 
 		double g = b ^ 2 - 4 * a * d_3;
 		double x1 = Math.sqrt(g) - b;
-		double x2 = (Math.sqrt(g) + b) * -1;
+		double x2 = Math.sqrt(g) + (b * -1);
 
 		if (g < 0) {
 			print("Not dicision d<0 " + d);
@@ -72,6 +79,8 @@ public class Equations {
 
 		print(x1);
 		print(x2);
+		
+		return x2;
 
 	}
 
