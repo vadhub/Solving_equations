@@ -1,6 +1,8 @@
 package com.vad.solving_equations;
 import java.awt.Choice;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -26,8 +28,7 @@ public class Run {
 		Choice ch = new Choice();
 		
 		ch.add("a+x=b");
-		ch.add("x^2*a+b+c=0");
-		ch.add("x^2*a+b+c=0");
+		ch.add("x^2*a+b+c=0");	
 		ch.add("x/b=a");
 		ch.add("b/x=a");
 		ch.add("a*x=b");
@@ -39,7 +40,7 @@ public class Run {
 		JTextField b = new JTextField(4);
 		JTextField c = new JTextField(4);
 		JTextField d = new JTextField(4);
-		JTextField e = new JTextField(4);	
+		JTextField e = new JTextField(4);
 		
 		JPanel panel1 = new JPanel();
 		panel1.setLayout(new FlowLayout());		
@@ -61,32 +62,40 @@ public class Run {
 		
 		frame.add(panel1);
 		frame.setVisible(true);
-		frame.setSize(450, 100);
+		frame.setSize(550, 100);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocation(400, 400);
 		
 		
-		String st_a = a.getText();
-		String st_b = b.getText();
-		String st_c = c.getText();
-		String st_d = d.getText();
-		String st_e = e.getText();		
-	
-		int int_a = Integer.parseInt(st_a);
-		int int_b = Integer.parseInt(st_b);
-		int int_c = Integer.parseInt(st_c);
-		int int_d = Integer.parseInt(st_d);
-		int int_e = Integer.parseInt(st_e);		
-		
-		equations.slovFra(2, 3);
-		equations.slovFra2(4, 5);
-		equations.slovFra3(5, 6, 7);
-		equations.slovFra4(1, 1, 1, 2, 3);
-		equations.slovMul(2, 6);
-		equations.solvR(1, -2, 3);
-		equations.solvSum(6, -5);
-		equations.slovFra5(1, 2, -7, 4, 3);
-
+		enter.addActionListener(new ActionListener() {		
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				int int_a;
+				int int_b;	
+				int int_c;
+				int int_d;
+				int int_e;
+				if(ch.getSelectedIndex() == 0){
+					
+					int_a = Integer.parseInt(a.getText());
+					int_b = Integer.parseInt(b.getText());											
+					int x = (int) equations.solvSum(int_a, int_b);
+					
+					result.setText(String.valueOf(x));
+				}else if(ch.getSelectedIndex() == 1){
+					
+					int_a = Integer.parseInt(a.getText());
+					int_b = Integer.parseInt(b.getText());	
+					int_c = Integer.parseInt(b.getText());										
+					double x = equations.solvR(int_a, int_b,int_c);	
+					
+					result.setText(String.valueOf(x));
+				}
+								
+			}
+		});
+		equations.solvR(1, -2, 1);				
 	}
 
 }
