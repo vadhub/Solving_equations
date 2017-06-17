@@ -1,4 +1,5 @@
 package com.vad.solving_equations;
+import java.awt.Choice;
 import java.awt.FlowLayout;
 
 import javax.swing.*;
@@ -22,6 +23,18 @@ public class Run {
 		JLabel l_e = new JLabel("e: ");
 		JLabel l_result = new JLabel("result: ");
 		
+		Choice ch = new Choice();
+		
+		ch.add("a+x=b");
+		ch.add("x^2*a+b+c=0");
+		ch.add("x^2*a+b+c=0");
+		ch.add("x/b=a");
+		ch.add("b/x=a");
+		ch.add("a*x=b");
+		ch.add("a+x/b = c");
+		ch.add("a^2+b+c/d=e");
+		ch.add("a/b+c/d=e");		
+		
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
 		JTextField c = new JTextField(4);
@@ -31,6 +44,7 @@ public class Run {
 		JPanel panel1 = new JPanel();
 		panel1.setLayout(new FlowLayout());		
 		
+		panel1.add(ch);		
 		panel1.add(enter);
 		panel1.add(l_a);
 		panel1.add(a);
@@ -43,7 +57,7 @@ public class Run {
 		panel1.add(l_e);
 		panel1.add(e);
 		panel1.add(l_result);
-		panel1.add(result);
+		panel1.add(result);	
 		
 		frame.add(panel1);
 		frame.setVisible(true);
@@ -51,18 +65,19 @@ public class Run {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocation(400, 400);
 		
+		
 		String st_a = a.getText();
 		String st_b = b.getText();
 		String st_c = c.getText();
 		String st_d = d.getText();
-		String st_e = e.getText();
-		
+		String st_e = e.getText();		
+	
 		int int_a = Integer.parseInt(st_a);
 		int int_b = Integer.parseInt(st_b);
 		int int_c = Integer.parseInt(st_c);
 		int int_d = Integer.parseInt(st_d);
-		int int_e = Integer.parseInt(st_e);
-
+		int int_e = Integer.parseInt(st_e);		
+		
 		equations.slovFra(2, 3);
 		equations.slovFra2(4, 5);
 		equations.slovFra3(5, 6, 7);
