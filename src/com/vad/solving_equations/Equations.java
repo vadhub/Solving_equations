@@ -15,7 +15,7 @@ public class Equations {
 	public double solvR(int a, int b, int c) {
 		double d = b ^ 2 - 4 * a * c;
 		double x1 = Math.sqrt(d) - b;
-		double x2 = Math.sqrt(d) + b * -1;
+		double x2 = Math.sqrt(d) + (b * -1);
 
 		if (d < 0) {
 			print("Not Solution " + d);
@@ -64,7 +64,7 @@ public class Equations {
 		return x;
 	}
 
-	// a^2+b+c/d=e
+	// ax^2+xb+c/d=e
 	public double slovFra4(int a, int b, int c, int d, int e) {
 		double phase_1 = e * -1;
 		double phase_2 = phase_1 * d;

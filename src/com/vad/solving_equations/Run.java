@@ -34,8 +34,8 @@ public class Run {
 		ch.add("b/x=a");
 		ch.add("a+x/b = c");
 		ch.add("a*x=b");
-		ch.add("a^2+b+c/d=e");
-		ch.add("a/b+c/d=e");
+		ch.add("ax^2+bx+c/d=e");
+		ch.add("x/a+b/c=d");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -133,11 +133,21 @@ public class Run {
 					int_d = Integer.parseInt(b.getText());
 					int_e = Integer.parseInt(b.getText());
 
-					double x = equations.slovFra4(int_a, int_b, int_c, int_d,
-							int_e);
+					double x = equations.slovFra4(int_a, int_b, int_c, int_d,int_e);
 
 					result.setText(String.valueOf(x));
-				}				
+					
+				}else if(ch.getSelectedIndex() == 7){
+					
+					int_a = Integer.parseInt(a.getText());
+					int_b = Integer.parseInt(b.getText());
+					int_c = Integer.parseInt(b.getText());
+					int_d = Integer.parseInt(b.getText());
+					
+					int x = equations.slovFra5(int_a, int_b, int_c, int_d);
+					
+					result.setText(String.valueOf(x));
+				}
 				
 			}
 		});
