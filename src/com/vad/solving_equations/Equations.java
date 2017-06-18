@@ -1,4 +1,5 @@
 package com.vad.solving_equations;
+
 public class Equations {
 	// a+x=b
 	// x+a=b
@@ -11,7 +12,7 @@ public class Equations {
 	// D=b^2-4*a*c
 	// x1 = -b+sqrt(d)/2a
 	// x2 = -b-sqrt(d)/2a
-	public double solvR(int a, int b, int c){
+	public double solvR(int a, int b, int c) {
 		double d = b ^ 2 - 4 * a * c;
 		double x1 = Math.sqrt(d) - b;
 		double x2 = Math.sqrt(d) + b * -1;
@@ -31,7 +32,7 @@ public class Equations {
 		int x = b * a;
 
 		print(x);
-		
+
 		return x;
 	}
 
@@ -47,7 +48,7 @@ public class Equations {
 	public double slovMul(double a, double b) {
 		double x = b / a;
 		print(x);
-		
+
 		return x;
 	}
 
@@ -59,7 +60,7 @@ public class Equations {
 		double x = phase_3 * -1;
 
 		print(x);
-		
+
 		return x;
 	}
 
@@ -67,9 +68,9 @@ public class Equations {
 	public double slovFra4(int a, int b, int c, int d, int e) {
 		double phase_1 = e * -1;
 		double phase_2 = phase_1 * d;
-		int d_3 = (int) (c + phase_2);
+		int phase_3 = (int) (c + phase_2);
 
-		double g = b ^ 2 - 4 * a * d_3;
+		double g = b ^ 2 - 4 * a * phase_3;
 		double x1 = Math.sqrt(g) - b;
 		double x2 = Math.sqrt(g) + (b * -1);
 
@@ -79,32 +80,24 @@ public class Equations {
 
 		print(x1);
 		print(x2);
-		
+
 		return x2;
 
 	}
 
-	// a/b+c/d=e;
-	public void slovFra5(int a, int b, int c, int d, int e) {
-		if (b != d) {
-			int phase_1 = e * -1;
-			int mul = b * d;
-			int ovrl = a * d;
-			int ovrl2 = c * b;
-			double phase_2 = ovrl + ovrl2 + phase_1;
-			double x = phase_2 / mul;
+	// x/a+b/c=d;
+	public int slovFra5(int a, int b, int c, int d) {
 
-			print(x);
+		int phase_1 = a * c;
+		int phase_2 = b * a;
+		int phase_3 = d * -1;
+		int phase_4 = phase_3 * phase_1;
+		int phase_5 = phase_2 + phase_4;
+		int phase_Fin = (phase_5 / c) * -1;
 
-		} else {
-			int phase_1 = e * -1;
-			int phase_2 = phase_1 * d;
-			int phase_3 = a + c + phase_2;
-			int x = phase_3 / d;
+		print(phase_Fin);
 
-			print(x);
-
-		}
+		return phase_Fin;
 	}
 
 	private void print(int i) {
@@ -118,4 +111,5 @@ public class Equations {
 	private void print(String str) {
 		System.out.println(str);
 	}
+
 }

@@ -31,7 +31,7 @@ public class Run {
 		ch.add("a+x=b");
 		ch.add("x^2*a+b+c=0");
 		ch.add("x/b=a");
-		ch.add("b/x=a");		
+		ch.add("b/x=a");
 		ch.add("a+x/b = c");
 		ch.add("a*x=b");
 		ch.add("a^2+b+c/d=e");
@@ -90,57 +90,58 @@ public class Run {
 					double x = equations.solvR(int_a, int_b, int_c);
 
 					result.setText(String.valueOf(x));
-					
+
 				} else if (ch.getSelectedIndex() == 2) {
-					
-					int_a = Integer.parseInt(a.getText());
-					int_b = Integer.parseInt(b.getText());	
-					
-					int x = equations.slovFra(int_a, int_b);
-					
-					result.setText(String.valueOf(x));
-					
-				} else if (ch.getSelectedIndex() == 3) {
-					
+
 					int_a = Integer.parseInt(a.getText());
 					int_b = Integer.parseInt(b.getText());
-					
-					double x = equations.slovFra2(int_a, int_b);	
-					
+
+					int x = equations.slovFra(int_a, int_b);
+
 					result.setText(String.valueOf(x));
 
-				} else if (ch.getSelectedIndex() == 4) {					
+				} else if (ch.getSelectedIndex() == 3) {
+
 					int_a = Integer.parseInt(a.getText());
 					int_b = Integer.parseInt(b.getText());
-					int_c = Integer.parseInt(b.getText());					
-					
-					double x = equations.slovFra3(int_a, int_b, int_c);	
-					
+
+					double x = equations.slovFra2(int_a, int_b);
+
 					result.setText(String.valueOf(x));
-					
+
+				} else if (ch.getSelectedIndex() == 4) {
+					int_a = Integer.parseInt(a.getText());
+					int_b = Integer.parseInt(b.getText());
+					int_c = Integer.parseInt(b.getText());
+
+					double x = equations.slovFra3(int_a, int_b, int_c);
+
+					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 5) {
 					int_a = Integer.parseInt(a.getText());
 					int_b = Integer.parseInt(b.getText());
-					
-					double x = equations.slovMul(int_a, int_b);	
-					
+
+					double x = equations.slovMul(int_a, int_b);
+
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 6) {
 					int_a = Integer.parseInt(a.getText());
 					int_b = Integer.parseInt(b.getText());
-					int_c = Integer.parseInt(b.getText());	
+					int_c = Integer.parseInt(b.getText());
 					int_d = Integer.parseInt(b.getText());
 					int_e = Integer.parseInt(b.getText());
-					
-					double x = equations.slovFra4(int_a, int_b, int_c, int_d, int_e);	
-					
+
+					double x = equations.slovFra4(int_a, int_b, int_c, int_d,
+							int_e);
+
 					result.setText(String.valueOf(x));
-				}
+				}				
+				
 			}
 		});
-		equations.solvR(1, -2, 1);
+		equations.slovFra5(3, 4, 6, 3);
 	}
 
 }
