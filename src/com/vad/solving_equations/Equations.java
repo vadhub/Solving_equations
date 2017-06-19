@@ -111,5 +111,13 @@ public class Equations {
 	private void print(String str) {
 		System.out.println(str);
 	}
+	
+	public void F(int n){
+		System.out.println(n);
+		if(n<5){
+			F(n+1);
+			F(n+3);
+		}
+	}
 
 }
