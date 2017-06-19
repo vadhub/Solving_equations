@@ -11,12 +11,13 @@ public class Run {
 
 	public static void main(String[] args) {
 		Equations equations = new Equations();
+		EquationsTrigeometry equationsTri = new EquationsTrigeometry();
 
 		// gui bloc
 
 		JFrame frame = new JFrame();
 
-		JTextField result = new JTextField(4);
+		JTextField result = new JTextField(9);
 		JButton enter = new JButton("Enter");
 
 		JLabel l_a = new JLabel("a: ");
@@ -36,6 +37,7 @@ public class Run {
 		ch.add("a*x=b");
 		ch.add("ax^2+bx+c/d=e");
 		ch.add("x/a+b/c=d");
+		ch.add("sinX = a");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -118,7 +120,8 @@ public class Run {
 
 				} else if (ch.getSelectedIndex() == 6) {
 
-					double x = equations.slovFra4(int_a, int_b, int_c, int_d,int_e);
+					double x = equations.slovFra4(int_a, int_b, int_c, int_d,
+							int_e);
 
 					result.setText(String.valueOf(x));
 
@@ -127,6 +130,11 @@ public class Run {
 					double x = equations.slovFra5(int_a, int_b, int_c, int_d);
 
 					result.setText(String.valueOf(x));
+				} else if (ch.getSelectedIndex() == 8) {					
+
+					String x = equationsTri.slovSin(int_a);
+
+					result.setText(x);
 				}
 
 			}
