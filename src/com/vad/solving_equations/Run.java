@@ -76,61 +76,59 @@ public class Run {
 				int int_c;
 				int int_d;
 				int int_e;
-				
+
 				int_a = Integer.parseInt(a.getText());
 				int_b = Integer.parseInt(b.getText());
 				int_c = Integer.parseInt(c.getText());
 				int_d = Integer.parseInt(d.getText());
 				int_e = Integer.parseInt(e.getText());
-				
-				if (ch.getSelectedIndex() == 0) {					
+
+				if (ch.getSelectedIndex() == 0) {
 					int x = (int) equations.solvSum(int_a, int_b);
 
 					result.setText(String.valueOf(x));
-				} else if (ch.getSelectedIndex() == 1) {					
+				} else if (ch.getSelectedIndex() == 1) {
 					double x = equations.solvR(int_a, int_b, int_c);
 
 					result.setText(String.valueOf(x));
 
-				} else if (ch.getSelectedIndex() == 2) {				
+				} else if (ch.getSelectedIndex() == 2) {
 
 					int x = equations.slovFra(int_a, int_b);
 
 					result.setText(String.valueOf(x));
 
-				} else if (ch.getSelectedIndex() == 3) {			
+				} else if (ch.getSelectedIndex() == 3) {
 
 					double x = equations.slovFra2(int_a, int_b);
 
 					result.setText(String.valueOf(x));
 
-				} else if (ch.getSelectedIndex() == 4) {					
+				} else if (ch.getSelectedIndex() == 4) {
 
 					double x = equations.slovFra3(int_a, int_b, int_c);
 
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 5) {
-					
+
 					double x = equations.slovMul(int_a, int_b);
 
 					result.setText(String.valueOf(x));
 
-				} else if (ch.getSelectedIndex() == 6) {				
+				} else if (ch.getSelectedIndex() == 6) {
 
 					double x = equations.slovFra4(int_a, int_b, int_c, int_d,int_e);
 
 					result.setText(String.valueOf(x));
-					
-				}else if(ch.getSelectedIndex() == 7){
-					
-					
-					
+
+				} else if (ch.getSelectedIndex() == 7) {
+
 					double x = equations.slovFra5(int_a, int_b, int_c, int_d);
-					
+
 					result.setText(String.valueOf(x));
 				}
-				
+
 			}
 		});
 		equations.F(5);
