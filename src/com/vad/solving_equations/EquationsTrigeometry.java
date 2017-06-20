@@ -39,7 +39,7 @@ public class EquationsTrigeometry {
 			return "x = (-1)^k * -(" + neg_angls[3] + ")+ pi*k, k=Z";
 		} else if (a == -1) {
 			return "x = -pi/2 + pi*k, k=Z";
-		} else if (a > COUNT) {
+		} else if (a > COUNT || a< (COUNT * -1)) {
 			return "x = (-1)^k * arcsin(" + a + ")+pi*k, k=Z";
 		}
 		return null;
@@ -74,7 +74,7 @@ public class EquationsTrigeometry {
 			return "x = +-" + cos_neg_angls[0] + " pi*n, n=Z";
 		} else if (a == -1) {
 			return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
-		} else if (a > COUNT) {
+		} else if (a > COUNT || a < (COUNT * -1)) {
 			return "x = +- arccos(" + a + ")+pi*n, sn=Z";
 		}
 		return null;

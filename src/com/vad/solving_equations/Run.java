@@ -17,7 +17,7 @@ public class Run {
 
 		JFrame frame = new JFrame();
 
-		JTextField result = new JTextField(9);
+		JTextField result = new JTextField(17);
 		JButton enter = new JButton("Enter");
 
 		JLabel l_a = new JLabel("a: ");
@@ -131,9 +131,11 @@ public class Run {
 					double x = equations.slovFra5(int_a, int_b, int_c, int_d);
 
 					result.setText(String.valueOf(x));
-				} else if (ch.getSelectedIndex() == 8) {					
-
+				} else if (ch.getSelectedIndex() == 8) {
 					String x = equationsTri.slovSin(int_a);
+					result.setText(x);
+				} else if (ch.getSelectedIndex() == 8) {
+					String x = equationsTri.slovCos(int_a);
 
 					result.setText(x);
 				}
