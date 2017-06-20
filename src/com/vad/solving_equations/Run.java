@@ -38,6 +38,7 @@ public class Run {
 		ch.add("ax^2+bx+c/d=e");
 		ch.add("x/a+b/c=d");
 		ch.add("sinX = a");
+		ch.add("cosX = a");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);

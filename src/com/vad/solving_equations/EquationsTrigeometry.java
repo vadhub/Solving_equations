@@ -8,35 +8,74 @@ public class EquationsTrigeometry {
 
 	String[] cos_neg_angls = { "5pi/6", "3pi/4", "2pi/3" };
 
+	private int COUNT = 1;
+
 	public String slovSin(int a) {
 
 		if (a == 1 / 2) {
-			return "x = (-1)^k " + angls[0] + " piK, k=z";
+			return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
 
 		} else if (a == Math.sqrt(2) / 2) {
 
-			return "x = (-1)^k " + angls[1] + " piK, k=z";
+			return "x = (-1)^k * " + angls[1] + "+ pi*k, k=Z";
 
 		} else if (a == Math.sqrt(3) / 2) {
 
-			return "x = (-1)^k " + angls[2] + " piK, k=z";
+			return "x = (-1)^k *" + angls[2] + "+ pi*k, k=Z";
 		} else if (a == 1) {
 
-			return "x = " + angls[3] + " 2piK, k=z";
+			return "x = " + angls[3] + "+ pi*k, k=Z";
 		} else if (a == 0) {
 
-			return "x = piK, k=z";
+			return "x = pi*k, k=Z";
 		} else if (a == -1 / 2) {
 
-			return "x = (-1)^k -" + neg_angls[1] + " piK, k=z";
+			return "x = (-1)^k * -(" + neg_angls[1] + ")+ pi*k, k=Z";
 		} else if (a == -(Math.sqrt(2) / 2)) {
 
-			return "x = (-1)^k -" + neg_angls[2] + " piK, k=z";
+			return "x = (-1)^k * -(" + neg_angls[2] + ")+ pi*k, k=Z";
 		} else if (a == -(Math.sqrt(3) / 2)) {
 
-			return "x = (-1)^k -" + neg_angls[3] + " piK, k=z";
+			return "x = (-1)^k * -(" + neg_angls[3] + ")+ pi*k, k=Z";
 		} else if (a == -1) {
-			return "x = pi/2 + 2piK, k=z";
+			return "x = -pi/2 + pi*k, k=Z";
+		} else if (a > COUNT) {
+			return "x = (-1)^k * arcsin(" + a + ")+pi*k, k=Z";
+		}
+		return null;
+	}
+
+	public String slovCos(int a) {
+
+		if (a == 1 / 2) {
+			return "x = +-" + angls[2] + " 2pi*n, n=Z";
+
+		} else if (a == Math.sqrt(2) / 2) {
+
+			return "x = +-" + angls[1] + " 2pi*n, n=Z";
+
+		} else if (a == Math.sqrt(3) / 2) {
+
+			return "x = +-" + angls[0] + " 2pi*n, n=Z";
+		} else if (a == 1) {
+
+			return "x = 2pi*n, n=z";
+		} else if (a == 0) {
+
+			return "x =" + angls[3] + "pi*n, n=Z";
+		} else if (a == -1 / 2) {
+
+			return "x = +-" + cos_neg_angls[2] + " pi*n, n=Z";
+		} else if (a == -(Math.sqrt(2) / 2)) {
+
+			return "x = +-" + cos_neg_angls[1] + " pi*n, n=Z";
+		} else if (a == -(Math.sqrt(3) / 2)) {
+
+			return "x = +-" + cos_neg_angls[0] + " pi*n, n=Z";
+		} else if (a == -1) {
+			return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
+		} else if (a > COUNT) {
+			return "x = +- arccos(" + a + ")+pi*n, sn=Z";
 		}
 		return null;
 	}
