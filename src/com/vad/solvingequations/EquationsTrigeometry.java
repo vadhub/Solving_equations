@@ -10,37 +10,37 @@ public class EquationsTrigeometry {
 
 	private int COUNT = 1;
 
-	public String slovSin(int a) {
+	public String slovSin(int x) {
 
-		if (a == 1 / 2) {
+		if (x == 1 / 2) {
 			return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
 
-		} else if (a == Math.sqrt(2) / 2) {
+		} else if (x == Math.sqrt(2) / 2) {
 
 			return "x = (-1)^k * " + angls[1] + "+ pi*k, k=Z";
 
-		} else if (a == Math.sqrt(3) / 2) {
+		} else if (x == Math.sqrt(3) / 2) {
 
 			return "x = (-1)^k *" + angls[2] + "+ pi*k, k=Z";
-		} else if (a == 1) {
+		} else if (x == 1) {
 
 			return "x = " + angls[3] + "+ pi*k, k=Z";
-		} else if (a == 0) {
+		} else if (x == 0) {
 
 			return "x = pi*k, k=Z";
-		} else if (a == -1 / 2) {
+		} else if (x == -1 / 2) {
 
 			return "x = (-1)^k * -(" + neg_angls[1] + ")+ pi*k, k=Z";
-		} else if (a == -(Math.sqrt(2) / 2)) {
+		} else if (x == -(Math.sqrt(2) / 2)) {
 
 			return "x = (-1)^k * -(" + neg_angls[2] + ")+ pi*k, k=Z";
-		} else if (a == -(Math.sqrt(3) / 2)) {
+		} else if (x == -(Math.sqrt(3) / 2)) {
 
 			return "x = (-1)^k * -(" + neg_angls[3] + ")+ pi*k, k=Z";
-		} else if (a == -1) {
+		} else if (x == -1) {
 			return "x = -pi/2 + pi*k, k=Z";
-		} else if (a > COUNT || a< (COUNT * -1)) {
-			return "x = (-1)^k * arcsin(" + a + ")+pi*k, k=Z";
+		} else if (x > COUNT || x < (COUNT * -1)) {
+			return "x = (-1)^k * arcsin(" + x + ")+pi*k, k=Z";
 		}
 		return "ERROR";
 	}
@@ -73,8 +73,33 @@ public class EquationsTrigeometry {
 
 			return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
 		} else if (x == -1) {
-			
+
 			return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
+		}
+		return "ERROR";
+	}
+
+	public String slovTg(int x) {
+		if (x == 0) {
+			return "x = pi*n, n=Z";
+		} else if (x == 1 / (Math.sqrt(3))) {
+			
+			return "x = " + angls[0] + "pi*n, n=Z";
+		} else if (x == 1) {
+			
+			return "x = " + angls[1] + "pi*n, n=Z";
+		} else if (x == Math.sqrt(3)) {
+			
+			return "x = " + angls[2] + "pi*n, n=Z";
+		} else if (x == -(Math.sqrt(3))) {
+			
+			return "x = " + neg_angls[2] + "pi*n, n=Z";
+		} else if (x == -(1 / (Math.sqrt(3)))) {
+			
+			return "x = " + neg_angls[0] + "pi*n, n=Z";
+		} else if (x == -1) {
+			
+			return "x = " + neg_angls[1] + "pi*n, n=Z";
 		}
 		return "ERROR";
 	}

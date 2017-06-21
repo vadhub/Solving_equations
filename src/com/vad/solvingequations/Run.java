@@ -39,6 +39,7 @@ public class Run {
 		ch.add("x/a+b/c=d");
 		ch.add("sinX = a");
 		ch.add("cosX = a");
+		ch.add("tgX = a");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -137,8 +138,12 @@ public class Run {
 
 				} else if (ch.getSelectedIndex() == 9) {
 
-					String d = equationsTri.slovCos(int_a);
-					result.setText(d);
+					String x = equationsTri.slovCos(int_a);
+					result.setText(x);
+				} else if (ch.getSelectedIndex() == 10) {
+
+					String x = equationsTri.slovTg(int_a);
+					result.setText(x);
 				}
 			}
 		});	
