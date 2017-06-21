@@ -1,4 +1,4 @@
-package com.vad.solving_equations;
+package com.vad.solvingequations;
 
 import java.awt.Choice;
 import java.awt.FlowLayout;
@@ -134,15 +134,14 @@ public class Run {
 				} else if (ch.getSelectedIndex() == 8) {
 					String x = equationsTri.slovSin(int_a);
 					result.setText(x);
-				} else if (ch.getSelectedIndex() == 8) {
-					String x = equationsTri.slovCos(int_a);
 
-					result.setText(x);
+				} else if (ch.getSelectedIndex() == 9) {
+
+					String d = equationsTri.slovCos(int_a);
+					result.setText(d);
 				}
-
 			}
-		});
-		equations.F(5);
+		});	
+		
 	}
-
 }

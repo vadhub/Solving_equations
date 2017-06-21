@@ -1,4 +1,4 @@
-package com.vad.solving_equations;
+package com.vad.solvingequations;
 
 public class Equations {
 	// a+x=b

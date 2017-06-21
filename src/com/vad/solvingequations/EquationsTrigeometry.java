@@ -1,4 +1,4 @@
-package com.vad.solving_equations;
+package com.vad.solvingequations;
 
 public class EquationsTrigeometry {
 	String[] angls = { "pi/6", "pi/4", "pi/3", "pi/2", "pi" };
@@ -42,42 +42,41 @@ public class EquationsTrigeometry {
 		} else if (a > COUNT || a< (COUNT * -1)) {
 			return "x = (-1)^k * arcsin(" + a + ")+pi*k, k=Z";
 		}
-		return null;
+		return "ERROR";
 	}
 
-	public String slovCos(int a) {
+	public String slovCos(int x) {
 
-		if (a == 1 / 2) {
-			return "x = +-" + angls[2] + " 2pi*n, n=Z";
+		if (x == 1 / 2) {
+			return "x = +-" + angls[2] + " +  2pi*n, n=Z";
 
-		} else if (a == Math.sqrt(2) / 2) {
+		} else if (x == Math.sqrt(2) / 2) {
 
-			return "x = +-" + angls[1] + " 2pi*n, n=Z";
+			return "x = +-" + angls[1] + " +  2pi*n, n=Z";
 
-		} else if (a == Math.sqrt(3) / 2) {
+		} else if (x == Math.sqrt(3) / 2) {
 
-			return "x = +-" + angls[0] + " 2pi*n, n=Z";
-		} else if (a == 1) {
+			return "x = +-" + angls[0] + " +  2pi*n, n=Z";
+		} else if (x == 1) {
 
 			return "x = 2pi*n, n=z";
-		} else if (a == 0) {
+		} else if (x == 0) {
 
-			return "x =" + angls[3] + "pi*n, n=Z";
-		} else if (a == -1 / 2) {
+			return "x =" + angls[3] + " + pi*n, n=Z";
+		} else if (x == -1 / 2) {
 
-			return "x = +-" + cos_neg_angls[2] + " pi*n, n=Z";
-		} else if (a == -(Math.sqrt(2) / 2)) {
+			return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
+		} else if (x == -(Math.sqrt(2) / 2)) {
 
-			return "x = +-" + cos_neg_angls[1] + " pi*n, n=Z";
-		} else if (a == -(Math.sqrt(3) / 2)) {
+			return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
+		} else if (x == -(Math.sqrt(3) / 2)) {
 
-			return "x = +-" + cos_neg_angls[0] + " pi*n, n=Z";
-		} else if (a == -1) {
+			return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
+		} else if (x == -1) {
+			
 			return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
-		} else if (a > COUNT || a < (COUNT * -1)) {
-			return "x = +- arccos(" + a + ")+pi*n, sn=Z";
 		}
-		return null;
+		return "ERROR";
 	}
 
 }
