@@ -67,7 +67,12 @@ public class Equations {
 		if (g < 0) {
 			return d;
 		}
-		return x2;
+
+		if (x1 < x2) {
+			return x2;
+		} else {
+			return x1;
+		}
 
 	}
 
