@@ -40,6 +40,7 @@ public class Run {
 		ch.add("sinX = a");
 		ch.add("cosX = a");
 		ch.add("tgX = a");
+		ch.add("sqrt(a+x)=b");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -144,9 +145,13 @@ public class Run {
 
 					String x = equationsTri.slovTg(int_a);
 					result.setText(x);
+				} else if (ch.getSelectedIndex() == 11) {
+
+					int x = equations.slovSqrt(int_a, int_b);
+					result.setText(String.valueOf(x));
 				}
 			}
-		});	
-		
+		});
+
 	}
 }
