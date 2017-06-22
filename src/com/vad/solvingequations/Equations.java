@@ -20,32 +20,37 @@ public class Equations {
 		if (d < 0) {
 			return d;
 		}
-		return x2;
+		
+		if (x1 < x2) {
+			return x2;
+		} else {
+			return x1;
+		}
 	}
 
 	// x/b=a
-	public int slovFra(int a, int b) {
+	public int solvFra(int a, int b) {
 		int x = b * a;
 
 		return x;
 	}
 
 	// b/x=a
-	public double slovFra2(double a, double b) {
+	public double solvFra2(double a, double b) {
 		double x = a / b;
 
 		return x;
 	}
 
 	// a*x=b
-	public double slovMul(double a, double b) {
+	public double solvMul(double a, double b) {
 		double x = b / a;
 
 		return x;
 	}
 
 	// a+x/b = c
-	public double slovFra3(double a, double b, double c) {
+	public double solvFra3(double a, double b, double c) {
 		double phase_1 = c * -1;
 		double phase_2 = phase_1 * b;
 		double phase_3 = a + phase_2;
@@ -55,7 +60,7 @@ public class Equations {
 	}
 
 	// ax^2+xb+c/d=e
-	public double slovFra4(int a, int b, int c, int d, int e) {
+	public double solvFra4(int a, int b, int c, int d, int e) {
 		double phase_1 = e * -1;
 		double phase_2 = phase_1 * d;
 		int phase_3 = (int) (c + phase_2);
@@ -77,7 +82,7 @@ public class Equations {
 	}
 
 	// x/a+b/c=d;
-	public int slovFra5(int a, int b, int c, int d) {
+	public int solvFra5(int a, int b, int c, int d) {
 
 		int phase_1 = a * c;
 		int phase_2 = b * a;
@@ -89,7 +94,7 @@ public class Equations {
 	}
 
 	// sqrt(a+x)=b
-	public int slovSqrt(int a, int b) {
+	public int solvSqrt(int a, int b) {
 		int phase_1 = b * b;
 		int x = phase_1 - a;
 		return x;

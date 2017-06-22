@@ -10,7 +10,7 @@ public class EquationsTrigeometry {
 
 	private int COUNT = 1;
 
-	public String slovSin(int x) {
+	public String solvSin(int x) {
 
 		if (x == 1 / 2) {
 			return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
@@ -45,7 +45,7 @@ public class EquationsTrigeometry {
 		return "ERROR";
 	}
 
-	public String slovCos(int x) {
+	public String solvCos(int x) {
 
 		if (x == 1 / 2) {
 			return "x = +-" + angls[2] + " +  2pi*n, n=Z";
@@ -79,7 +79,7 @@ public class EquationsTrigeometry {
 		return "ERROR";
 	}
 
-	public String slovTg(int x) {
+	public String solvTg(int x) {
 		if (x == 0) {
 			return "x = pi*n, n=Z";
 		} else if (x == 1 / (Math.sqrt(3))) {

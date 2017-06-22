@@ -99,55 +99,55 @@ public class Run {
 
 				} else if (ch.getSelectedIndex() == 2) {
 
-					int x = equations.slovFra(int_a, int_b);
+					int x = equations.solvFra(int_a, int_b);
 
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 3) {
 
-					double x = equations.slovFra2(int_a, int_b);
+					double x = equations.solvFra2(int_a, int_b);
 
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 4) {
 
-					double x = equations.slovFra3(int_a, int_b, int_c);
+					double x = equations.solvFra3(int_a, int_b, int_c);
 
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 5) {
 
-					double x = equations.slovMul(int_a, int_b);
+					double x = equations.solvMul(int_a, int_b);
 
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 6) {
 
-					double x = equations.slovFra4(int_a, int_b, int_c, int_d,
+					double x = equations.solvFra4(int_a, int_b, int_c, int_d,
 							int_e);
 
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 7) {
 
-					double x = equations.slovFra5(int_a, int_b, int_c, int_d);
+					double x = equations.solvFra5(int_a, int_b, int_c, int_d);
 
 					result.setText(String.valueOf(x));
 				} else if (ch.getSelectedIndex() == 8) {
-					String x = equationsTri.slovSin(int_a);
+					String x = equationsTri.solvSin(int_a);
 					result.setText(x);
 
 				} else if (ch.getSelectedIndex() == 9) {
 
-					String x = equationsTri.slovCos(int_a);
+					String x = equationsTri.solvCos(int_a);
 					result.setText(x);
 				} else if (ch.getSelectedIndex() == 10) {
 
-					String x = equationsTri.slovTg(int_a);
+					String x = equationsTri.solvTg(int_a);
 					result.setText(x);
 				} else if (ch.getSelectedIndex() == 11) {
 
-					int x = equations.slovSqrt(int_a, int_b);
+					int x = equations.solvSqrt(int_a, int_b);
 					result.setText(String.valueOf(x));
 				}
 			}
