@@ -43,6 +43,7 @@ public class Run {
 		ch.add("sqrt(a+x)=b");
 		ch.add("sqrt(a+x)^3=b");
 		ch.add("sqrt(a+x)^4=b");
+		ch.add("|a+x| = b");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -150,15 +151,20 @@ public class Run {
 				} else if (ch.getSelectedIndex() == 11) {
 
 					int x = equations.solvSqrt_2(int_a, int_b);
-					result.setText(String.valueOf(x));					
+					result.setText(String.valueOf(x));
 				} else if (ch.getSelectedIndex() == 12) {
-					
+
 					int x = equations.solvSqrt_3(int_a, int_b);
-					result.setText(String.valueOf(x));					
+					result.setText(String.valueOf(x));
 				} else if (ch.getSelectedIndex() == 13) {
 
 					int x = equations.solvSqrt_4(int_a, int_b);
 					result.setText(String.valueOf(x));
+				} else if (ch.getSelectedIndex() == 14) {
+
+					int x1 = equations.solvMod_X1(int_a, int_b);
+					int x2 = equations.solvMod_X2(int_a, int_b);
+					result.setText(String.valueOf(x1) + " ; " + String.valueOf(x2));
 				}
 			}
 		});
