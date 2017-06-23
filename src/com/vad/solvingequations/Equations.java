@@ -20,7 +20,7 @@ public class Equations {
 		if (d < 0) {
 			return d;
 		}
-		
+
 		if (x1 < x2) {
 			return x2;
 		} else {
@@ -94,11 +94,28 @@ public class Equations {
 	}
 
 	// sqrt(a+x)=b
-	public int solvSqrt(int a, int b) {
+	public int solvSqrt_2(int a, int b) {
 		int phase_1 = b * b;
+		int x = phase_1 - a;
+		return x;
+	}
+
+	// sqrt(a+x)^3=b
+	public int solvSqrt_3(int a, int b) {
+		int phase_1 = b * b * b;
 		int x = phase_1 - a;
 		return x;
 
 	}
+
+	// sqrt(a+x)^3=b
+	public int solvSqrt_4(int a, int b) {
+		int phase_1 = b * b * b * b;
+		int x = phase_1 - a;
+		return x;
+	}
+
+	
+	
 
 }

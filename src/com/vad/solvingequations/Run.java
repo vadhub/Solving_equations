@@ -41,6 +41,8 @@ public class Run {
 		ch.add("cosX = a");
 		ch.add("tgX = a");
 		ch.add("sqrt(a+x)=b");
+		ch.add("sqrt(a+x)^3=b");
+		ch.add("sqrt(a+x)^4=b");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -147,7 +149,15 @@ public class Run {
 					result.setText(x);
 				} else if (ch.getSelectedIndex() == 11) {
 
-					int x = equations.solvSqrt(int_a, int_b);
+					int x = equations.solvSqrt_2(int_a, int_b);
+					result.setText(String.valueOf(x));					
+				} else if (ch.getSelectedIndex() == 12) {
+					
+					int x = equations.solvSqrt_3(int_a, int_b);
+					result.setText(String.valueOf(x));					
+				} else if (ch.getSelectedIndex() == 13) {
+
+					int x = equations.solvSqrt_4(int_a, int_b);
 					result.setText(String.valueOf(x));
 				}
 			}
