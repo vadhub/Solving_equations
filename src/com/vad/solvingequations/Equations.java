@@ -115,7 +115,21 @@ public class Equations {
 		return x;
 	}
 
+	//|x+a|=b
+	public int solvMod_X1(int a, int b){
+		int phase_1 = a*-1;
+		int x1 = b+phase_1;
+		
+		return x1;		
+	}
 	
+	public int solvMod_X2(int a, int b){		
+		int phase_1 = a*-1;		
+		int phase_2 = b*-1;
+		int x2 = phase_1+phase_2;
+		
+		return x2;		
+	}
 	
 
 }
