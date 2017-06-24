@@ -12,21 +12,25 @@ public class Equations {
 	// D=b^2-4*a*c
 	// x1 = -b+sqrt(d)/2a
 	// x2 = -b-sqrt(d)/2a
-	public double solvR(int a, int b, int c) {
+	public double solvR_X1(double a, double b, double c) {
 		double d = b * b - 4 * a * c;
-		double x1 = Math.sqrt(d) - b;
-		double x2 = Math.sqrt(d) + (b * -1);
-
-		if (d < 0) {
-			return d;
-		}
-
-		if (x1 < x2) {
-			return x2;
-		} else {
-			return x1;
-		}
+		double phase_1 = b*-1 + Math.sqrt(d);
+		
+		double x1 = phase_1/2*a;	
+		
+		return x1;		
 	}
+	
+	public double solvR_X2(int a, int b, int c) {
+		double d = b * b - 4 * a * c;
+		double phase_1 = -b - Math.sqrt(d);
+		
+		double x2 = phase_1/2*a;	
+		
+		return x2;		
+	}
+	
+	
 
 	// x/b=a
 	public int solvFra(int a, int b) {
@@ -66,8 +70,8 @@ public class Equations {
 		int phase_3 = (int) (c + phase_2);
 
 		double g = b * b - 4 * a * phase_3;
-		double x1 = Math.sqrt(g) - b;
-		double x2 = Math.sqrt(g) + (b * -1);
+		double x1 = (Math.sqrt(g) - (b * -1))/2*a;
+		double x2 = (Math.sqrt(g) + (b * -1))/2*a;
 
 		if (g < 0) {
 			return d;

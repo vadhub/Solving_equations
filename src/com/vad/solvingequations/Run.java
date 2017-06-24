@@ -30,7 +30,7 @@ public class Run {
 		Choice ch = new Choice();
 
 		ch.add("a+x=b");
-		ch.add("x^2*a+b+c=0");
+		ch.add("x^2a+bx+c=0");
 		ch.add("x/b=a");
 		ch.add("b/x=a");
 		ch.add("a+x/b = c");
@@ -96,9 +96,10 @@ public class Run {
 
 					result.setText(String.valueOf(x));
 				} else if (ch.getSelectedIndex() == 1) {
-					double x = equations.solvR(int_a, int_b, int_c);
+					double x = equations.solvR_X1(int_a, int_b, int_c);
+					double x2 = equations.solvR_X2(int_a, int_b, int_c);
 
-					result.setText(String.valueOf(x));
+					result.setText(String.valueOf(x)+";"+String.valueOf(x2));
 
 				} else if (ch.getSelectedIndex() == 2) {
 
