@@ -44,6 +44,7 @@ public class Run {
 		ch.add("sqrt(a+x)^3=b");
 		ch.add("sqrt(a+x)^4=b");
 		ch.add("|a+x| = b");
+		ch.add("ñtgX = a");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -166,6 +167,9 @@ public class Run {
 					int x1 = equations.solvMod_X1(int_a, int_b);
 					int x2 = equations.solvMod_X2(int_a, int_b);
 					result.setText(String.valueOf(x1) + " ; " + String.valueOf(x2));
+				} else if(ch.getSelectedIndex() == 15){
+					String x = equationsTri.solvCtg(int_a);
+					result.setText(x);
 				}
 			}
 		});

@@ -99,7 +99,36 @@ public class EquationsTrigeometry {
 			return "x = " + neg_angls[0] + "pi*n, n=Z";
 		} else if (x == -1) {
 			
-			return "x = " + neg_angls[1] + "pi*n, n=Z";
+			return "x = " + neg_angls[5] + "pi*n, n=Z";
+		}else if (x > COUNT||x < COUNT) {
+			
+			return "does not exist";
+		}
+		return "ERROR";
+	}
+	
+	public String solvCtg(int x) {
+		
+		if (x == 1 / (Math.sqrt(3))) {
+			
+			return "x = " + angls[2] + "pi*n, n=Z";
+		} else if (x == 1) {
+			
+			return "x = " + angls[1] + "pi*n, n=Z";
+		} else if (x == Math.sqrt(3)) {
+			
+			return "x = " + angls[0] + "pi*n, n=Z";
+		} else if (x == -(Math.sqrt(3))) {
+			
+			return "x = " + neg_angls[4] + "pi*n, n=Z";
+		} else if (x == -(1 / (Math.sqrt(3)))) {
+			
+			return "x = " + neg_angls[6] + "pi*n, n=Z";
+		} else if (x == -1) {
+			
+			return "x = " + neg_angls[5] + "pi*n, n=Z";
+		}else if(x>COUNT||x<COUNT){
+			return"does not exist";
 		}
 		return "ERROR";
 	}
