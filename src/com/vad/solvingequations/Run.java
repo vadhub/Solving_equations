@@ -12,6 +12,7 @@ public class Run {
 	public static void main(String[] args) {
 		Equations equations = new Equations();
 		EquationsTrigeometry equationsTri = new EquationsTrigeometry();
+		MappingSolutions mappingSol = new MappingSolutions();
 
 		// gui bloc
 
@@ -94,7 +95,9 @@ public class Run {
 
 				if (ch.getSelectedIndex() == 0) {
 					int x = (int) equations.solvSum(int_a, int_b);
-
+					
+					mappingSol.DisplayForSum(int_a, int_b, x);	
+					
 					result.setText(String.valueOf(x));
 				} else if (ch.getSelectedIndex() == 1) {
 					double x = equations.solvR_X1(int_a, int_b, int_c);
