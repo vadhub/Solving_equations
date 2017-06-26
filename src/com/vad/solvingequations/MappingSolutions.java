@@ -59,7 +59,10 @@ public class MappingSolutions {
 		
 		mainTxt.append("D = "+String.valueOf(b*b)+" -4 *"+String.valueOf(a)+"*"+String.valueOf(c)+"="+String.valueOf(d)+";");
 		
-		
+		if(d<0){
+			mainTxt.append("\n");
+			mainTxt.append("D<0 not solving");
+		}else
 		
 		mainTxt.append("\n");	
 		
