@@ -123,6 +123,8 @@ public class Run {
 				} else if (ch.getSelectedIndex() == 4) {
 
 					double x = equations.solvFra3(int_a, int_b, int_c);
+					
+					mappingSol.DisplayForFra3(int_a, int_b, int_c, x);
 
 					result.setText(String.valueOf(x));
 

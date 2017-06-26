@@ -53,7 +53,7 @@ public class MappingSolutions {
 		
 		mainTxt.append("\n");
 		
-		mainTxt.append("x^2*"+String.valueOf(a)+"+ x*"+String.valueOf(c)+" = "+String.valueOf(b)+";");	
+		mainTxt.append("x^2*"+String.valueOf(a)+"+ x*"+String.valueOf(b)+" +"+String.valueOf(c)+" = 0;");	
 		
 		mainTxt.append("\n");
 		
@@ -62,7 +62,7 @@ public class MappingSolutions {
 		if(d<0){
 			mainTxt.append("\n");
 			mainTxt.append("D<0 not solving");
-		}else
+		}else{
 		
 		mainTxt.append("\n");	
 		
@@ -78,7 +78,7 @@ public class MappingSolutions {
 		
 		mainTxt.append("\n");
 		
-		mainTxt.append("x2 =" +String.valueOf(phase_2X2)+";");
+		mainTxt.append("x2 =" +String.valueOf(phase_2X2)+";");}
 				
 		frame.add(mainTxt);
 		
@@ -87,5 +87,58 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	
+	}
+	
+	public void DisplayForFra3(int a, int b, int c, double x){
+		
+		double phase_1 = c * -1;
+		double phase_2 = phase_1 * b;
+		double phase_3 = a + phase_2;
+		double phase_4 = phase_3 * -1;
+		
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();	
+		
+		mainTxt.setFont(font);
+		
+		mainTxt.append("solving: ");
+		
+		mainTxt.append("\n");
+		
+		// a+x/b = c
+		
+		mainTxt.append(String.valueOf(a)+"+ x / "+String.valueOf(b)+"="+ String.valueOf(c)+";");	
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append(String.valueOf(a)+"+ x / "+String.valueOf(b)+String.valueOf(c*-1)+"= 0;");	
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append(String.valueOf(a)+"+ x / "+String.valueOf(b)+""+String.valueOf(-c)+"*"+String.valueOf(b)+"= 0;");
+		
+		mainTxt.append("\n");	
+		
+		mainTxt.append(String.valueOf(a)+"+ x / "+String.valueOf(b)+""+String.valueOf(phase_2)+"= 0;");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("x "+String.valueOf(a)+"+"+String.valueOf(phase_2)+"/ "+String.valueOf(b)+"= 0;");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("x "+phase_3+"/ "+String.valueOf(b)+"= 0;");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("x =" +phase_4+";");
+		
+		frame.add(mainTxt);
+		
+		frame.setSize(200, 200);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+				
 	}
 }
