@@ -100,8 +100,11 @@ public class Run {
 					
 					result.setText(String.valueOf(x));
 				} else if (ch.getSelectedIndex() == 1) {
+					
 					double x = equations.solvR_X1(int_a, int_b, int_c);
 					double x2 = equations.solvR_X2(int_a, int_b, int_c);
+					
+					mappingSol.DisplayForR(int_a, int_b, int_c, x);
 
 					result.setText(String.valueOf(x)+";"+String.valueOf(x2));
 

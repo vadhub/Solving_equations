@@ -8,7 +8,7 @@ public class Equations {
 		return x;
 	}
 
-	// x^2*a+b+c=0
+	// a*x^2+b*x+c=0
 	// D=b^2-4*a*c
 	// x1 = -b+sqrt(d)/2a
 	// x2 = -b-sqrt(d)/2a
