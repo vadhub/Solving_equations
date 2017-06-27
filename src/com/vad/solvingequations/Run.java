@@ -162,6 +162,9 @@ public class Run {
 				} else if (ch.getSelectedIndex() == 11) {
 
 					int x = equations.solvSqrt_2(int_a, int_b);
+					
+					mappingSol.DisplaysolvSqrt_2(int_a, int_b, x);
+					
 					result.setText(String.valueOf(x));
 				} else if (ch.getSelectedIndex() == 12) {
 

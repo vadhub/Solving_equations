@@ -172,4 +172,41 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
+	
+	public void DisplaysolvSqrt_2(int a, int b, int x){
+		
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
+		
+		mainTxt.setFont(font);
+		
+		mainTxt.append("solving: ");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("sqrt("+String.valueOf(a)+" + x) = "+String.valueOf(b)+";");	
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("sqrt("+String.valueOf(a)+" + x)^2 = ("+String.valueOf(b)+")^2 ;");	
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append(String.valueOf(a)+" + x = "+String.valueOf(b*b)+";");	
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append("x = "+String.valueOf(b*b) + String.valueOf(a*-1)+";");
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append("x = "+String.valueOf(b*b + a*-1)+";");
+		
+		frame.add(mainTxt);
+		
+		frame.setSize(200, 200);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);				
+	}
 }
