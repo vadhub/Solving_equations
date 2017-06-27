@@ -131,7 +131,8 @@ public class Run {
 				} else if (ch.getSelectedIndex() == 5) {
 
 					double x = equations.solvMul(int_a, int_b);
-
+					
+					mappingSol.DisplaysolvMul(int_a, int_b, x);
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 6) {

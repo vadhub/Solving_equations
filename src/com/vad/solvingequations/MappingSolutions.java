@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 public class MappingSolutions {
-	private Font font = new Font("SERIF", 10, 20);
+	private Font font = new Font("SERIF", Font.BOLD, 20);
 	public void DisplayForSum(int a, int b, int x){
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -140,5 +140,36 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 				
+	}
+	
+	public void DisplaysolvMul(int a, int b, double x){
+		
+		x = b/a;
+		
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
+		
+		mainTxt.setFont(font);
+		
+		mainTxt.append("solving: ");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append(String.valueOf(a)+"* x = "+String.valueOf(b)+";");	
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("x = "+String.valueOf(b)+" / "+String.valueOf(a)+";");	
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append("x = "+String.valueOf(x)+";");
+		
+		frame.add(mainTxt);
+		
+		frame.setSize(200, 200);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
 	}
 }
