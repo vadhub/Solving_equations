@@ -209,4 +209,70 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);				
 	}
+	
+public void DisplaysolvFra_5(int a, int b, int c, int d, int x){
+	
+		int phase_1 = a * c;
+		int phase_2 = b * a;
+		int phase_3 = d * -1;
+		int phase_4 = phase_3 * phase_1;
+		int phase_5 = phase_2 + phase_4;
+		int phase_Fin = (phase_5 / c) * -1;	
+		
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
+		
+		mainTxt.setFont(font);
+		
+		mainTxt.append("solving: ");
+		
+		mainTxt.append("\n");
+		
+		// x/a+b/c=d;
+		
+		mainTxt.append("x /"+String.valueOf(a)+" + "+String.valueOf(b)+" / "+String.valueOf(c)+" = "+String.valueOf(d)+";");	
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append(String.valueOf(c)+" * x /"+String.valueOf(a)+" * "+String.valueOf(c)+" + "+String.valueOf(b)+" * "+String.valueOf(a)+" / "+String.valueOf(c)+" = "+String.valueOf(d)+";");
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append(String.valueOf(c)+" * x /"+String.valueOf(phase_1)+" + "+String.valueOf(phase_2)+" / "+String.valueOf(phase_1)+" + "+String.valueOf(d*-1)+" = 0;");	
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append(String.valueOf(c)+" * x /"+String.valueOf(phase_1)+" + "+String.valueOf(phase_2)+" / "+String.valueOf(phase_1)+" + "+String.valueOf(d*-1)+" * "+String.valueOf(phase_1)+" = 0;");
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append(String.valueOf(c)+" * x /"+String.valueOf(phase_1)+" + "+String.valueOf(phase_2)+" / "+String.valueOf(phase_1)+" + "+String.valueOf(d*-1)+" * "+String.valueOf(phase_1)+" = 0;");
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append(String.valueOf(c)+" * x /"+String.valueOf(phase_1)+" + "+String.valueOf(phase_2)+" / "+String.valueOf(phase_1)+" + "+String.valueOf(phase_4)+" / "+String.valueOf(phase_1)+" = 0;");
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append(String.valueOf(c)+" * x /"+String.valueOf(phase_1)+" + "+String.valueOf(phase_5)+" / "+String.valueOf(phase_1)+" = 0;");
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append(String.valueOf(c)+" * x + "+String.valueOf(phase_5)+" = 0;");
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append(String.valueOf(c)+" * x = 0"+String.valueOf(phase_5*-1)+";");
+		
+		mainTxt.append("\n");		
+		
+		mainTxt.append("x = "+String.valueOf(phase_Fin)+";");				
+		
+		frame.add(mainTxt);
+		
+		frame.setSize(200, 200);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);				
+	}
 }
