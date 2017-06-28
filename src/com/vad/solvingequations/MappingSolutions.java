@@ -1,5 +1,6 @@
 package com.vad.solvingequations;
 
+import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.JFrame;
@@ -10,6 +11,8 @@ public class MappingSolutions {
 	public void DisplayForSum(int a, int b, int x){
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
+		
+		mainTxt.setBackground(Color.green);
 		
 		mainTxt.setFont(font);
 		
@@ -210,7 +213,7 @@ public class MappingSolutions {
 		frame.setVisible(true);				
 	}
 	
-public void DisplaysolvFra_5(int a, int b, int c, int d, int x){
+public void DisplaysolvFra_5(int a, int b, int c, int d, double x){
 	
 		int phase_1 = a * c;
 		int phase_2 = b * a;
@@ -262,7 +265,7 @@ public void DisplaysolvFra_5(int a, int b, int c, int d, int x){
 		
 		mainTxt.append("\n");		
 		
-		mainTxt.append(String.valueOf(c)+" * x = 0"+String.valueOf(phase_5*-1)+";");
+		mainTxt.append(String.valueOf(c)+" * x = "+String.valueOf(phase_5*-1)+";");
 		
 		mainTxt.append("\n");		
 		

@@ -137,14 +137,15 @@ public class Run {
 
 				} else if (ch.getSelectedIndex() == 6) {
 
-					double x = equations.solvFra4(int_a, int_b, int_c, int_d,
-							int_e);
+					double x = equations.solvFra4(int_a, int_b, int_c, int_d, int_e);
 
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 7) {
 
 					double x = equations.solvFra5(int_a, int_b, int_c, int_d);
+					
+					mappingSol.DisplaysolvFra_5(int_a, int_b, int_c, int_d, x);
 
 					result.setText(String.valueOf(x));
 				} else if (ch.getSelectedIndex() == 8) {
