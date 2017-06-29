@@ -40,7 +40,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	
 	}
-	public void DisplayForR(int a, int b, int c, double x){	
+	public void DisplayForR(int a, int b, int c){	
 		
 		double d = b * b - 4 * a * c;
 		double phase_1 = -b + Math.sqrt(d);
@@ -98,7 +98,7 @@ public class MappingSolutions {
 	
 	}
 	
-	public void DisplayForFra3(int a, int b, int c, double x){
+	public void DisplayForFra3(int a, int b, int c){
 		
 		double phase_1 = c * -1;
 		double phase_2 = phase_1 * b;
@@ -221,7 +221,7 @@ public class MappingSolutions {
 		
 		mainTxt.append("\n");		
 		
-		mainTxt.append("x = "+String.valueOf(b*b + a*-1)+";");
+		mainTxt.append("x = "+x+";");
 		
 		frame.add(mainTxt);
 		
@@ -238,8 +238,7 @@ public void DisplaysolvFra_5(int a, int b, int c, int d, double x){
 		int phase_3 = d * -1;
 		int phase_4 = phase_3 * phase_1;
 		int phase_5 = phase_2 + phase_4;
-		int phase_Fin = (phase_5 / c) * -1;	
-		
+				
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
 		
@@ -291,7 +290,7 @@ public void DisplaysolvFra_5(int a, int b, int c, int d, double x){
 		
 		mainTxt.append("\n");		
 		
-		mainTxt.append("x = "+String.valueOf(phase_Fin)+";");				
+		mainTxt.append("x = "+x+";");				
 		
 		frame.add(mainTxt);
 		
@@ -301,7 +300,7 @@ public void DisplaysolvFra_5(int a, int b, int c, int d, double x){
 		frame.setVisible(true);				
 	}
 
-public void DisplaysolvMod(int a, int b, int x){	
+public void DisplaysolvMod(int a, int b, int x,int x2){	
 	
 	JFrame frame = new JFrame();
 	JTextArea mainTxt = new JTextArea();
@@ -316,19 +315,23 @@ public void DisplaysolvMod(int a, int b, int x){
 	
 	mainTxt.append("\n");
 	
-	mainTxt.append("x + "+String.valueOf(a)+" = "+String.valueOf(b)+";");	
+	mainTxt.append("|x + "+String.valueOf(a)+"| = "+String.valueOf(b)+" ;");	
 	
 	mainTxt.append("\n");
 	
-	mainTxt.append("x + = "+String.valueOf(b)+String.valueOf(a*-1)+";");
+	mainTxt.append("x1 + = "+String.valueOf(b)+" "+String.valueOf(a*-1)+" ;");
 	
 	mainTxt.append("\n");
 	
-	mainTxt.append("x1 + = "+String.valueOf(b+(a*-1))+";");
+	mainTxt.append("x1 + = "+x+";");
 	
 	mainTxt.append("\n");
 	
-	mainTxt.append("x2 + = "+String.valueOf((b*-1)+(a*-1))+";");	
+	mainTxt.append("x2 + = "+String.valueOf(b*-1)+" "+String.valueOf(a*-1)+" ;");
+	
+	mainTxt.append("\n");
+	
+	mainTxt.append("x2 + = "+x2+";");	
 	
 	frame.add(mainTxt);
 	

@@ -104,7 +104,7 @@ public class Run {
 					double x = equations.solvR_X1(int_a, int_b, int_c);
 					double x2 = equations.solvR_X2(int_a, int_b, int_c);
 					
-					mappingSol.DisplayForR(int_a, int_b, int_c, x);
+					mappingSol.DisplayForR(int_a, int_b, int_c);
 
 					result.setText(String.valueOf(x)+";"+String.valueOf(x2));
 
@@ -124,7 +124,7 @@ public class Run {
 
 					double x = equations.solvFra3(int_a, int_b, int_c);
 					
-					mappingSol.DisplayForFra3(int_a, int_b, int_c, x);
+					mappingSol.DisplayForFra3(int_a, int_b, int_c);
 
 					result.setText(String.valueOf(x));
 
@@ -179,6 +179,9 @@ public class Run {
 
 					int x1 = equations.solvMod_X1(int_a, int_b);
 					int x2 = equations.solvMod_X2(int_a, int_b);
+					
+					mappingSol.DisplaysolvMod(int_a, int_b, x1,x2);
+					
 					result.setText(String.valueOf(x1) + " ; " + String.valueOf(x2));
 				} else if(ch.getSelectedIndex() == 15){
 					String x = equationsTri.solvCtg(int_a);
