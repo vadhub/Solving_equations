@@ -12,7 +12,9 @@ public class MappingSolutions {
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
 		
-		mainTxt.setBackground(Color.green);
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+		
+		mainTxt.setForeground(Color.WHITE);
 		
 		mainTxt.setFont(font);
 		
@@ -38,7 +40,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	
 	}
-	public void DisplayForR(int a, int b, int c, double x){
+	public void DisplayForR(int a, int b, int c, double x){	
 		
 		double d = b * b - 4 * a * c;
 		double phase_1 = -b + Math.sqrt(d);
@@ -47,8 +49,12 @@ public class MappingSolutions {
 		double phase_2X2 = phase_1X2/2*a;
 		
 		
-		JFrame frame = new JFrame();
-		JTextArea mainTxt = new JTextArea();		
+		JFrame frame = new JFrame();		
+		JTextArea mainTxt = new JTextArea();	
+		
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+		
+		mainTxt.setForeground(Color.WHITE);
 		
 		mainTxt.setFont(font);
 		
@@ -102,6 +108,10 @@ public class MappingSolutions {
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();	
 		
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+		
+		mainTxt.setForeground(Color.WHITE);
+		
 		mainTxt.setFont(font);
 		
 		mainTxt.append("solving: ");
@@ -152,6 +162,10 @@ public class MappingSolutions {
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
 		
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+		
+		mainTxt.setForeground(Color.WHITE);
+		
 		mainTxt.setFont(font);
 		
 		mainTxt.append("solving: ");
@@ -176,10 +190,14 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 	
-	public void DisplaysolvSqrt_2(int a, int b, int x){
+	public void DisplaysolvSqrt_2(int a, int b, int x){		
 		
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
+		
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+		
+		mainTxt.setForeground(Color.WHITE);
 		
 		mainTxt.setFont(font);
 		
@@ -224,6 +242,10 @@ public void DisplaysolvFra_5(int a, int b, int c, int d, double x){
 		
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
+		
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+		
+		mainTxt.setForeground(Color.WHITE);
 		
 		mainTxt.setFont(font);
 		
@@ -277,5 +299,42 @@ public void DisplaysolvFra_5(int a, int b, int c, int d, double x){
 		frame.setLocation(400, 455);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);				
+	}
+
+public void DisplaysolvMod(int a, int b, int x){	
+	
+	JFrame frame = new JFrame();
+	JTextArea mainTxt = new JTextArea();
+	
+	mainTxt.setBackground(Color.green.darker().darker().darker());
+	
+	mainTxt.setForeground(Color.WHITE);
+	
+	mainTxt.setFont(font);
+	
+	mainTxt.append("solving: ");
+	
+	mainTxt.append("\n");
+	
+	mainTxt.append("x + "+String.valueOf(a)+" = "+String.valueOf(b)+";");	
+	
+	mainTxt.append("\n");
+	
+	mainTxt.append("x + = "+String.valueOf(b)+String.valueOf(a*-1)+";");
+	
+	mainTxt.append("\n");
+	
+	mainTxt.append("x1 + = "+String.valueOf(b+(a*-1))+";");
+	
+	mainTxt.append("\n");
+	
+	mainTxt.append("x2 + = "+String.valueOf((b*-1)+(a*-1))+";");	
+	
+	frame.add(mainTxt);
+	
+	frame.setSize(200, 200);
+	frame.setLocation(400, 455);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setVisible(true);				
 	}
 }
