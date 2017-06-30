@@ -149,39 +149,48 @@ public class Run {
 					mappingSol.DisplaysolvFra_5(int_a, int_b, int_c, int_d, x);
 
 					result.setText(String.valueOf(x));
+					
 				} else if (ch.getSelectedIndex() == 8) {
+					
 					String x = equationsTri.solvSin(int_a);
+					
+					mappingSol.DisplaySolvSin(int_a);
+					
 					result.setText(x);
 
 				} else if (ch.getSelectedIndex() == 9) {
 
 					String x = equationsTri.solvCos(int_a);
 					result.setText(x);
+					
 				} else if (ch.getSelectedIndex() == 10) {
 
 					String x = equationsTri.solvTg(int_a);
 					result.setText(x);
+					
 				} else if (ch.getSelectedIndex() == 11) {
 
 					int x = equations.solvSqrt_2(int_a, int_b);
 					
-					mappingSol.DisplaysolvSqrt_2(int_a, int_b, x);
-					
+					mappingSol.DisplaysolvSqrt_2(int_a, int_b, x);					
 					result.setText(String.valueOf(x));
+					
 				} else if (ch.getSelectedIndex() == 12) {
 
 					int x = equations.solvSqrt_3(int_a, int_b);
 					result.setText(String.valueOf(x));
+					
 				} else if (ch.getSelectedIndex() == 13) {
 
 					int x = equations.solvSqrt_4(int_a, int_b);
 					result.setText(String.valueOf(x));
+					
 				} else if (ch.getSelectedIndex() == 14) {
 
 					int x1 = equations.solvMod_X1(int_a, int_b);
 					int x2 = equations.solvMod_X2(int_a, int_b);
 					
-					mappingSol.DisplaysolvMod(int_a, int_b, x1,x2);
+					mappingSol.DisplaySolvMod(int_a, int_b, x1,x2);
 					
 					result.setText(String.valueOf(x1) + " ; " + String.valueOf(x2));
 				} else if(ch.getSelectedIndex() == 15){
