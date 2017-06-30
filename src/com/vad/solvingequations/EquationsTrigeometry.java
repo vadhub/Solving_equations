@@ -83,54 +83,93 @@ public class EquationsTrigeometry {
 		if (x == 0) {
 			return "x = pi*n, n=Z";
 		} else if (x == 1 / (Math.sqrt(3))) {
-			
+
 			return "x = " + angls[0] + "pi*n, n=Z";
 		} else if (x == 1) {
-			
+
 			return "x = " + angls[1] + "pi*n, n=Z";
 		} else if (x == Math.sqrt(3)) {
-			
+
 			return "x = " + angls[2] + "pi*n, n=Z";
 		} else if (x == -(Math.sqrt(3))) {
-			
+
 			return "x = " + neg_angls[2] + "pi*n, n=Z";
 		} else if (x == -(1 / (Math.sqrt(3)))) {
-			
+
 			return "x = " + neg_angls[0] + "pi*n, n=Z";
 		} else if (x == -1) {
-			
+
 			return "x = " + neg_angls[5] + "pi*n, n=Z";
-		}else if (x > COUNT||x < COUNT) {
-			
+		} else if (x > COUNT || x < COUNT) {
+
 			return "does not exist";
 		}
 		return "ERROR";
 	}
-	
+
 	public String solvCtg(int x) {
-		
+
 		if (x == 1 / (Math.sqrt(3))) {
-			
+
 			return "x = " + angls[2] + "pi*n, n=Z";
 		} else if (x == 1) {
-			
+
 			return "x = " + angls[1] + "pi*n, n=Z";
 		} else if (x == Math.sqrt(3)) {
-			
+
 			return "x = " + angls[0] + "pi*n, n=Z";
 		} else if (x == -(Math.sqrt(3))) {
-			
+
 			return "x = " + neg_angls[4] + "pi*n, n=Z";
 		} else if (x == -(1 / (Math.sqrt(3)))) {
-			
+
 			return "x = " + neg_angls[6] + "pi*n, n=Z";
 		} else if (x == -1) {
-			
+
 			return "x = " + neg_angls[5] + "pi*n, n=Z";
-		}else if(x>COUNT||x<COUNT){
-			return"does not exist";
+		} else if (x > COUNT || x < COUNT) {
+			return "does not exist";
 		}
 		return "ERROR";
+	}
+
+	// a*sin+b = 0
+	public String solvSin_2(int a, int b) {
+
+		int x = b * -1 / a;
+
+		if (x == 1 / 2) {
+			return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
+
+		} else if (x == Math.sqrt(2) / 2) {
+
+			return "x = (-1)^k * " + angls[1] + "+ pi*k, k=Z";
+
+		} else if (x == Math.sqrt(3) / 2) {
+
+			return "x = (-1)^k *" + angls[2] + "+ pi*k, k=Z";
+		} else if (x == 1) {
+
+			return "x = " + angls[3] + "+ pi*k, k=Z";
+		} else if (x == 0) {
+
+			return "x = pi*k, k=Z";
+		} else if (x == -1 / 2) {
+
+			return "x = (-1)^k * -(" + neg_angls[1] + ")+ pi*k, k=Z";
+		} else if (x == -(Math.sqrt(2) / 2)) {
+
+			return "x = (-1)^k * -(" + neg_angls[2] + ")+ pi*k, k=Z";
+		} else if (x == -(Math.sqrt(3) / 2)) {
+
+			return "x = (-1)^k * -(" + neg_angls[3] + ")+ pi*k, k=Z";
+		} else if (x == -1) {
+			return "x = -pi/2 + pi*k, k=Z";
+		} else if (x > COUNT || x < (COUNT * -1)) {
+			return "x = (-1)^k * arcsin(" + x + ")+pi*k, k=Z";
+		}
+		return "ERROR";		
+
 	}
 
 }

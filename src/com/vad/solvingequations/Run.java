@@ -46,6 +46,7 @@ public class Run {
 		ch.add("sqrt(a+x)^4=b");
 		ch.add("|a+x| = b");
 		ch.add("ñtgX = a");
+		ch.add("a*sinX + b = 0");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -186,7 +187,13 @@ public class Run {
 				} else if(ch.getSelectedIndex() == 15){
 					String x = equationsTri.solvCtg(int_a);
 					result.setText(x);
+				}	else if(ch.getSelectedIndex() == 16){
+					
+					String x = equationsTri.solvSin_2(int_a, int_b);
+					
+					result.setText(x);
 				}
+				
 			}
 		});
 
