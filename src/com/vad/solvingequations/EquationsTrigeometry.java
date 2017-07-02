@@ -171,5 +171,43 @@ public class EquationsTrigeometry {
 		return "ERROR";		
 
 	}
+	
+	// a*cos+b = 0
+		public String solvCos_2(int a, int b) {
+
+			int x = b * -1 / a;
+
+			if (x == 1 / 2) {
+				return "x = +-" + angls[2] + " +  2pi*n, n=Z";
+
+			} else if (x == Math.sqrt(2) / 2) {
+
+				return "x = +-" + angls[1] + " +  2pi*n, n=Z";
+
+			} else if (x == Math.sqrt(3) / 2) {
+
+				return "x = +-" + angls[0] + " +  2pi*n, n=Z";
+			} else if (x == 1) {
+
+				return "x = 2pi*n, n=z";
+			} else if (x == 0) {
+
+				return "x =" + angls[3] + " + pi*n, n=Z";
+			} else if (x == -1 / 2) {
+
+				return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
+			} else if (x == -(Math.sqrt(2) / 2)) {
+
+				return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
+			} else if (x == -(Math.sqrt(3) / 2)) {
+
+				return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
+			} else if (x == -1) {
+
+				return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
+			}
+			return "ERROR";
+
+		}
 
 }
