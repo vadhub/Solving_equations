@@ -161,6 +161,9 @@ public class Run {
 				} else if (ch.getSelectedIndex() == 9) {
 
 					String x = equationsTri.solvCos(int_a);
+					
+					mappingSol.DisplaySolvCos(int_a);
+					
 					result.setText(x);
 					
 				} else if (ch.getSelectedIndex() == 10) {
