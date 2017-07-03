@@ -448,4 +448,37 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
+	
+	public void DisplaySolvTg(int a) {
+
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
+
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+
+		mainTxt.setForeground(Color.WHITE);
+
+		mainTxt.setFont(font);
+
+		mainTxt.append("solving: ");
+
+		mainTxt.append("\n");
+		
+		mainTxt.append("Tg x = "+String.valueOf(a)+";");	
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("x = arctg("+String.valueOf(a)+") + pi*k, k=Z;");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append(equationsTrigeometry.solvTg(a)+";");
+
+		frame.add(mainTxt);
+
+		frame.setSize(300, 300);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
 }
