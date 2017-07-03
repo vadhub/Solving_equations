@@ -136,7 +136,7 @@ public class EquationsTrigeometry {
 	// a*sin+b = 0
 	public String solvSin_2(int a, int b) {
 
-		int x = b * -1 / a;
+		int x = (b * -1) / a;
 
 		if (x == 1 / 2) {
 			return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
@@ -175,7 +175,7 @@ public class EquationsTrigeometry {
 	// a*cos+b = 0
 		public String solvCos_2(int a, int b) {
 
-			int x = b * -1 / a;
+			int x = (b * -1) / a;
 
 			if (x == 1 / 2) {
 				return "x = +-" + angls[2] + " +  2pi*n, n=Z";
@@ -213,7 +213,7 @@ public class EquationsTrigeometry {
 		// a*tg+b = 0		
 		public String solvTg_2(int a, int b) {
 			
-			int x = b * -1 / a;
+			int x = (b * -1) / a;
 			if (x == 0) {
 				return "x = pi*n, n=Z";
 			} else if (x == 1 / (Math.sqrt(3))) {
