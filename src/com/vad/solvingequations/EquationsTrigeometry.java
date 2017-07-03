@@ -208,6 +208,38 @@ public class EquationsTrigeometry {
 			}
 			return "ERROR";
 
+		}		
+		
+		// a*tg+b = 0		
+		public String solvTg_2(int a, int b) {
+			
+			int x = b * -1 / a;
+			if (x == 0) {
+				return "x = pi*n, n=Z";
+			} else if (x == 1 / (Math.sqrt(3))) {
+
+				return "x = " + angls[0] + "pi*n, n=Z";
+			} else if (x == 1) {
+
+				return "x = " + angls[1] + "pi*n, n=Z";
+			} else if (x == Math.sqrt(3)) {
+
+				return "x = " + angls[2] + "pi*n, n=Z";
+			} else if (x == -(Math.sqrt(3))) {
+
+				return "x = " + neg_angls[2] + "pi*n, n=Z";
+			} else if (x == -(1 / (Math.sqrt(3)))) {
+
+				return "x = " + neg_angls[0] + "pi*n, n=Z";
+			} else if (x == -1) {
+
+				return "x = " + neg_angls[5] + "pi*n, n=Z";
+			} else if (x > COUNT || x < COUNT) {
+
+				return "does not exist";
+			}
+			return "ERROR";
 		}
+
 
 }
