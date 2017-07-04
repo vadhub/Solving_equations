@@ -171,6 +171,9 @@ public class Run {
 				} else if (ch.getSelectedIndex() == 10) {
 
 					String x = equationsTri.solvTg(int_a);
+					
+					mappingSol.DisplaySolvTg(int_a);
+					
 					result.setText(x);
 					
 				} else if (ch.getSelectedIndex() == 11) {
@@ -199,8 +202,13 @@ public class Run {
 					
 					result.setText(String.valueOf(x1) + " ; " + String.valueOf(x2));
 				} else if(ch.getSelectedIndex() == 15){
+					
 					String x = equationsTri.solvCtg(int_a);
+					
+					mappingSol.DisplaySolvCtg(int_a);
+					
 					result.setText(x);
+					
 				} else if(ch.getSelectedIndex() == 16){
 					
 					String x = equationsTri.solvSin_2(int_a, int_b);
