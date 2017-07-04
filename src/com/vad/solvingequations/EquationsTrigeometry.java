@@ -168,78 +168,105 @@ public class EquationsTrigeometry {
 		} else if (x > COUNT || x < (COUNT * -1)) {
 			return "x = (-1)^k * arcsin(" + x + ")+pi*k, k=Z";
 		}
-		return "ERROR";		
+		return "ERROR";
 
 	}
-	
+
 	// a*cos+b = 0
-		public String solvCos_2(int a, int b) {
+	public String solvCos_2(int a, int b) {
 
-			int x = (b * -1) / a;
+		int x = (b * -1) / a;
 
-			if (x == 1 / 2) {
-				return "x = +-" + angls[2] + " +  2pi*n, n=Z";
+		if (x == 1 / 2) {
+			return "x = +-" + angls[2] + " +  2pi*n, n=Z";
 
-			} else if (x == Math.sqrt(2) / 2) {
+		} else if (x == Math.sqrt(2) / 2) {
 
-				return "x = +-" + angls[1] + " +  2pi*n, n=Z";
+			return "x = +-" + angls[1] + " +  2pi*n, n=Z";
 
-			} else if (x == Math.sqrt(3) / 2) {
+		} else if (x == Math.sqrt(3) / 2) {
 
-				return "x = +-" + angls[0] + " +  2pi*n, n=Z";
-			} else if (x == 1) {
+			return "x = +-" + angls[0] + " +  2pi*n, n=Z";
+		} else if (x == 1) {
 
-				return "x = 2pi*n, n=z";
-			} else if (x == 0) {
+			return "x = 2pi*n, n=z";
+		} else if (x == 0) {
 
-				return "x =" + angls[3] + " + pi*n, n=Z";
-			} else if (x == -1 / 2) {
+			return "x =" + angls[3] + " + pi*n, n=Z";
+		} else if (x == -1 / 2) {
 
-				return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
-			} else if (x == -(Math.sqrt(2) / 2)) {
+			return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
+		} else if (x == -(Math.sqrt(2) / 2)) {
 
-				return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
-			} else if (x == -(Math.sqrt(3) / 2)) {
+			return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
+		} else if (x == -(Math.sqrt(3) / 2)) {
 
-				return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
-			} else if (x == -1) {
+			return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
+		} else if (x == -1) {
 
-				return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
-			}
-			return "ERROR";
-
-		}		
-		
-		// a*tg+b = 0		
-		public String solvTg_2(int a, int b) {
-			
-			int x = (b * -1) / a;
-			if (x == 0) {
-				return "x = pi*n, n=Z";
-			} else if (x == 1 / (Math.sqrt(3))) {
-
-				return "x = " + angls[0] + "pi*n, n=Z";
-			} else if (x == 1) {
-
-				return "x = " + angls[1] + "pi*n, n=Z";
-			} else if (x == Math.sqrt(3)) {
-
-				return "x = " + angls[2] + "pi*n, n=Z";
-			} else if (x == -(Math.sqrt(3))) {
-
-				return "x = " + neg_angls[2] + "pi*n, n=Z";
-			} else if (x == -(1 / (Math.sqrt(3)))) {
-
-				return "x = " + neg_angls[0] + "pi*n, n=Z";
-			} else if (x == -1) {
-
-				return "x = " + neg_angls[5] + "pi*n, n=Z";
-			} else if (x > COUNT || x < COUNT) {
-
-				return "does not exist";
-			}
-			return "ERROR";
+			return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
 		}
+		return "ERROR";
 
+	}
+
+	// a*tg+b = 0
+	public String solvTg_2(int a, int b) {
+
+		int x = (b * -1) / a;
+		if (x == 0) {
+			return "x = pi*n, n=Z";
+		} else if (x == 1 / (Math.sqrt(3))) {
+
+			return "x = " + angls[0] + "pi*n, n=Z";
+		} else if (x == 1) {
+
+			return "x = " + angls[1] + "pi*n, n=Z";
+		} else if (x == Math.sqrt(3)) {
+
+			return "x = " + angls[2] + "pi*n, n=Z";
+		} else if (x == -(Math.sqrt(3))) {
+
+			return "x = " + neg_angls[2] + "pi*n, n=Z";
+		} else if (x == -(1 / (Math.sqrt(3)))) {
+
+			return "x = " + neg_angls[0] + "pi*n, n=Z";
+		} else if (x == -1) {
+
+			return "x = " + neg_angls[5] + "pi*n, n=Z";
+		} else if (x > COUNT || x < COUNT) {
+
+			return "does not exist";
+		}
+		return "ERROR";
+	}
+
+	// a*ctg+b = 0
+	public String solvCtg_2(int a, int b) {
+		int x = (b * -1) / a;
+
+		if (x == 1 / (Math.sqrt(3))) {
+
+			return "x = " + angls[2] + "pi*n, n=Z";
+		} else if (x == 1) {
+
+			return "x = " + angls[1] + "pi*n, n=Z";
+		} else if (x == Math.sqrt(3)) {
+
+			return "x = " + angls[0] + "pi*n, n=Z";
+		} else if (x == -(Math.sqrt(3))) {
+
+			return "x = " + neg_angls[4] + "pi*n, n=Z";
+		} else if (x == -(1 / (Math.sqrt(3)))) {
+
+			return "x = " + neg_angls[6] + "pi*n, n=Z";
+		} else if (x == -1) {
+
+			return "x = " + neg_angls[5] + "pi*n, n=Z";
+		} else if (x > COUNT || x < COUNT) {
+			return "does not exist";
+		}
+		return "ERROR";
+	}
 
 }
