@@ -514,4 +514,75 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
+	
+	public void DisplayForSolvSystemEnq(int a, int b, int x, int y) {
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
+
+		/*
+		 * x+y = a;
+		 * x+b=y
+		 */		
+		
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+
+		mainTxt.setForeground(Color.WHITE);
+
+		mainTxt.setFont(font);
+
+		mainTxt.append("solving: ");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("x + y = "+a+";");
+		mainTxt.append("x "+b+"= y;");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("y = "+a+" - x;");
+		mainTxt.append("x "+b+" = "+a+" - x;");
+
+		mainTxt.append("\n");	
+		
+		mainTxt.append("y = "+a+" - x;");
+		mainTxt.append("x "+b+" + "+a+" + x = 0;");
+		
+		mainTxt.append("\n");	
+		
+		mainTxt.append("y = "+a+" - x;");
+		mainTxt.append("x + x + "+b+" + "+a+" = 0;");
+		
+		mainTxt.append("\n");	
+		
+		mainTxt.append("y = "+a+" - x;");
+		mainTxt.append("2*x + "+b+" + "+a+" = 0;");
+
+		mainTxt.append("\n");	
+		
+		mainTxt.append("y = "+a+" - x;");
+		mainTxt.append("2*x = "+b+" + "+a+";");	
+		
+		mainTxt.append("\n");	
+		
+		mainTxt.append("y = "+a+" - x;");
+		mainTxt.append("x = ("+b+" + "+a+") / 2;");
+		
+		mainTxt.append("\n");	
+		
+		mainTxt.append("y = "+a+-x+";");
+		mainTxt.append("x ="+ x +";");		
+		
+		mainTxt.append("\n");	
+		
+		mainTxt.append("y = "+y+";");
+		mainTxt.append("x ="+ x +";");		
+		frame.add(mainTxt);
+
+		frame.setSize(200, 200);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+
+	}
+
 }
