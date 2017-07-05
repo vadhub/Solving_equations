@@ -49,6 +49,7 @@ public class Run {
 		ch.add("a*sinX + b = 0");
 		ch.add("a*cosX + b = 0");
 		ch.add("a*tgX + b = 0");
+		ch.add("xyx");
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -224,6 +225,12 @@ public class Run {
 					String x = equationsTri.solvTg_2(int_a, int_b);
 					
 					result.setText(x);
+				} else if(ch.getSelectedIndex() == 19){
+					
+					int x = equations.solvSystemEnqX(int_a, int_b);
+					int y = equations.solvSystemEnqY(int_a, int_b);
+					
+					result.setText(String.valueOf(x)+";"+String.valueOf(y));
 				}
 				
 			}
