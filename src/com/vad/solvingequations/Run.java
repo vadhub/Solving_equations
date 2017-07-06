@@ -49,7 +49,8 @@ public class Run {
 		ch.add("a*sinX + b = 0");
 		ch.add("a*cosX + b = 0");
 		ch.add("a*tgX + b = 0");
-		ch.add("xyx");
+		ch.add("x+y = a; x+b=y;");
+				
 
 		JTextField a = new JTextField(4);
 		JTextField b = new JTextField(4);
@@ -213,6 +214,7 @@ public class Run {
 				} else if(ch.getSelectedIndex() == 16){
 					
 					String x = equationsTri.solvSin_2(int_a, int_b);
+					mappingSol.DisplaySolvSin_2(int_a, int_b);
 					
 					result.setText(x);
 				} else if(ch.getSelectedIndex() == 17){

@@ -584,5 +584,43 @@ public class MappingSolutions {
 		frame.setVisible(true);
 
 	}
+	
+	// a*sin+b = 0
+	public void DisplaySolvSin_2(int a, int b) {
+
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
+
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+
+		mainTxt.setForeground(Color.WHITE);
+
+		mainTxt.setFont(font);
+
+		mainTxt.append("solving: ");
+
+		mainTxt.append("\n");
+		
+		mainTxt.append(String.valueOf(a)+" * Sin x +"+String.valueOf(b)+" = 0;");	
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append(String.valueOf(a)+" * Sin x ="+String.valueOf(b*-1)+";");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("Sin x ="+String.valueOf(b*-1)+" / "+String.valueOf(a)+";");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append(equationsTrigeometry.solvSin_2(a, b));
+
+		frame.add(mainTxt);
+
+		frame.setSize(300, 300);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
 
 }
