@@ -220,6 +220,7 @@ public class Run {
 				} else if(ch.getSelectedIndex() == 17){
 					
 					String x = equationsTri.solvCos_2(int_a, int_b);
+					mappingSol.DisplaySolvCos_2(int_a, int_b);
 					
 					result.setText(x);
 				} else if(ch.getSelectedIndex() == 18){
