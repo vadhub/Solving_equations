@@ -75,6 +75,8 @@ public class EquationsTrigeometry {
 		} else if (x == -1) {
 
 			return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
+		} else if (x > COUNT || x < (COUNT * -1)) {
+			return "x = (-1)^k * arcsin(" + x + ")+pi*k, k=Z";
 		}
 		return "ERROR";
 	}
@@ -100,7 +102,7 @@ public class EquationsTrigeometry {
 		} else if (x == -1) {
 
 			return "x = " + neg_angls[5] + "pi*n, n=Z";
-		} else if (x > COUNT || x < COUNT) {
+		} else if (x > COUNT || x < -COUNT) {
 
 			return "does not exist";
 		}
@@ -127,7 +129,7 @@ public class EquationsTrigeometry {
 		} else if (x == -1) {
 
 			return "x = " + neg_angls[5] + "pi*n, n=Z";
-		} else if (x > COUNT || x < COUNT) {
+		} else if (x > COUNT || x < -COUNT) {
 			return "does not exist";
 		}
 		return "ERROR";
@@ -205,6 +207,8 @@ public class EquationsTrigeometry {
 		} else if (x == -1) {
 
 			return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
+		}else if (x > COUNT || x < (COUNT * -1)) {
+			return "x = (-1)^k * arcsin(" + x + ")+pi*k, k=Z";
 		}
 		return "ERROR";
 
@@ -234,7 +238,7 @@ public class EquationsTrigeometry {
 		} else if (x == -1) {
 
 			return "x = " + neg_angls[5] + "pi*n, n=Z";
-		} else if (x > COUNT || x < COUNT) {
+		} else if (x > COUNT || x < -COUNT) {
 
 			return "does not exist";
 		}
@@ -263,7 +267,7 @@ public class EquationsTrigeometry {
 		} else if (x == -1) {
 
 			return "x = " + neg_angls[5] + "pi*n, n=Z";
-		} else if (x > COUNT || x < COUNT) {
+		} else if (x > COUNT || x < -COUNT) {
 			return "does not exist";
 		}
 		return "ERROR";
