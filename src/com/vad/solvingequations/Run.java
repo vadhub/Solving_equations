@@ -86,20 +86,20 @@ public class Run {
 
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				int int_a;
-				int int_b;
-				int int_c;
-				int int_d;
-				int int_e;
+				double int_a;
+				double int_b;
+				double int_c;
+				double int_d;
+				double int_e;
 
-				int_a = Integer.parseInt(a.getText());
-				int_b = Integer.parseInt(b.getText());
-				int_c = Integer.parseInt(c.getText());
-				int_d = Integer.parseInt(d.getText());
-				int_e = Integer.parseInt(e.getText());
+				int_a = Double.parseDouble(a.getText());
+				int_b = Double.parseDouble(b.getText());
+				int_c = Double.parseDouble(c.getText());
+				int_d = Double.parseDouble(d.getText());
+				int_e = Double.parseDouble(e.getText());
 
 				if (ch.getSelectedIndex() == 0) {
-					int x = (int) equations.solvSum(int_a, int_b);
+					double x = equations.solvSum(int_a, int_b);
 					
 					mappingSol.DisplayForSum(int_a, int_b, x);	
 					
@@ -107,7 +107,7 @@ public class Run {
 				} else if (ch.getSelectedIndex() == 1) {
 					
 					double x = equations.solvR_X1(int_a, int_b, int_c);
-					double x2 = equations.solvR_X2(int_a, int_b, int_c);
+					double x2 = equations.solvR_X2( int_a, int_b, int_c);
 					
 					mappingSol.DisplayForR(int_a, int_b, int_c);
 
@@ -115,7 +115,7 @@ public class Run {
 
 				} else if (ch.getSelectedIndex() == 2) {
 
-					int x = equations.solvFra(int_a, int_b);
+					double x = equations.solvFra( int_a, int_b);
 
 					result.setText(String.valueOf(x));
 
@@ -129,7 +129,7 @@ public class Run {
 
 					double x = equations.solvFra3(int_a, int_b, int_c);
 					
-					mappingSol.DisplayForFra3(int_a, int_b, int_c);
+					mappingSol.DisplayForFra3((int) int_a, int_b, int_c);
 
 					result.setText(String.valueOf(x));
 
@@ -137,20 +137,20 @@ public class Run {
 
 					double x = equations.solvMul(int_a, int_b);
 					
-					mappingSol.DisplaysolvMul(int_a, int_b, x);
+					mappingSol.DisplaysolvMul((int) int_a, int_b, x);
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 6) {
 
-					double x = equations.solvFra4(int_a, int_b, int_c, int_d, int_e);
+					double x = equations.solvFra4((int) int_a, int_b, int_c, int_d, int_e);
 
 					result.setText(String.valueOf(x));
 
 				} else if (ch.getSelectedIndex() == 7) {
 
-					double x = equations.solvFra5(int_a, int_b, int_c, int_d);
+					double x = equations.solvFra5((int) int_a, int_b, int_c, int_d);
 					
-					mappingSol.DisplaysolvFra_5(int_a, int_b, int_c, int_d, x);
+					mappingSol.DisplaysolvFra_5((int) int_a, int_b, int_c, int_d, x);
 
 					result.setText(String.valueOf(x));
 					
@@ -158,63 +158,63 @@ public class Run {
 					
 					String x = equationsTri.solvSin(int_a);
 					
-					mappingSol.DisplaySolvSin(int_a);
+					mappingSol.DisplaySolvSin((int) int_a);
 					
 					result.setText(x);
 
 				} else if (ch.getSelectedIndex() == 9) {
 
-					String x = equationsTri.solvCos(int_a);
+					String x = equationsTri.solvCos((int) int_a);
 					
-					mappingSol.DisplaySolvCos(int_a);
+					mappingSol.DisplaySolvCos((int) int_a);
 					
 					result.setText(x);
 					
 				} else if (ch.getSelectedIndex() == 10) {
 
-					String x = equationsTri.solvTg(int_a);
+					String x = equationsTri.solvTg((int) int_a);
 					
-					mappingSol.DisplaySolvTg(int_a);
+					mappingSol.DisplaySolvTg((int) int_a);
 					
 					result.setText(x);
 					
 				} else if (ch.getSelectedIndex() == 11) {
 
-					int x = equations.solvSqrt_2(int_a, int_b);
+					double x = equations.solvSqrt_2((int) int_a, int_b);
 					
-					mappingSol.DisplaysolvSqrt_2(int_a, int_b, x);					
+					mappingSol.DisplaysolvSqrt_2( int_a, int_b, x);					
 					result.setText(String.valueOf(x));
 					
 				} else if (ch.getSelectedIndex() == 12) {
 
-					int x = equations.solvSqrt_3(int_a, int_b);
+					double x = equations.solvSqrt_3( int_a, int_b);
 					result.setText(String.valueOf(x));
 					
 				} else if (ch.getSelectedIndex() == 13) {
 
-					int x = equations.solvSqrt_4(int_a, int_b);
+					double x = equations.solvSqrt_4( int_a, int_b);
 					result.setText(String.valueOf(x));
 					
 				} else if (ch.getSelectedIndex() == 14) {
 
-					int x1 = equations.solvMod_X1(int_a, int_b);
-					int x2 = equations.solvMod_X2(int_a, int_b);
+					double x1 = equations.solvMod_X1( int_a, int_b);
+					double x2 = equations.solvMod_X2( int_a, int_b);
 					
 					mappingSol.DisplaySolvMod(int_a, int_b, x1,x2);
 					
 					result.setText(String.valueOf(x1) + " ; " + String.valueOf(x2));
 				} else if(ch.getSelectedIndex() == 15){
 					
-					String x = equationsTri.solvCtg(int_a);
+					String x = equationsTri.solvCtg((int) int_a);
 					
-					mappingSol.DisplaySolvCtg(int_a);
+					mappingSol.DisplaySolvCtg((int) int_a);
 					
 					result.setText(x);
 					
 				} else if(ch.getSelectedIndex() == 16){
 					
 					String x = equationsTri.solvSin_2(int_a, int_b);
-					mappingSol.DisplaySolvSin_2(int_a, int_b);
+					mappingSol.DisplaySolvSin_2((int) int_a, int_b);
 					
 					result.setText(x);
 				} else if(ch.getSelectedIndex() == 17){
@@ -230,8 +230,8 @@ public class Run {
 					result.setText(x);
 				} else if(ch.getSelectedIndex() == 19){
 					
-					int x = equations.solvSystemEnqX(int_a, int_b);
-					int y = equations.solvSystemEnqY(int_a, int_b);
+					double x = equations.solvSystemEnqX(int_a, int_b);
+					double y = equations.solvSystemEnqY( int_a, int_b);
 					
 					result.setText(String.valueOf(x)+";"+String.valueOf(y));
 				}

@@ -3,8 +3,8 @@ package com.vad.solvingequations;
 public class Equations {
 	// a+x=b
 	// x+a=b
-	public int solvSum(int a, int b) {
-		int x = b - a;
+	public double solvSum(double a, double b) {
+		double x = b - a;
 		return x;
 	}
 
@@ -21,7 +21,7 @@ public class Equations {
 		return x1;
 	}
 
-	public double solvR_X2(int a, int b, int c) {
+	public double solvR_X2(double a, double b, double c) {
 		double d = b * b - 4 * a * c;
 		double phase_1 = -b - Math.sqrt(d);
 
@@ -31,8 +31,8 @@ public class Equations {
 	}
 
 	// x/b=a
-	public int solvFra(int a, int b) {
-		int x = b * a;
+	public double solvFra(double a, double b) {
+		double x = b * a;
 
 		return x;
 	}
@@ -62,7 +62,7 @@ public class Equations {
 	}
 
 	// ax^2+xb+c/d=e
-	public double solvFra4(int a, int b, int c, int d, int e) {
+	public double solvFra4(double a, double b, double c, double d, double e) {
 		double phase_1 = e * -1;
 		double phase_2 = phase_1 * d;
 		int phase_3 = (int) (c + phase_2);
@@ -84,51 +84,51 @@ public class Equations {
 	}
 
 	// x/a+b/c=d;
-	public int solvFra5(int a, int b, int c, int d) {
+	public double solvFra5(double a, double b, double c, double d) {
 
-		int phase_1 = a * c;
-		int phase_2 = b * a;
-		int phase_3 = d * -1;
-		int phase_4 = phase_3 * phase_1;
-		int phase_5 = phase_2 + phase_4;
-		int phase_Fin = (phase_5 / c) * -1;
+		double phase_1 = a * c;
+		double phase_2 = b * a;
+		double phase_3 = d * -1;
+		double phase_4 = phase_3 * phase_1;
+		double phase_5 = phase_2 + phase_4;
+		double phase_Fin = (phase_5 / c) * -1;
 		return phase_Fin;
 	}
 
 	// sqrt(a+x)=b
-	public int solvSqrt_2(int a, int b) {
-		int phase_1 = b * b;
-		int x = phase_1 - a;
+	public double solvSqrt_2(double a, double b) {
+		double phase_1 = b * b;
+		double x = phase_1 - a;
 		return x;
 	}
 
 	// sqrt(a+x)^3=b
-	public int solvSqrt_3(int a, int b) {
-		int phase_1 = b * b * b;
-		int x = phase_1 - a;
+	public double solvSqrt_3(double a, double b) {
+		double phase_1 = b * b * b;
+		double x = phase_1 - a;
 		return x;
 
 	}
 
 	// sqrt(a+x)^3=b
-	public int solvSqrt_4(int a, int b) {
-		int phase_1 = b * b * b * b;
-		int x = phase_1 - a;
+	public double solvSqrt_4(double a, double b) {
+		double phase_1 = b * b * b * b;
+		double x = phase_1 - a;
 		return x;
 	}
 
 	// |x+a|=b
-	public int solvMod_X1(int a, int b) {
-		int phase_1 = a * -1;
-		int x1 = b + phase_1;
+	public double solvMod_X1(double a, double b) {
+		double phase_1 = a * -1;
+		double x1 = b + phase_1;
 
 		return x1;
 	}
 
-	public int solvMod_X2(int a, int b) {
-		int phase_1 = a * -1;
-		int phase_2 = b * -1;
-		int x2 = phase_1 + phase_2;
+	public double solvMod_X2(double a, double b) {
+		double phase_1 = a * -1;
+		double phase_2 = b * -1;
+		double x2 = phase_1 + phase_2;
 
 		return x2;
 	}
@@ -137,8 +137,8 @@ public class Equations {
 	 * x+y = a;
 	 * x+b=y
 	 */
-	public int solvSystemEnqX(int a, int b) {
-		int y;
+	public double solvSystemEnqX(double a, double b) {
+		double y;
 
 		y = a + b;
 
@@ -148,7 +148,7 @@ public class Equations {
 
 	}
 
-	public int solvSystemEnqY(int a, int b) {
+	public double solvSystemEnqY(double a, double b) {
 		return (a + b) / 2;
 
 	}

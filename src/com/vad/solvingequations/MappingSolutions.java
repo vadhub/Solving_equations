@@ -10,7 +10,7 @@ public class MappingSolutions {
 	private Font font = new Font("SERIF", Font.BOLD, 20);
 	EquationsTrigeometry equationsTrigeometry = new EquationsTrigeometry();
 
-	public void DisplayForSum(int a, int b, int x) {
+	public void DisplayForSum(double int_a, double b, double x) {
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
 
@@ -24,12 +24,12 @@ public class MappingSolutions {
 
 		mainTxt.append("\n");
 
-		mainTxt.append(String.valueOf(a) + "+ x = " + String.valueOf(b) + ";");
+		mainTxt.append(String.valueOf(int_a) + "+ x = " + String.valueOf(b) + ";");
 
 		mainTxt.append("\n");
 
 		mainTxt.append("x = " + String.valueOf(b) + " "
-				+ String.valueOf(a * -1) + ";");
+				+ String.valueOf(int_a * -1) + ";");
 
 		mainTxt.append("\n");
 
@@ -44,7 +44,7 @@ public class MappingSolutions {
 
 	}
 
-	public void DisplayForR(int a, int b, int c) {
+	public void DisplayForR(double a, double b, double c) {
 
 		double d = b * b - 4 * a * c;
 		double phase_1 = -b + Math.sqrt(d);
@@ -107,7 +107,7 @@ public class MappingSolutions {
 
 	}
 
-	public void DisplayForFra3(int a, int b, int c) {
+	public void DisplayForFra3(double a, double b, double c) {
 
 		double phase_1 = c * -1;
 		double phase_2 = phase_1 * b;
@@ -169,7 +169,7 @@ public class MappingSolutions {
 
 	}
 
-	public void DisplaysolvMul(int a, int b, double x) {
+	public void DisplaysolvMul(double a, double b, double x) {
 
 		x = b / a;
 
@@ -205,7 +205,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 
-	public void DisplaysolvSqrt_2(int a, int b, int x) {
+	public void DisplaysolvSqrt_2(double a, double b, double x) {
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -250,13 +250,13 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 
-	public void DisplaysolvFra_5(int a, int b, int c, int d, double x) {
+	public void DisplaysolvFra_5(double a, double b, double c, double d, double x) {
 
-		int phase_1 = a * c;
-		int phase_2 = b * a;
-		int phase_3 = d * -1;
-		int phase_4 = phase_3 * phase_1;
-		int phase_5 = phase_2 + phase_4;
+		double phase_1 = a * c;
+		double phase_2 = b * a;
+		double phase_3 = d * -1;
+		double phase_4 = phase_3 * phase_1;
+		double phase_5 = phase_2 + phase_4;
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -339,7 +339,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 
-	public void DisplaySolvMod(int a, int b, int x, int x2) {
+	public void DisplaySolvMod(double a, double b, double x, double x2) {
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -383,7 +383,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 	
-	public void DisplaySolvSin(int a) {
+	public void DisplaySolvSin(double a) {
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -416,7 +416,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 	
-	public void DisplaySolvCos(int a) {
+	public void DisplaySolvCos(double a) {
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -449,7 +449,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 	
-	public void DisplaySolvTg(int a) {
+	public void DisplaySolvTg(double a) {
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -482,7 +482,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 	
-	public void DisplaySolvCtg(int a) {
+	public void DisplaySolvCtg(double a) {
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -515,7 +515,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 	
-	public void DisplayForSolvSystemEnq(int a, int b, int x, int y) {
+	public void DisplayForSolvSystemEnq(double a, double b, double x, double y) {
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
 
@@ -586,7 +586,7 @@ public class MappingSolutions {
 	}
 	
 	// a*sin+b = 0
-	public void DisplaySolvSin_2(int a, int b) {
+	public void DisplaySolvSin_2(double a, double b) {
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -623,7 +623,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 	
-	public void DisplaySolvCos_2(int a, int b) {
+	public void DisplaySolvCos_2(double a, double b) {
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
@@ -660,7 +660,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 	
-	public void DisplaySolvTg_2(int a, int b) {
+	public void DisplaySolvTg_2(double a, double b) {
 
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
