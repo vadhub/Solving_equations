@@ -659,5 +659,42 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
+	
+	public void DisplaySolvTg_2(int a, int b) {
+
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
+
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+
+		mainTxt.setForeground(Color.WHITE);
+
+		mainTxt.setFont(font);
+
+		mainTxt.append("solving: ");
+
+		mainTxt.append("\n");
+		
+		mainTxt.append(String.valueOf(a)+" * Tg x +"+String.valueOf(b)+" = 0;");	
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append(String.valueOf(a)+" * Tg x ="+String.valueOf(b*-1)+";");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("Tg x ="+String.valueOf(b*-1)+" / "+String.valueOf(a)+";");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append(equationsTrigeometry.solvTg_2(a, b));
+
+		frame.add(mainTxt);
+
+		frame.setSize(300, 300);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
 
 }
