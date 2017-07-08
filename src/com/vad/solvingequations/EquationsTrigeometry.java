@@ -272,5 +272,10 @@ public class EquationsTrigeometry {
 		}
 		return "ERROR";
 	}
+	//sin(x/a)=b
+	public String solvSin_3(double a, double b) {
+		double x =b;
+		return null;
+	}
 
 }
