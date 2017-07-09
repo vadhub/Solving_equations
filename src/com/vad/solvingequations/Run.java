@@ -50,6 +50,7 @@ public class Run {
 		ch.add("a*cosX + b = 0");
 		ch.add("a*tgX + b = 0");
 		ch.add("x+y = a; x+b=y;");
+		ch.add("sin(x/a) = b");
 				
 
 		JTextField a = new JTextField(4);
@@ -234,7 +235,13 @@ public class Run {
 					double y = equations.solvSystemEnqY( int_a, int_b);
 					
 					result.setText(String.valueOf(x)+";"+String.valueOf(y));
+				}	else if(ch.getSelectedIndex() == 20){
+					
+					String x = equationsTri.solvSin_3(int_a, int_b);			
+					
+					result.setText(x);
 				}
+				
 				
 			}
 		});
