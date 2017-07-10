@@ -679,11 +679,7 @@ public class MappingSolutions {
 		
 		mainTxt.append("\n");
 		
-		mainTxt.append(String.valueOf(a)+" * Tg x ="+String.valueOf(b*-1)+";");
-		
-		mainTxt.append("\n");
-		
-		mainTxt.append("Tg x ="+String.valueOf(b*-1)+" / "+String.valueOf(a)+";");
+		mainTxt.append(String.valueOf(a)+" * Tg x ="+String.valueOf(b*-1)+";");		
 		
 		mainTxt.append("\n");
 		
@@ -733,5 +729,39 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
+	
+	//sin(x/a)=b;	
+	public void DisplaySolvSin_3(double a, double b) {
+
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
+
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+
+		mainTxt.setForeground(Color.WHITE);
+
+		mainTxt.setFont(font);
+
+		mainTxt.append("solving: ");
+
+		mainTxt.append("\n");
+		
+		mainTxt.append("Sin (x /"+String.valueOf(a)+") ="+b+";");	
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("x /"+String.valueOf(a)+" ="+equationsTrigeometry.SpecialArcSin(b)+";");
+		
+		mainTxt.append("\n");
+		
+		mainTxt.append("x ="+equationsTrigeometry.solvSin_3(a, b)+";");	
+
+		frame.add(mainTxt);
+
+		frame.setSize(300, 300);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}	
 
 }

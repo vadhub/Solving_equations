@@ -10,6 +10,40 @@ public class EquationsTrigeometry {
 
 	private int COUNT = 1;
 
+	public String SpecialArcSin(double int_a) {
+
+		if (int_a == 1 / 2) {
+			return "(-1)^k * " + angls[0] + "+ pi*k, k=Z";
+
+		} else if (int_a == Math.sqrt(2) / 2) {
+
+			return "(-1)^k * " + angls[1] + "+ pi*k, k=Z";
+
+		} else if (int_a == Math.sqrt(3) / 2) {
+
+			return "(-1)^k *" + angls[2] + "+ pi*k, k=Z";
+		} else if (int_a == 1) {
+
+			return angls[3] + "+ pi*k, k=Z";
+		} else if (int_a == 0) {
+
+			return "pi*k, k=Z";
+		} else if (int_a == -1 / 2) {
+
+			return "(-1)^k * -(" + neg_angls[1] + ")+ pi*k, k=Z";
+		} else if (int_a == -(Math.sqrt(2) / 2)) {
+
+			return "(-1)^k * -(" + neg_angls[2] + ")+ pi*k, k=Z";
+		} else if (int_a == -(Math.sqrt(3) / 2)) {
+
+			return "(-1)^k * -(" + neg_angls[3] + ")+ pi*k, k=Z";
+		} else if (int_a == -1) {
+			return "-pi/2 + pi*k, k=Z";
+		} else {
+			return "(-1)^k * arcsin(" + String.valueOf(int_a)+ ")+pi*k, k=Z";
+		}
+	}
+
 	public String solvSin(double int_a) {
 
 		if (int_a == 1 / 2) {
@@ -40,9 +74,10 @@ public class EquationsTrigeometry {
 		} else if (int_a == -1) {
 			return "x = -pi/2 + pi*k, k=Z";
 		} else {
-			return "x = (-1)^k * arcsin(" +  String.valueOf(int_a) + ")+pi*k, k=Z";
-		}		
-		
+			return "x = (-1)^k * arcsin(" + String.valueOf(int_a)
+					+ ")+pi*k, k=Z";
+		}
+
 	}
 
 	public String solvCos(double x) {
@@ -168,7 +203,7 @@ public class EquationsTrigeometry {
 		} else if (x == -1) {
 			return "x = -pi/2 + pi*k, k=Z";
 		} else if (x > COUNT || x < (COUNT * -1)) {
-			return "x = (-1)^k * arcsin(" +  String.valueOf(x) + ")+pi*k, k=Z";
+			return "x = (-1)^k * arcsin(" + String.valueOf(x) + ")+pi*k, k=Z";
 		}
 		return "ERROR";
 
@@ -207,8 +242,8 @@ public class EquationsTrigeometry {
 		} else if (x == -1) {
 
 			return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
-		}else if (x > COUNT || x < (COUNT * -1)) {
-			return "x = (-1)^k * arcsin(" +  String.valueOf(x) + ")+pi*k, k=Z";
+		} else if (x > COUNT || x < (COUNT * -1)) {
+			return "x = (-1)^k * arcsin(" + String.valueOf(x) + ")+pi*k, k=Z";
 		}
 		return "ERROR";
 
@@ -272,38 +307,47 @@ public class EquationsTrigeometry {
 		}
 		return "ERROR";
 	}
-	//sin(x/a)=b
-	public String solvSin_3(double a, double b) {				
-		if (b == 1 / 2) {		
-			return "x = (-1)^k * "+ a+ " * " + angls[0] + "+"+a+"*pi*k, k=Z";
+
+	// sin(x/a)=b
+	public String solvSin_3(double a, double b) {
+		if (b == 1 / 2) {
+			return "x = (-1)^k * " + a + " * " + angls[0] + "+" + a
+					+ "*pi*k, k=Z";
 
 		} else if (b == Math.sqrt(2) / 2) {
 
-			return "x = (-1)^k * "+ a+ " * " + angls[1]+ "+"+a+"*pi*k, k=Z";
+			return "x = (-1)^k * " + a + " * " + angls[1] + "+" + a
+					+ "*pi*k, k=Z";
 
 		} else if (b == Math.sqrt(3) / 2) {
 
-			return "x = (-1)^k *" + a+ " * " + angls[2] + "+"+a+"*pi*k, k=Z";
+			return "x = (-1)^k *" + a + " * " + angls[2] + "+" + a
+					+ "*pi*k, k=Z";
 		} else if (b == 1) {
 
-			return "x = " + a+ " * " + angls[3] + "+"+a+"* pi*k, k=Z";
+			return "x = " + a + " * " + angls[3] + "+" + a + "* pi*k, k=Z";
 		} else if (b == 0) {
 
-			return "x ="+a+" * pi*k, k=Z";
+			return "x =" + a + " * pi*k, k=Z";
 		} else if (b == -1 / 2) {
 
-			return "x = (-1)^k * -("+String.valueOf(a*-1)+ " * " + neg_angls[1] + ")+"+a+" * pi*k, k=Z";
+			return "x = (-1)^k * -(" + String.valueOf(a * -1) + " * "
+					+ neg_angls[1] + ")+" + a + " * pi*k, k=Z";
 		} else if (b == -(Math.sqrt(2) / 2)) {
 
-			return "x = (-1)^k * -(" +String.valueOf(a*-1)+ " * " + neg_angls[2]+ ")+"+a+" * pi*k, k=Z";
+			return "x = (-1)^k * -(" + String.valueOf(a * -1) + " * "
+					+ neg_angls[2] + ")+" + a + " * pi*k, k=Z";
 		} else if (b == -(Math.sqrt(3) / 2)) {
 
-			return "x = (-1)^k * -(" + a+ " * " + neg_angls[3] +  ")+"+a+" * pi*k, k=Z";
+			return "x = (-1)^k * -(" + a + " * " + neg_angls[3] + ")+" + a
+					+ " * pi*k, k=Z";
 		} else if (b == -1) {
-			return "x ="+String.valueOf(a*-1)+"pi/2 +"+a+" * pi*k, k=Z";
+			return "x =" + String.valueOf(a * -1) + "pi/2 +" + a
+					+ " * pi*k, k=Z";
 		} else {
-			return "x = (-1)^k * arcsin("+String.valueOf(b*a) + ")"+a+" * pi*k, k=Z";
-		}	
+			return "x = (-1)^k * arcsin(" + String.valueOf(b * a) + ")" + a
+					+ " * pi*k, k=Z";
+		}
 	}
 
 }
