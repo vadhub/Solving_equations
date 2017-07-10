@@ -227,6 +227,7 @@ public class Run {
 				} else if(ch.getSelectedIndex() == 18){
 					
 					String x = equationsTri.solvTg_2(int_a, int_b);
+					mappingSol.DisplaySolvTg_2(int_a, int_b);					
 					
 					result.setText(x);
 				} else if(ch.getSelectedIndex() == 19){
