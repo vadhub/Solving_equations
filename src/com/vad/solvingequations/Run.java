@@ -238,7 +238,8 @@ public class Run {
 					result.setText(String.valueOf(x)+";"+String.valueOf(y));
 				}	else if(ch.getSelectedIndex() == 20){
 					
-					String x = equationsTri.solvSin_3(int_a, int_b);			
+					String x = equationsTri.solvSin_3(int_a, int_b);
+					mappingSol.DisplaySolvSin_3(int_a, int_b);
 					
 					result.setText(x);
 				}
