@@ -10,6 +10,7 @@ public class EquationsTrigeometry {
 
 	private int COUNT = 1;
 
+////////////////////sin special for display	
 	public String SpecialArcSin(double int_a) {
 
 		if (int_a == 1 / 2) {
@@ -42,6 +43,42 @@ public class EquationsTrigeometry {
 		} else {
 			return "(-1)^k * arcsin(" + String.valueOf(int_a)+ ")+pi*k, k=Z";
 		}
+	}
+	////////////////////cos special for display
+	public String SpecialArcCos(double x) {
+
+		if (x == 1 / 2) {
+			return "+-" + angls[2] + " +  2pi*n, n=Z";
+
+		} else if (x == Math.sqrt(2) / 2) {
+
+			return "+-" + angls[1] + " +  2pi*n, n=Z";
+
+		} else if (x == Math.sqrt(3) / 2) {
+
+			return "+-" + angls[0] + " +  2pi*n, n=Z";
+		} else if (x == 1) {
+
+			return "2pi*n, n=z";
+		} else if (x == 0) {
+
+			return angls[3] + " + pi*n, n=Z";
+		} else if (x == -1 / 2) {
+
+			return "+-" + cos_neg_angls[2] + " + pi*n, n=Z";
+		} else if (x == -(Math.sqrt(2) / 2)) {
+
+			return "+-" + cos_neg_angls[1] + " +  pi*n, n=Z";
+		} else if (x == -(Math.sqrt(3) / 2)) {
+
+			return "+-" + cos_neg_angls[0] + " +  pi*n, n=Z";
+		} else if (x == -1) {
+
+			return cos_neg_angls[4] + " pi*n, n=Z";
+		} else if (x > COUNT || x < (COUNT * -1)) {
+			return "x = +- arccos(" + String.valueOf(x) + ")+2pi*k, k=Z";
+		}
+		return "ERROR";
 	}
 
 	public String solvSin(double int_a) {
