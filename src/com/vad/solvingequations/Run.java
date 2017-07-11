@@ -51,6 +51,7 @@ public class Run {
 		ch.add("a*tgX + b = 0");
 		ch.add("x+y = a; x+b=y;");
 		ch.add("sin(x/a) = b");
+		ch.add("cos(x/a) = b");
 				
 
 		JTextField a = new JTextField(4);
@@ -239,6 +240,12 @@ public class Run {
 				}	else if(ch.getSelectedIndex() == 20){
 					
 					String x = equationsTri.solvSin_3(int_a, int_b);
+					mappingSol.DisplaySolvSin_3(int_a, int_b);
+					
+					result.setText(x);
+				}	else if(ch.getSelectedIndex() == 21){
+					
+					String x = equationsTri.solvCos_3(int_a, int_b);
 					mappingSol.DisplaySolvSin_3(int_a, int_b);
 					
 					result.setText(x);
