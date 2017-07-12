@@ -413,5 +413,35 @@ public class EquationsTrigeometry {
 				return "x = +- arccos(" + String.valueOf(a*b) + ")"+String.valueOf(a*2)+"+pi*k, k=Z";
 			}			
 		}
+		
+		//tg(x/a)=b	
+		public String solvTg_3(double a, double b) {
+			
+			if (b == 0) {
+				return "x ="+a+" * pi*n, n=Z";
+			} else if (b == 1 / (Math.sqrt(3))) {
+
+				return "x = " +a+" * "+ angls[0] +a+" * "+"pi*n, n=Z";
+			} else if (b == 1) {
+
+				return "x = " +a+" * "+ angls[1] +a+" * "+ "pi*n, n=Z";
+			} else if (b == Math.sqrt(3)) {
+
+				return "x = " +a+" * "+ angls[2] +a+" * "+ "pi*n, n=Z";
+			} else if (b == -(Math.sqrt(3))) {
+
+				return "x = " +a+" * "+ neg_angls[2] +a+" * "+ "pi*n, n=Z";
+			} else if (b == -(1 / (Math.sqrt(3)))) {
+
+				return "x = " +a+" * "+ neg_angls[0] +a+" * "+ "pi*n, n=Z";
+			} else if (b == -1) {
+
+				return "x = " +a+" * "+ neg_angls[5] +a+" * "+ "pi*n, n=Z";
+			} else if (b > COUNT || b < -COUNT) {
+
+				return "does not exist";
+			}
+			return "ERROR";
+		}	
 
 }

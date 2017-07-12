@@ -780,7 +780,7 @@ public class MappingSolutions {
 
 			mainTxt.append("\n");
 			
-			mainTxt.append("Sin (x /"+String.valueOf(a)+") ="+b+";");	
+			mainTxt.append("Cos (x /"+String.valueOf(a)+") ="+b+";");	
 			
 			mainTxt.append("\n");
 			
@@ -788,7 +788,7 @@ public class MappingSolutions {
 			
 			mainTxt.append("\n");
 			
-			mainTxt.append("x ="+equationsTrigeometry.solvSin_3(a, b)+";");	
+			mainTxt.append("x ="+equationsTrigeometry.solvCos_3(a, b)+";");	
 
 			frame.add(mainTxt);
 
