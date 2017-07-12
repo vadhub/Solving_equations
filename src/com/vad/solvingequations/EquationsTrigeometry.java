@@ -80,6 +80,35 @@ public class EquationsTrigeometry {
 		}
 		return "ERROR";
 	}
+	
+	//////////////////////tg special for display 	
+	public String SpecialArcTg(double x) {
+		if (x == 0) {
+			return "x = pi*n, n=Z";
+		} else if (x == 1 / (Math.sqrt(3))) {
+
+			return "x = " + angls[0] + "pi*n, n=Z";
+		} else if (x == 1) {
+
+			return "x = " + angls[1] + "pi*n, n=Z";
+		} else if (x == Math.sqrt(3)) {
+
+			return "x = " + angls[2] + "pi*n, n=Z";
+		} else if (x == -(Math.sqrt(3))) {
+
+			return "x = " + neg_angls[2] + "pi*n, n=Z";
+		} else if (x == -(1 / (Math.sqrt(3)))) {
+
+			return "x = " + neg_angls[0] + "pi*n, n=Z";
+		} else if (x == -1) {
+
+			return "x = " + neg_angls[5] + "pi*n, n=Z";
+		} else if (x > COUNT || x < -COUNT) {
+
+			return "does not exist";
+		}
+		return "ERROR";
+	}
 
 	public String solvSin(double int_a) {
 
