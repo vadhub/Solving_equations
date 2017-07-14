@@ -22,4 +22,9 @@ public class AllSolvingEquations {
 
 		return b / (d * x);
 	}
+	
+	public double del(int x, double b, double a) {
+		
+		return  a * b*x;
+	}
 }
