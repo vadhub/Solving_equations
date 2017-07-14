@@ -21,7 +21,7 @@ public class TestRun {
 			arr[i] = scn.nextDouble();
 		}
 		
-		System.out.println(all.sum(x, res, arr));
+		System.out.println(all.mul(x, res, arr));
 
 	}
 
