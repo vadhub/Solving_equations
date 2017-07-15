@@ -110,6 +110,33 @@ public class EquationsTrigeometry {
 		}
 		return "ERROR";
 	}
+	
+	// ////////////////////ctg special for display
+		public String SpecialArcCtg(double x) {
+			if (x == 1 / (Math.sqrt(3))) {
+
+				return angls[2] + "pi*n, n=Z";
+			} else if (x == 1) {
+
+				return angls[1] + "pi*n, n=Z";
+			} else if (x == Math.sqrt(3)) {
+
+				return  angls[0] + "pi*n, n=Z";
+			} else if (x == -(Math.sqrt(3))) {
+
+				return neg_angls[4] + "pi*n, n=Z";
+			} else if (x == -(1 / (Math.sqrt(3)))) {
+
+				return neg_angls[6] + "pi*n, n=Z";
+			} else if (x == -1) {
+
+				return neg_angls[5] + "pi*n, n=Z";
+			} else if (x > COUNT || x < -COUNT) {
+				return "does not exist";
+			}
+			return "ERROR";
+		}
+
 
 	public String solvSin(double int_a) {
 
