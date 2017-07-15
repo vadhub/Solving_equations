@@ -24,7 +24,8 @@ public class MappingSolutions {
 
 		mainTxt.append("\n");
 
-		mainTxt.append(String.valueOf(int_a) + "+ x = " + String.valueOf(b) + ";");
+		mainTxt.append(String.valueOf(int_a) + "+ x = " + String.valueOf(b)
+				+ ";");
 
 		mainTxt.append("\n");
 
@@ -250,7 +251,8 @@ public class MappingSolutions {
 		frame.setVisible(true);
 	}
 
-	public void DisplaysolvFra_5(double a, double b, double c, double d, double x) {
+	public void DisplaysolvFra_5(double a, double b, double c, double d,
+			double x) {
 
 		double phase_1 = a * c;
 		double phase_2 = b * a;
@@ -382,7 +384,7 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
+
 	public void DisplaySolvSin(double a) {
 
 		JFrame frame = new JFrame();
@@ -397,16 +399,17 @@ public class MappingSolutions {
 		mainTxt.append("solving: ");
 
 		mainTxt.append("\n");
-		
-		mainTxt.append("Sin x = "+String.valueOf(a)+";");	
-		
+
+		mainTxt.append("Sin x = " + String.valueOf(a) + ";");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append("x = (-1)^k * arcsin("+String.valueOf(a)+") + pi*k, k=Z;");
-		
+
+		mainTxt.append("x = (-1)^k * arcsin(" + String.valueOf(a)
+				+ ") + pi*k, k=Z;");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append(equationsTrigeometry.solvSin(a)+";");
+
+		mainTxt.append(equationsTrigeometry.solvSin(a) + ";");
 
 		frame.add(mainTxt);
 
@@ -415,7 +418,7 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
+
 	public void DisplaySolvCos(double a) {
 
 		JFrame frame = new JFrame();
@@ -430,16 +433,16 @@ public class MappingSolutions {
 		mainTxt.append("solving: ");
 
 		mainTxt.append("\n");
-		
-		mainTxt.append("cos x = "+String.valueOf(a)+";");	
-		
+
+		mainTxt.append("cos x = " + String.valueOf(a) + ";");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append("x =+- arccos("+String.valueOf(a)+") + 2*pi*k, k=Z;");
-		
+
+		mainTxt.append("x =+- arccos(" + String.valueOf(a) + ") + 2*pi*k, k=Z;");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append(equationsTrigeometry.solvCos(a)+";");
+
+		mainTxt.append(equationsTrigeometry.solvCos(a) + ";");
 
 		frame.add(mainTxt);
 
@@ -448,7 +451,7 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
+
 	public void DisplaySolvTg(double a) {
 
 		JFrame frame = new JFrame();
@@ -463,16 +466,16 @@ public class MappingSolutions {
 		mainTxt.append("solving: ");
 
 		mainTxt.append("\n");
-		
-		mainTxt.append("Tg x = "+String.valueOf(a)+";");	
-		
+
+		mainTxt.append("Tg x = " + String.valueOf(a) + ";");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append("x = arctg("+String.valueOf(a)+") + pi*k, k=Z;");
-		
+
+		mainTxt.append("x = arctg(" + String.valueOf(a) + ") + pi*k, k=Z;");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append(equationsTrigeometry.solvTg(a)+";");
+
+		mainTxt.append(equationsTrigeometry.solvTg(a) + ";");
 
 		frame.add(mainTxt);
 
@@ -481,7 +484,7 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
+
 	public void DisplaySolvCtg(double a) {
 
 		JFrame frame = new JFrame();
@@ -496,16 +499,16 @@ public class MappingSolutions {
 		mainTxt.append("solving: ");
 
 		mainTxt.append("\n");
-		
-		mainTxt.append("ctg x = "+String.valueOf(a)+";");	
-		
+
+		mainTxt.append("ctg x = " + String.valueOf(a) + ";");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append("x = arcctg("+String.valueOf(a)+") + pi*k, k=Z;");
-		
+
+		mainTxt.append("x = arcctg(" + String.valueOf(a) + ") + pi*k, k=Z;");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append(equationsTrigeometry.solvCtg(a)+";");
+
+		mainTxt.append(equationsTrigeometry.solvCtg(a) + ";");
 
 		frame.add(mainTxt);
 
@@ -514,16 +517,15 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
+
 	public void DisplayForSolvSystemEnq(double a, double b, double x, double y) {
 		JFrame frame = new JFrame();
 		JTextArea mainTxt = new JTextArea();
 
 		/*
-		 * x+y = a;
-		 * x+b=y
-		 */		
-		
+		 * x+y = a; x+b=y
+		 */
+
 		mainTxt.setBackground(Color.green.darker().darker().darker());
 
 		mainTxt.setForeground(Color.WHITE);
@@ -534,48 +536,48 @@ public class MappingSolutions {
 
 		mainTxt.append("\n");
 
-		mainTxt.append("x + y = "+a+";");
-		mainTxt.append("x "+b+"= y;");
+		mainTxt.append("x + y = " + a + ";");
+		mainTxt.append("x " + b + "= y;");
 
 		mainTxt.append("\n");
 
-		mainTxt.append("y = "+a+" - x;");
-		mainTxt.append("x "+b+" = "+a+" - x;");
+		mainTxt.append("y = " + a + " - x;");
+		mainTxt.append("x " + b + " = " + a + " - x;");
 
-		mainTxt.append("\n");	
-		
-		mainTxt.append("y = "+a+" - x;");
-		mainTxt.append("x "+b+" + "+a+" + x = 0;");
-		
-		mainTxt.append("\n");	
-		
-		mainTxt.append("y = "+a+" - x;");
-		mainTxt.append("x + x + "+b+" + "+a+" = 0;");
-		
-		mainTxt.append("\n");	
-		
-		mainTxt.append("y = "+a+" - x;");
-		mainTxt.append("2*x + "+b+" + "+a+" = 0;");
+		mainTxt.append("\n");
 
-		mainTxt.append("\n");	
-		
-		mainTxt.append("y = "+a+" - x;");
-		mainTxt.append("2*x = "+b+" + "+a+";");	
-		
-		mainTxt.append("\n");	
-		
-		mainTxt.append("y = "+a+" - x;");
-		mainTxt.append("x = ("+b+" + "+a+") / 2;");
-		
-		mainTxt.append("\n");	
-		
-		mainTxt.append("y = "+a+-x+";");
-		mainTxt.append("x ="+ x +";");		
-		
-		mainTxt.append("\n");	
-		
-		mainTxt.append("y = "+y+";");
-		mainTxt.append("x ="+ x +";");		
+		mainTxt.append("y = " + a + " - x;");
+		mainTxt.append("x " + b + " + " + a + " + x = 0;");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("y = " + a + " - x;");
+		mainTxt.append("x + x + " + b + " + " + a + " = 0;");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("y = " + a + " - x;");
+		mainTxt.append("2*x + " + b + " + " + a + " = 0;");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("y = " + a + " - x;");
+		mainTxt.append("2*x = " + b + " + " + a + ";");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("y = " + a + " - x;");
+		mainTxt.append("x = (" + b + " + " + a + ") / 2;");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("y = " + a + -x + ";");
+		mainTxt.append("x =" + x + ";");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("y = " + y + ";");
+		mainTxt.append("x =" + x + ";");
 		frame.add(mainTxt);
 
 		frame.setSize(200, 200);
@@ -584,7 +586,7 @@ public class MappingSolutions {
 		frame.setVisible(true);
 
 	}
-	
+
 	// a*sin+b = 0
 	public void DisplaySolvSin_2(double a, double b) {
 
@@ -600,19 +602,22 @@ public class MappingSolutions {
 		mainTxt.append("solving: ");
 
 		mainTxt.append("\n");
-		
-		mainTxt.append(String.valueOf(a)+" * Sin x +"+String.valueOf(b)+" = 0;");	
-		
+
+		mainTxt.append(String.valueOf(a) + " * Sin x +" + String.valueOf(b)
+				+ " = 0;");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append(String.valueOf(a)+" * Sin x ="+String.valueOf(b*-1)+";");
-		
+
+		mainTxt.append(String.valueOf(a) + " * Sin x ="
+				+ String.valueOf(b * -1) + ";");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append("Sin x ="+String.valueOf(b*-1)+" / "+String.valueOf(a)+";");
-		
+
+		mainTxt.append("Sin x =" + String.valueOf(b * -1) + " / "
+				+ String.valueOf(a) + ";");
+
 		mainTxt.append("\n");
-		
+
 		mainTxt.append(equationsTrigeometry.solvSin_2(a, b));
 
 		frame.add(mainTxt);
@@ -622,7 +627,7 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
+
 	public void DisplaySolvCos_2(double a, double b) {
 
 		JFrame frame = new JFrame();
@@ -637,19 +642,22 @@ public class MappingSolutions {
 		mainTxt.append("solving: ");
 
 		mainTxt.append("\n");
-		
-		mainTxt.append(String.valueOf(a)+" * Cos x +"+String.valueOf(b)+" = 0;");	
-		
+
+		mainTxt.append(String.valueOf(a) + " * Cos x +" + String.valueOf(b)
+				+ " = 0;");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append(String.valueOf(a)+" * Cos x ="+String.valueOf(b*-1)+";");
-		
+
+		mainTxt.append(String.valueOf(a) + " * Cos x ="
+				+ String.valueOf(b * -1) + ";");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append("Cos x ="+String.valueOf(b*-1)+" / "+String.valueOf(a)+";");
-		
+
+		mainTxt.append("Cos x =" + String.valueOf(b * -1) + " / "
+				+ String.valueOf(a) + ";");
+
 		mainTxt.append("\n");
-		
+
 		mainTxt.append(equationsTrigeometry.solvCos_2(a, b));
 
 		frame.add(mainTxt);
@@ -659,7 +667,7 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
+
 	public void DisplaySolvTg_2(double a, double b) {
 
 		JFrame frame = new JFrame();
@@ -674,15 +682,17 @@ public class MappingSolutions {
 		mainTxt.append("solving: ");
 
 		mainTxt.append("\n");
-		
-		mainTxt.append(String.valueOf(a)+" * Tg x +"+String.valueOf(b)+" = 0;");	
-		
+
+		mainTxt.append(String.valueOf(a) + " * Tg x +" + String.valueOf(b)
+				+ " = 0;");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append(String.valueOf(a)+" * Tg x ="+String.valueOf(b*-1)+";");		
-		
+
+		mainTxt.append(String.valueOf(a) + " * Tg x =" + String.valueOf(b * -1)
+				+ ";");
+
 		mainTxt.append("\n");
-		
+
 		mainTxt.append(equationsTrigeometry.solvTg_2(a, b));
 
 		frame.add(mainTxt);
@@ -692,7 +702,7 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
+
 	public void DisplaySolvCtg_2(double a, double b) {
 
 		JFrame frame = new JFrame();
@@ -707,19 +717,22 @@ public class MappingSolutions {
 		mainTxt.append("solving: ");
 
 		mainTxt.append("\n");
-		
-		mainTxt.append(String.valueOf(a)+" * ctg x +"+String.valueOf(b)+" = 0;");	
-		
+
+		mainTxt.append(String.valueOf(a) + " * ctg x +" + String.valueOf(b)
+				+ " = 0;");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append(String.valueOf(a)+" * ctg x ="+String.valueOf(b*-1)+";");
-		
+
+		mainTxt.append(String.valueOf(a) + " * ctg x ="
+				+ String.valueOf(b * -1) + ";");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append("ctg x ="+String.valueOf(b*-1)+" / "+String.valueOf(a)+";");
-		
+
+		mainTxt.append("ctg x =" + String.valueOf(b * -1) + " / "
+				+ String.valueOf(a) + ";");
+
 		mainTxt.append("\n");
-		
+
 		mainTxt.append(equationsTrigeometry.solvCtg_2(a, b));
 
 		frame.add(mainTxt);
@@ -729,8 +742,8 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
-	//sin(x/a)=b;	
+
+	// sin(x/a)=b;
 	public void DisplaySolvSin_3(double a, double b) {
 
 		JFrame frame = new JFrame();
@@ -745,16 +758,17 @@ public class MappingSolutions {
 		mainTxt.append("solving: ");
 
 		mainTxt.append("\n");
-		
-		mainTxt.append("Sin (x /"+String.valueOf(a)+") ="+b+";");	
-		
+
+		mainTxt.append("Sin (x /" + String.valueOf(a) + ") =" + b + ";");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append("x /"+String.valueOf(a)+" ="+equationsTrigeometry.SpecialArcSin(b)+";");
-		
+
+		mainTxt.append("x /" + String.valueOf(a) + " ="
+				+ equationsTrigeometry.SpecialArcSin(b) + ";");
+
 		mainTxt.append("\n");
-		
-		mainTxt.append("x ="+equationsTrigeometry.solvSin_3(a, b)+";");	
+
+		mainTxt.append("x =" + equationsTrigeometry.solvSin_3(a, b) + ";");
 
 		frame.add(mainTxt);
 
@@ -763,39 +777,74 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
-	
-	//cos(x/a)=b;	
-		public void DisplaySolvCos_3(double a, double b) {
 
-			JFrame frame = new JFrame();
-			JTextArea mainTxt = new JTextArea();
+	// cos(x/a)=b;
+	public void DisplaySolvCos_3(double a, double b) {
 
-			mainTxt.setBackground(Color.green.darker().darker().darker());
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
 
-			mainTxt.setForeground(Color.WHITE);
+		mainTxt.setBackground(Color.green.darker().darker().darker());
 
-			mainTxt.setFont(font);
+		mainTxt.setForeground(Color.WHITE);
 
-			mainTxt.append("solving: ");
+		mainTxt.setFont(font);
 
-			mainTxt.append("\n");
-			
-			mainTxt.append("Cos (x /"+String.valueOf(a)+") ="+b+";");	
-			
-			mainTxt.append("\n");
-			
-			mainTxt.append("x /"+String.valueOf(a)+" ="+equationsTrigeometry.SpecialArcSin(b)+";");
-			
-			mainTxt.append("\n");
-			
-			mainTxt.append("x ="+equationsTrigeometry.solvCos_3(a, b)+";");	
+		mainTxt.append("solving: ");
 
-			frame.add(mainTxt);
+		mainTxt.append("\n");
 
-			frame.setSize(300, 300);
-			frame.setLocation(400, 455);
-			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			frame.setVisible(true);
-		}	
+		mainTxt.append("Cos (x /" + String.valueOf(a) + ") =" + b + ";");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("x /" + String.valueOf(a) + " ="
+				+ equationsTrigeometry.SpecialArcSin(b) + ";");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("x =" + equationsTrigeometry.solvCos_3(a, b) + ";");
+
+		frame.add(mainTxt);
+
+		frame.setSize(300, 300);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+
+	// tg(x/a)=b;
+	public void DisplaySolvTg_3(double a, double b) {
+
+		JFrame frame = new JFrame();
+		JTextArea mainTxt = new JTextArea();
+
+		mainTxt.setBackground(Color.green.darker().darker().darker());
+
+		mainTxt.setForeground(Color.WHITE);
+
+		mainTxt.setFont(font);
+
+		mainTxt.append("solving: ");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("Tg (x /" + String.valueOf(a) + ") =" + b + ";");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("x /" + String.valueOf(a) + " ="	+ equationsTrigeometry.SpecialArcTg(b) + ";");
+
+		mainTxt.append("\n");
+
+		mainTxt.append("x =" + equationsTrigeometry.solvTg_3(a, b) + ";");
+
+		frame.add(mainTxt);
+
+		frame.setSize(300, 300);
+		frame.setLocation(400, 455);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
 
 }
