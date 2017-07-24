@@ -31,4 +31,8 @@ public class AllSolvingEquations {
 			return  a * b;
 		}
 	}
+	
+	public void T1(){
+		
+	}
 }

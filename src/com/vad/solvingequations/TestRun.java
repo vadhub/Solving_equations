@@ -20,7 +20,7 @@ public class TestRun {
 			
 			arr[i] = scn.nextDouble();
 		}
-		
+						
 		System.out.println(all.mul(x, res, arr));
 
 	}

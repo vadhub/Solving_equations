@@ -846,5 +846,38 @@ public class MappingSolutions {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
+	// ctg(x/a)=b;
+		public void DisplaySolvCtg_3(double a, double b) {
+
+			JFrame frame = new JFrame();
+			JTextArea mainTxt = new JTextArea();
+
+			mainTxt.setBackground(Color.green.darker().darker().darker());
+
+			mainTxt.setForeground(Color.WHITE);
+
+			mainTxt.setFont(font);
+
+			mainTxt.append("solving: ");
+
+			mainTxt.append("\n");
+
+			mainTxt.append("Ctg (x /" + String.valueOf(a) + ") =" + b + ";");
+
+			mainTxt.append("\n");
+
+			mainTxt.append("x /" + String.valueOf(a) + " ="	+ equationsTrigeometry.SpecialArcCtg(b) + ";");
+
+			mainTxt.append("\n");
+
+			mainTxt.append("x =" + equationsTrigeometry.solvCtg_3(a, b) + ";");
+
+			frame.add(mainTxt);
+
+			frame.setSize(300, 300);
+			frame.setLocation(400, 455);
+			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setVisible(true);
+		}
 
 }
