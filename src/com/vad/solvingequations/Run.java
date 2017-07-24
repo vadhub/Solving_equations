@@ -53,6 +53,8 @@ public class Run {
 		ch.add("x+y = a; x+b=y;");
 		ch.add("sin(x/a) = b");
 		ch.add("cos(x/a) = b");
+		ch.add("tg(x/a) = b");
+		ch.add("ctg(x/a) = b");
 				
 
 		JTextField a = new JTextField(4);
@@ -247,10 +249,23 @@ public class Run {
 				}	else if(ch.getSelectedIndex() == 21){
 					
 					String x = equationsTri.solvCos_3(int_a, int_b);
-					mappingSol.DisplaySolvSin_3(int_a, int_b);
+					mappingSol.DisplaySolvCos_3(int_a, int_b);
+					
+					result.setText(x);
+				}else if(ch.getSelectedIndex() == 22){
+					
+					String x = equationsTri.solvTg_3(int_a, int_b);
+					mappingSol.DisplaySolvTg_3(int_a, int_b);
+					
+					result.setText(x);
+				}else if(ch.getSelectedIndex() == 23){
+					
+					String x = equationsTri.solvCtg_3(int_a, int_b);
+					mappingSol.DisplaySolvCtg_3(int_a, int_b);
 					
 					result.setText(x);
 				}
+				
 				
 				
 			}
