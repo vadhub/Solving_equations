@@ -32,7 +32,7 @@ public class Run {
 		Choice ch = new Choice();
 
 		ch.add("a+x=b");
-		ch.add("x^2a+bx+c=0");
+		ch.add("x^2*a+bx+c=0");
 		ch.add("x/b=a");
 		ch.add("b/x=a");
 		ch.add("a+x/b = c");
@@ -55,6 +55,7 @@ public class Run {
 		ch.add("cos(x/a) = b");
 		ch.add("tg(x/a) = b");
 		ch.add("ctg(x/a) = b");
+		ch.add("a*sin(x)^2+b*sin(x)+c=0");
 				
 
 		JTextField a = new JTextField(4);
@@ -262,6 +263,11 @@ public class Run {
 					
 					String x = equationsTri.solvCtg_3(int_a, int_b);
 					mappingSol.DisplaySolvCtg_3(int_a, int_b);
+					
+					result.setText(x);
+				}else if(ch.getSelectedIndex() == 24){
+					
+					String x = equationsTri.solvCos_X(int_a, int_b, int_c);
 					
 					result.setText(x);
 				}
