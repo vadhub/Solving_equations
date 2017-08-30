@@ -1,6 +1,9 @@
 package com.vad.solvingequations;
 
 public class EquationsTrigeometry {
+	
+	Equations ec = new Equations();
+	
 	String[] angls = { "pi/6", "pi/4", "pi/3", "pi/2", "pi" };
 
 	String[] neg_angls = { "7pi/6", "5pi/4", "4pi/3", "3pi/2", "11pi/6",
@@ -9,6 +12,8 @@ public class EquationsTrigeometry {
 	String[] cos_neg_angls = { "5pi/6", "3pi/4", "2pi/3" };
 
 	private int COUNT = 1;
+	
+	
 
 	// //////////////////sin special for display
 	public String SpecialArcSin(double int_a) {
@@ -544,5 +549,80 @@ public class EquationsTrigeometry {
 		}
 		return "ERROR";
 	}
+	//a*sin^2(x) + b*sin(x) - c = 0
+	public String solvCos_X(double a, double b, double c) {
+		
+		double x1 = ec.solvR_X1(a, b, c);
+		double x2 = ec.solvR_X2(a, b, c);
+		
+		if(x1<1){
+			if (x1 == 1 / 2) {
+				return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
+
+			} else if (x1 == Math.sqrt(2) / 2) {
+
+				return "x = (-1)^k * " + angls[1] + "+ pi*k, k=Z";
+
+			} else if (x1 == Math.sqrt(3) / 2) {
+
+				return "x = (-1)^k *" + angls[2] + "+ pi*k, k=Z";
+			} else if (x1 == 1) {
+
+				return "x = " + angls[3] + "+ pi*k, k=Z";
+			} else if (x1== 0) {
+
+				return "x = pi*k, k=Z";
+			} else if (x1 == -1 / 2) {
+
+				return "x = (-1)^k * -(" + neg_angls[1] + ")+ pi*k, k=Z";
+			} else if (x1 == -(Math.sqrt(2) / 2)) {
+
+				return "x = (-1)^k * -(" + neg_angls[2] + ")+ pi*k, k=Z";
+			} else if (x1 == -(Math.sqrt(3) / 2)) {
+
+				return "x = (-1)^k * -(" + neg_angls[3] + ")+ pi*k, k=Z";
+			} else if (x1 == -1) {
+				return "x = -pi/2 + pi*k, k=Z";
+			} else {
+				return "x = (-1)^k * arcsin(" + String.valueOf(x1)
+						+ ")+pi*k, k=Z";
+			}
+		}else if(x2<1){		
+		if (x2 == 1 / 2) {
+			return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
+
+		} else if (x2 == Math.sqrt(2) / 2) {
+
+			return "x = (-1)^k * " + angls[1] + "+ pi*k, k=Z";
+
+		} else if (x2 == Math.sqrt(3) / 2) {
+
+			return "x = (-1)^k *" + angls[2] + "+ pi*k, k=Z";
+		} else if (x2 == 1) {
+
+			return "x = " + angls[3] + "+ pi*k, k=Z";
+		} else if (x2== 0) {
+
+			return "x = pi*k, k=Z";
+		} else if (x2 == -1 / 2) {
+
+			return "x = (-1)^k * -(" + neg_angls[1] + ")+ pi*k, k=Z";
+		} else if (x2 == -(Math.sqrt(2) / 2)) {
+
+			return "x = (-1)^k * -(" + neg_angls[2] + ")+ pi*k, k=Z";
+		} else if (x2 == -(Math.sqrt(3) / 2)) {
+
+			return "x = (-1)^k * -(" + neg_angls[3] + ")+ pi*k, k=Z";
+		} else if (x2 == -1) {
+			return "x = -pi/2 + pi*k, k=Z";
+		} else {
+			return "x = (-1)^k * arcsin(" + String.valueOf(x2)
+					+ ")+pi*k, k=Z";
+		}
+	}
+								
+		return "ERROR";
+	}	
+	
 
 }

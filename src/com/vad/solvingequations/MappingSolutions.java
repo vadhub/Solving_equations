@@ -83,7 +83,7 @@ public class MappingSolutions {
 			mainTxt.append("\n");
 
 			mainTxt.append("x1 = " + String.valueOf(b * -1) + "+ sqrt("
-					+ String.valueOf(d) + ");");
+					+ String.valueOf(d) + ") / 2;");
 
 			mainTxt.append("\n");
 
@@ -92,7 +92,7 @@ public class MappingSolutions {
 			mainTxt.append("\n");
 
 			mainTxt.append("x2 = " + String.valueOf(b * -1) + "- sqrt("
-					+ String.valueOf(d) + ");");
+					+ String.valueOf(d) + ") / 2;");
 
 			mainTxt.append("\n");
 
