@@ -84,9 +84,9 @@ public class Run {
 
 		frame.add(panel1);
 		frame.setVisible(true);
-		frame.setSize(560, 100);
+		frame.setSize(629, 100);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setLocation(400, 400);
+		frame.setLocation(400, 430);
 
 		enter.addActionListener(new ActionListener() {
 
@@ -269,6 +269,7 @@ public class Run {
 					
 					String x = equationsTri.solvCos_X(int_a, int_b, int_c);
 					
+					mappingSol.DisplaySolvSin_X(int_a, int_b, int_c);
 					result.setText(x);
 				}			
 				
