@@ -879,5 +879,85 @@ public class MappingSolutions {
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.setVisible(true);
 		}
+		
+		// //a*sin^2(x) + b*sin(x) - c = 0
+				public void DisplaySolvSin_X(double a, double b, double c) {
+					
+					double d = b * b - 4 * a * c;
+					double phase_1 = -b + Math.sqrt(d);
+					double phase_1X2 = -b - Math.sqrt(d);
+					double phase_2 = phase_1 / 2 * a;
+					double phase_2X2 = phase_1X2 / 2 * a;
+
+					JFrame frame = new JFrame();
+					JTextArea mainTxt = new JTextArea();
+
+					mainTxt.setBackground(Color.green.darker().darker().darker());
+
+					mainTxt.setForeground(Color.WHITE);
+
+					mainTxt.setFont(font);
+
+					mainTxt.append("solving: ");
+
+					mainTxt.append("\n");
+
+					mainTxt.append(String.valueOf(a) +"* Sin (x)^2 +"+String.valueOf(b) +"* Sin (x) + "+String.valueOf(c)+" = 0;");
+
+					mainTxt.append("\n");
+
+					mainTxt.append("Sin(x) = y;");
+
+					mainTxt.append("\n");
+
+					mainTxt.append(String.valueOf(a) +"* Y^2 + "+String.valueOf(b) +"* Y + "+String.valueOf(c)+" = 0;");
+					
+					mainTxt.append("\n");
+					
+					mainTxt.append("D = " + String.valueOf(b * b) + " -4 *"
+							+ String.valueOf(a) + "*" + String.valueOf(c) + "="
+							+ String.valueOf(d) + ";");
+					
+					if (d < 0) {
+						mainTxt.append("\n");
+						mainTxt.append("D<0 not solving");
+					} else {
+
+						mainTxt.append("\n");
+
+						mainTxt.append("y1 = " + String.valueOf(b * -1) + "+ sqrt("
+								+ String.valueOf(d) + ") / 2;");
+
+						mainTxt.append("\n");
+
+						mainTxt.append("Sin (x1) = " + String.valueOf(phase_2) + ";");
+
+						mainTxt.append("\n");
+
+						mainTxt.append("y2 = " + String.valueOf(b * -1) + "- sqrt("
+								+ String.valueOf(d) + ") / 2;");
+
+						mainTxt.append("\n");
+
+						mainTxt.append("Sin (x2) =" + String.valueOf(phase_2X2) + ";");
+												
+						mainTxt.append("/n");
+						
+						mainTxt.append("Sin (x1) = "+ equationsTrigeometry.SpecialArcSin(phase_2));
+						
+						mainTxt.append("Sin (x2) = "+ equationsTrigeometry.SpecialArcSin(phase_2X2));
+						
+					}
+
+
+					frame.add(mainTxt);
+
+					frame.setSize(300, 300);
+					frame.setLocation(400, 455);
+					frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+					frame.setVisible(true);
+				}
+		
+		
 
 }

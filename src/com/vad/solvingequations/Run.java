@@ -270,9 +270,7 @@ public class Run {
 					String x = equationsTri.solvCos_X(int_a, int_b, int_c);
 					
 					result.setText(x);
-				}
-				
-				
+				}			
 				
 			}
 		});
