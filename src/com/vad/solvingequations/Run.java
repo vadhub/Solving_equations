@@ -12,9 +12,9 @@ public class Run {
 	public static void main(String[] args) {
 		Equations equations = new Equations();
 		EquationsTrigeometry equationsTri = new EquationsTrigeometry();
-		MappingSolutions mappingSol = new MappingSolutions();	
-		
-		
+		MappingSolutions mappingSol = new MappingSolutions();
+			
+			
 		// gui bloc
 
 		JFrame frame = new JFrame();
