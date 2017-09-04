@@ -941,11 +941,11 @@ public class MappingSolutions {
 
 						mainTxt.append("Sin (x2) =" + String.valueOf(phase_2X2) + ";");
 												
-						mainTxt.append("/n");
+						mainTxt.append("\n");
 						
 						mainTxt.append("Sin (x1) = "+ equationsTrigeometry.SpecialArcSin(phase_2));
 						
-						mainTxt.append("/n");
+						mainTxt.append("\n");
 						
 						mainTxt.append("Sin (x2) = "+ equationsTrigeometry.SpecialArcSin(phase_2X2));
 						
@@ -1021,13 +1021,13 @@ public class MappingSolutions {
 
 						mainTxt.append("Cos (x2) =" + String.valueOf(phase_2X2) + ";");
 												
-						mainTxt.append("/n");
+						mainTxt.append("\n");
 						
-						mainTxt.append("Cos (x1) = "+ equationsTrigeometry.SpecialArcCos(phase_2));
+						mainTxt.append("Cos (x1) = "+ equationsTrigeometry.SpecialArcCos(phase_2)+";");
 						
-						mainTxt.append("/n");
+						mainTxt.append("\n");
 						
-						mainTxt.append("Cos (x2) = "+ equationsTrigeometry.SpecialArcCos(phase_2X2));
+						mainTxt.append("Cos (x2) = "+ equationsTrigeometry.SpecialArcCos(phase_2X2)+";");
 						
 					}
 
