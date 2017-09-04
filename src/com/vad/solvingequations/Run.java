@@ -55,6 +55,7 @@ public class Run {
 		ch.add("tg(x/a) = b");
 		ch.add("ctg(x/a) = b");
 		ch.add("a*sin(x)^2+b*sin(x)+c=0");
+		ch.add("a*cos(x)^2+b*cos(x)+c=0");
 				
 
 		JTextField a = new JTextField(4);
@@ -270,7 +271,13 @@ public class Run {
 					
 					mappingSol.DisplaySolvSin_X(int_a, int_b, int_c);
 					result.setText(x);
-				}			
+				}else if(ch.getSelectedIndex() == 25){
+					
+					String x = equationsTri.solvCos_X(int_a, int_b, int_c);
+					
+					mappingSol.DisplaySolvCos_X(int_a, int_b, int_c);
+					result.setText(x);
+				}						
 				
 			}
 		});
