@@ -12,8 +12,7 @@ public class Run {
 	public static void main(String[] args) {
 		Equations equations = new Equations();
 		EquationsTrigeometry equationsTri = new EquationsTrigeometry();
-		MappingSolutions mappingSol = new MappingSolutions();
-			
+		MappingSolutions mappingSol = new MappingSolutions();		
 			
 		// gui bloc
 
@@ -267,7 +266,7 @@ public class Run {
 					result.setText(x);
 				}else if(ch.getSelectedIndex() == 24){
 					
-					String x = equationsTri.solvCos_X(int_a, int_b, int_c);
+					String x = equationsTri.solvSin_X(int_a, int_b, int_c);
 					
 					mappingSol.DisplaySolvSin_X(int_a, int_b, int_c);
 					result.setText(x);

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class TestRun {
 
 	public static void main(String[] args) {
-		AllSolvingEquations all = new AllSolvingEquations();
+		
 		
 		Scanner scn = new Scanner(System.in);	
 		
@@ -21,7 +21,7 @@ public class TestRun {
 			arr[i] = scn.nextDouble();
 		}
 						
-		System.out.println(all.mul(x, res, arr));
+	
 
 	}
 

@@ -550,7 +550,7 @@ public class EquationsTrigeometry {
 		return "ERROR";
 	}
 	//a*sin^2(x) + b*sin(x) - c = 0
-	public String solvCos_X(double a, double b, double c) {
+	public String solvSin_X(double a, double b, double c) {
 		
 		double x1 = ec.solvR_X1(a, b, c);
 		double x2 = ec.solvR_X2(a, b, c);
@@ -622,7 +622,82 @@ public class EquationsTrigeometry {
 	}
 								
 		return "ERROR";
-	}	
+	}
+	
+	//a*cos^2(x) + b*cos(x) - c = 0
+		public String solvCos_X(double a, double b, double c) {
+			
+			double x1 = ec.solvR_X1(a, b, c);
+			double x2 = ec.solvR_X2(a, b, c);
+			
+			if(x1<1){
+				if (x1 == 1 / 2) {
+					return "x = +-" + angls[2] + " +  2pi*n, n=Z";
+
+				} else if (x1 == Math.sqrt(2) / 2) {
+
+					return "x = +-" + angls[1] + " +  2pi*n, n=Z";
+
+				} else if (x1 == Math.sqrt(3) / 2) {
+
+					return "x = +-" + angls[0] + " +  2pi*n, n=Z";
+				} else if (x1 == 1) {
+
+					return "x = 2pi*n, n=z";
+				} else if (x1 == 0) {
+
+					return "x =" + angls[3] + " + pi*n, n=Z";
+				} else if (x1 == -1 / 2) {
+
+					return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
+				} else if (x1 == -(Math.sqrt(2) / 2)) {
+
+					return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
+				} else if (x1 == -(Math.sqrt(3) / 2)) {
+
+					return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
+				} else if (x1 == -1) {
+
+					return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
+				} else if (x1 > COUNT || x1 < (COUNT * -1)) {
+					return "x = +- arccos(" + String.valueOf(x1) + ")+pi*k, k=Z";
+				}
+			}else if(x2<1){		
+				if (x1 == 1 / 2) {
+					return "x = +-" + angls[2] + " +  2pi*n, n=Z";
+
+				} else if (x1 == Math.sqrt(2) / 2) {
+
+					return "x = +-" + angls[1] + " +  2pi*n, n=Z";
+
+				} else if (x1 == Math.sqrt(3) / 2) {
+
+					return "x = +-" + angls[0] + " +  2pi*n, n=Z";
+				} else if (x1 == 1) {
+
+					return "x = 2pi*n, n=z";
+				} else if (x1 == 0) {
+
+					return "x =" + angls[3] + " + pi*n, n=Z";
+				} else if (x1 == -1 / 2) {
+
+					return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
+				} else if (x1 == -(Math.sqrt(2) / 2)) {
+
+					return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
+				} else if (x1 == -(Math.sqrt(3) / 2)) {
+
+					return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
+				} else if (x1 == -1) {
+
+					return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
+				} else if (x1 > COUNT || x1 < (COUNT * -1)) {
+					return "x = +- arccos(" + String.valueOf(x1) + ")+pi*k, k=Z";
+				}
+		}
+									
+			return "ERROR";
+		}	
 	
 
 }

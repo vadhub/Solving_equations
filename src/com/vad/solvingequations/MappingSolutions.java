@@ -945,6 +945,8 @@ public class MappingSolutions {
 						
 						mainTxt.append("Sin (x1) = "+ equationsTrigeometry.SpecialArcSin(phase_2));
 						
+						mainTxt.append("/n");
+						
 						mainTxt.append("Sin (x2) = "+ equationsTrigeometry.SpecialArcSin(phase_2X2));
 						
 					}
