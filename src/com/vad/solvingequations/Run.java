@@ -286,7 +286,14 @@ public class Run {
 	}
 	
 	public static void deleteSymbol(String str){		 	       
-	       String h = str.replaceAll("[-=]", "");
-	        System.out.println(h);
+	       String h = str.replaceAll("[-=]", " ");
+	       System.out.println(h);
+	       
+	       for (int i = 0;i<h.length();i++){
+	    	   String[] parts = h.split(" ");
+	    	   String str1 = parts[i];  
+	    	   System.out.println(str1);
+	       }
+	       
 	}
 }
