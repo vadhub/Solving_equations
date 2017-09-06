@@ -281,6 +281,12 @@ public class Run {
 				
 			}
 		});
-
+		
+	deleteSymbol("8-x=9");
+	}
+	
+	public static void deleteSymbol(String str){		 	       
+	       String h = str.replaceAll("[-=]", "");
+	        System.out.println(h);
 	}
 }

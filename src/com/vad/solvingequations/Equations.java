@@ -2,7 +2,7 @@ package com.vad.solvingequations;
 
 public class Equations {	
 	int[] numb = new int[5];
-	int[]x = new int[2];
+	int[] x = new int[2];
 	// a+x=b
 	// x+a=b	
 	public double solvSum(double a, double b) {
