@@ -288,11 +288,14 @@ public class Run {
 	public static void deleteSymbol(String str){		 	       
 	       String h = str.replaceAll("[-=]", " ");
 	       System.out.println(h);
-	       String[] parts = h.split(" ");	       
-	       for (int i = 0;i<parts.length;i++){	  
-	    	
+	       String[] parts = h.split(" ");	
+	       
+	       for (int i = 0;i<parts.length;i++){    	
 	    	   System.out.println(parts[i]);
 	       }
 	       
+	}
+	public boolean detectSymbol(String str, String s){
+		return str.contains(s);		
 	}
 }
