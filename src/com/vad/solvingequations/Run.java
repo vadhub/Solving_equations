@@ -285,8 +285,10 @@ public class Run {
 	deleteSymbol("8-x=9");
 	}
 	
-	public static void deleteSymbol(String str){		 	       
+	public static void deleteSymbol(String str){
+		
 	       String h = str.replaceAll("[-=]", " ");
+	       	       
 	       System.out.println(h);
 	       String[] parts = h.split(" ");	
 	       
@@ -295,7 +297,7 @@ public class Run {
 	       }
 	       
 	}
-	public boolean detectSymbol(String str, String s){
+	public static boolean detectSymbol(String str, String s){
 		return str.contains(s);		
 	}
 }
