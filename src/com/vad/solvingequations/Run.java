@@ -285,15 +285,13 @@ public class Run {
 	deleteSymbol("8-x=9");
 	}
 	
-	public static void deleteSymbol(String str){
-		
-	       String h = str.replaceAll("[-=]", " ");
-	       	       
-	       System.out.println(h);
-	       String[] parts = h.split(" ");	
+	public static void deleteSymbol(String str){		
+	       String h = str.replaceAll("[-=x]", " ");	       
+	       System.out.println(h);	       
+	       char[] strToSymbols = str.toCharArray(); 
 	       
-	       for (int i = 0;i<parts.length;i++){    	
-	    	   System.out.println(parts[i]);
+	       for (int i = 0;i<strToSymbols.length;i++){    	
+	    	   System.out.println(strToSymbols[i]);
 	       }
 	       
 	}
