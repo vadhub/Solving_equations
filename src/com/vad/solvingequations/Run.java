@@ -4,6 +4,7 @@ import java.awt.Choice;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
@@ -285,12 +286,15 @@ public class Run {
 	deleteSymbol("8-x=9");
 	}
 	
-	public static void deleteSymbol(String str){		
-	       String h = str.replaceAll("[-=x]", " ");	       
-	       System.out.println(h);	       
-	       char[] strToSymbols = str.toCharArray(); 
+	public static void deleteSymbol(String str){   	      	       
+	       char[] strToSymbols = str.toCharArray();
+	       ArrayList<Integer> vchk = new ArrayList<Integer>();
 	       
-	       for (int i = 0;i<strToSymbols.length;i++){    	
+	       for (int i = 0;i<strToSymbols.length;i++){ 
+				if (Character.isDigit(strToSymbols.length)) {
+															
+				}
+//					elem = Character.digit( strToSymbols.charAt(i), 10);	 
 	    	   System.out.println(strToSymbols[i]);
 	       }
 	       
