@@ -1,9 +1,9 @@
 package com.vad.solvingequations;
 
 public class EquationsTrigeometry {
-	
+
 	Equations ec = new Equations();
-	
+
 	String[] angls = { "pi/6", "pi/4", "pi/3", "pi/2", "pi" };
 
 	String[] neg_angls = { "7pi/6", "5pi/4", "4pi/3", "3pi/2", "11pi/6",
@@ -12,8 +12,6 @@ public class EquationsTrigeometry {
 	String[] cos_neg_angls = { "5pi/6", "3pi/4", "2pi/3" };
 
 	private int COUNT = 1;
-	
-	
 
 	// //////////////////sin special for display
 	public String SpecialArcSin(double int_a) {
@@ -115,33 +113,32 @@ public class EquationsTrigeometry {
 		}
 		return "ERROR";
 	}
-	
+
 	// ////////////////////ctg special for display
-		public String SpecialArcCtg(double x) {
-			if (x == 1 / (Math.sqrt(3))) {
+	public String SpecialArcCtg(double x) {
+		if (x == 1 / (Math.sqrt(3))) {
 
-				return angls[2] + "pi*n, n=Z";
-			} else if (x == 1) {
+			return angls[2] + "pi*n, n=Z";
+		} else if (x == 1) {
 
-				return angls[1] + "pi*n, n=Z";
-			} else if (x == Math.sqrt(3)) {
+			return angls[1] + "pi*n, n=Z";
+		} else if (x == Math.sqrt(3)) {
 
-				return  angls[0] + "pi*n, n=Z";
-			} else if (x == -(Math.sqrt(3))) {
+			return angls[0] + "pi*n, n=Z";
+		} else if (x == -(Math.sqrt(3))) {
 
-				return neg_angls[4] + "pi*n, n=Z";
-			} else if (x == -(1 / (Math.sqrt(3)))) {
+			return neg_angls[4] + "pi*n, n=Z";
+		} else if (x == -(1 / (Math.sqrt(3)))) {
 
-				return neg_angls[6] + "pi*n, n=Z";
-			} else if (x == -1) {
+			return neg_angls[6] + "pi*n, n=Z";
+		} else if (x == -1) {
 
-				return neg_angls[5] + "pi*n, n=Z";
-			} else if (x > COUNT || x < -COUNT) {
-				return "does not exist";
-			}
-			return "ERROR";
+			return neg_angls[5] + "pi*n, n=Z";
+		} else if (x > COUNT || x < -COUNT) {
+			return "does not exist";
 		}
-
+		return "ERROR";
+	}
 
 	public String solvSin(double int_a) {
 
@@ -528,34 +525,35 @@ public class EquationsTrigeometry {
 
 		if (b == 1 / (Math.sqrt(3))) {
 
-			return "x = "+a+"*" + angls[2] +" + "+a+ " * pi*n, n=Z";
+			return "x = " + a + "*" + angls[2] + " + " + a + " * pi*n, n=Z";
 		} else if (b == 1) {
 
-			return "x = "+a+"*" +  angls[1] +" + "+a+ " * pi*n, n=Z";
+			return "x = " + a + "*" + angls[1] + " + " + a + " * pi*n, n=Z";
 		} else if (b == Math.sqrt(3)) {
 
-			return "x = " +a+"*" +  angls[0] +" + "+a+ " * pi*n, n=Z";
+			return "x = " + a + "*" + angls[0] + " + " + a + " * pi*n, n=Z";
 		} else if (b == -(Math.sqrt(3))) {
 
-			return "x = " +a+"*" +  neg_angls[4] +" + "+a+ " * pi*n, n=Z";
+			return "x = " + a + "*" + neg_angls[4] + " + " + a + " * pi*n, n=Z";
 		} else if (b == -(1 / (Math.sqrt(3)))) {
 
-			return "x = " +a+"*" +  neg_angls[6] +" + "+a+ " * pi*n, n=Z";
+			return "x = " + a + "*" + neg_angls[6] + " + " + a + " * pi*n, n=Z";
 		} else if (b == -1) {
 
-			return "x = " +a+"*" + neg_angls[5] +" + "+a+ " * pi*n, n=Z";
+			return "x = " + a + "*" + neg_angls[5] + " + " + a + " * pi*n, n=Z";
 		} else if (b > COUNT || b < -COUNT) {
 			return "does not exist";
 		}
 		return "ERROR";
 	}
-	//a*sin^2(x) + b*sin(x) - c = 0
+
+	// a*sin^2(x) + b*sin(x) - c = 0
 	public String solvSin_X(double a, double b, double c) {
-		
+
 		double x1 = ec.solvR_X1(a, b, c);
 		double x2 = ec.solvR_X2(a, b, c);
-		
-		if(x1<1){
+
+		if (x1 < 1) {
 			if (x1 == 1 / 2) {
 				return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
 
@@ -569,7 +567,7 @@ public class EquationsTrigeometry {
 			} else if (x1 == 1) {
 
 				return "x = " + angls[3] + "+ pi*k, k=Z";
-			} else if (x1== 0) {
+			} else if (x1 == 0) {
 
 				return "x = pi*k, k=Z";
 			} else if (x1 == -1 / 2) {
@@ -587,117 +585,178 @@ public class EquationsTrigeometry {
 				return "x = (-1)^k * arcsin(" + String.valueOf(x1)
 						+ ")+pi*k, k=Z";
 			}
-		}else if(x2<1){		
-		if (x2 == 1 / 2) {
-			return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
+		} else if (x2 < 1) {
+			if (x2 == 1 / 2) {
+				return "x = (-1)^k * " + angls[0] + "+ pi*k, k=Z";
 
-		} else if (x2 == Math.sqrt(2) / 2) {
+			} else if (x2 == Math.sqrt(2) / 2) {
 
-			return "x = (-1)^k * " + angls[1] + "+ pi*k, k=Z";
+				return "x = (-1)^k * " + angls[1] + "+ pi*k, k=Z";
 
-		} else if (x2 == Math.sqrt(3) / 2) {
+			} else if (x2 == Math.sqrt(3) / 2) {
 
-			return "x = (-1)^k *" + angls[2] + "+ pi*k, k=Z";
-		} else if (x2 == 1) {
+				return "x = (-1)^k *" + angls[2] + "+ pi*k, k=Z";
+			} else if (x2 == 1) {
 
-			return "x = " + angls[3] + "+ pi*k, k=Z";
-		} else if (x2== 0) {
+				return "x = " + angls[3] + "+ pi*k, k=Z";
+			} else if (x2 == 0) {
 
-			return "x = pi*k, k=Z";
-		} else if (x2 == -1 / 2) {
+				return "x = pi*k, k=Z";
+			} else if (x2 == -1 / 2) {
 
-			return "x = (-1)^k * -(" + neg_angls[1] + ")+ pi*k, k=Z";
-		} else if (x2 == -(Math.sqrt(2) / 2)) {
+				return "x = (-1)^k * -(" + neg_angls[1] + ")+ pi*k, k=Z";
+			} else if (x2 == -(Math.sqrt(2) / 2)) {
 
-			return "x = (-1)^k * -(" + neg_angls[2] + ")+ pi*k, k=Z";
-		} else if (x2 == -(Math.sqrt(3) / 2)) {
+				return "x = (-1)^k * -(" + neg_angls[2] + ")+ pi*k, k=Z";
+			} else if (x2 == -(Math.sqrt(3) / 2)) {
 
-			return "x = (-1)^k * -(" + neg_angls[3] + ")+ pi*k, k=Z";
-		} else if (x2 == -1) {
-			return "x = -pi/2 + pi*k, k=Z";
-		} else {
-			return "x = (-1)^k * arcsin(" + String.valueOf(x2)
-					+ ")+pi*k, k=Z";
+				return "x = (-1)^k * -(" + neg_angls[3] + ")+ pi*k, k=Z";
+			} else if (x2 == -1) {
+				return "x = -pi/2 + pi*k, k=Z";
+			} else {
+				return "x = (-1)^k * arcsin(" + String.valueOf(x2)
+						+ ")+pi*k, k=Z";
+			}
 		}
-	}
-								
+
 		return "ERROR";
 	}
-	
-	//a*cos^2(x) + b*cos(x) - c = 0
-		public String solvCos_X(double a, double b, double c) {
-			
-			double x1 = ec.solvR_X1(a, b, c);
-			double x2 = ec.solvR_X2(a, b, c);
-			
-			if(x1<1){
-				if (x1 == 1 / 2) {
-					return "x = +-" + angls[2] + " +  2pi*n, n=Z";
 
-				} else if (x1 == Math.sqrt(2) / 2) {
+	// a*cos^2(x) + b*cos(x) - c = 0
+	public String solvCos_X(double a, double b, double c) {
 
-					return "x = +-" + angls[1] + " +  2pi*n, n=Z";
+		double x1 = ec.solvR_X1(a, b, c);
+		double x2 = ec.solvR_X2(a, b, c);
 
-				} else if (x1 == Math.sqrt(3) / 2) {
+		if (x1 < 1) {
+			if (x1 == 1 / 2) {
+				return "x = +-" + angls[2] + " +  2pi*n, n=Z";
 
-					return "x = +-" + angls[0] + " +  2pi*n, n=Z";
-				} else if (x1 == 1) {
+			} else if (x1 == Math.sqrt(2) / 2) {
 
-					return "x = 2pi*n, n=z";
-				} else if (x1 == 0) {
+				return "x = +-" + angls[1] + " +  2pi*n, n=Z";
 
-					return "x =" + angls[3] + " + pi*n, n=Z";
-				} else if (x1 == -1 / 2) {
+			} else if (x1 == Math.sqrt(3) / 2) {
 
-					return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
-				} else if (x1 == -(Math.sqrt(2) / 2)) {
+				return "x = +-" + angls[0] + " +  2pi*n, n=Z";
+			} else if (x1 == 1) {
 
-					return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
-				} else if (x1 == -(Math.sqrt(3) / 2)) {
+				return "x = 2pi*n, n=z";
+			} else if (x1 == 0) {
 
-					return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
-				} else if (x1 == -1) {
+				return "x =" + angls[3] + " + pi*n, n=Z";
+			} else if (x1 == -1 / 2) {
 
-					return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
-				} else if (x1 > COUNT || x1 < (COUNT * -1)) {
-					return "x = +- arccos(" + String.valueOf(x1) + ")+pi*k, k=Z";
-				}
-			}else if(x2<1){		
-				if (x1 == 1 / 2) {
-					return "x = +-" + angls[2] + " +  2pi*n, n=Z";
+				return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
+			} else if (x1 == -(Math.sqrt(2) / 2)) {
 
-				} else if (x1 == Math.sqrt(2) / 2) {
+				return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
+			} else if (x1 == -(Math.sqrt(3) / 2)) {
 
-					return "x = +-" + angls[1] + " +  2pi*n, n=Z";
+				return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
+			} else if (x1 == -1) {
 
-				} else if (x1 == Math.sqrt(3) / 2) {
+				return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
+			} else if (x1 > COUNT || x1 < (COUNT * -1)) {
+				return "x = +- arccos(" + String.valueOf(x1) + ")+pi*k, k=Z";
+			}
+		} else if (x2 < 1) {
+			if (x1 == 1 / 2) {
+				return "x = +-" + angls[2] + " +  2pi*n, n=Z";
 
-					return "x = +-" + angls[0] + " +  2pi*n, n=Z";
-				} else if (x1 == 1) {
+			} else if (x2 == Math.sqrt(2) / 2) {
 
-					return "x = 2pi*n, n=z";
-				} else if (x1 == 0) {
+				return "x = +-" + angls[1] + " +  2pi*n, n=Z";
 
-					return "x =" + angls[3] + " + pi*n, n=Z";
-				} else if (x1 == -1 / 2) {
+			} else if (x2 == Math.sqrt(3) / 2) {
 
-					return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
-				} else if (x1 == -(Math.sqrt(2) / 2)) {
+				return "x = +-" + angls[0] + " +  2pi*n, n=Z";
+			} else if (x2 == 1) {
 
-					return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
-				} else if (x1 == -(Math.sqrt(3) / 2)) {
+				return "x = 2pi*n, n=z";
+			} else if (x2 == 0) {
 
-					return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
-				} else if (x1 == -1) {
+				return "x =" + angls[3] + " + pi*n, n=Z";
+			} else if (x2 == -1 / 2) {
 
-					return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
-				} else if (x1 > COUNT || x1 < (COUNT * -1)) {
-					return "x = +- arccos(" + String.valueOf(x1) + ")+pi*k, k=Z";
-				}
+				return "x = +-" + cos_neg_angls[2] + " + pi*n, n=Z";
+			} else if (x2 == -(Math.sqrt(2) / 2)) {
+
+				return "x = +-" + cos_neg_angls[1] + " +  pi*n, n=Z";
+			} else if (x2 == -(Math.sqrt(3) / 2)) {
+
+				return "x = +-" + cos_neg_angls[0] + " +  pi*n, n=Z";
+			} else if (x2 == -1) {
+
+				return "x = " + cos_neg_angls[4] + " pi*n, n=Z";
+			} else if (x2 > COUNT || x1 < (COUNT * -1)) {
+				return "x = +- arccos(" + String.valueOf(x1) + ")+pi*k, k=Z";
+			}
 		}
-									
-			return "ERROR";
-		}	
-	
+
+		return "ERROR";
+	}
+
+	// a*tg^2(x) + b*tg(x) - c = 0
+	public String solvTg_X(double a, double b, double c) {
+
+		double x1 = ec.solvR_X1(a, b, c);
+		double x2 = ec.solvR_X2(a, b, c);
+
+		if (x1 < 1) {
+			if (x2 == 0) {
+				return "x = pi*n, n=Z";
+			} else if (x1 == 1 / (Math.sqrt(3))) {
+
+				return "x = " + angls[0] + "pi*n, n=Z";
+			} else if (x1 == 1) {
+
+				return "x = " + angls[1] + "pi*n, n=Z";
+			} else if (x1 == Math.sqrt(3)) {
+
+				return "x = " + angls[2] + "pi*n, n=Z";
+			} else if (x1 == -(Math.sqrt(3))) {
+
+				return "x = " + neg_angls[2] + "pi*n, n=Z";
+			} else if (x1 == -(1 / (Math.sqrt(3)))) {
+
+				return "x = " + neg_angls[0] + "pi*n, n=Z";
+			} else if (x1 == -1) {
+
+				return "x = " + neg_angls[5] + "pi*n, n=Z";
+			} else if (x1 > COUNT || x1 < -COUNT) {
+
+				return "does not exist";
+			}
+		} else if (x2 < 1) {
+			if (x2 == 0) {
+				return "x = pi*n, n=Z";
+			} else if (x2 == 1 / (Math.sqrt(3))) {
+
+				return "x = " + angls[0] + "pi*n, n=Z";
+			} else if (x2 == 1) {
+
+				return "x = " + angls[1] + "pi*n, n=Z";
+			} else if (x2 == Math.sqrt(3)) {
+
+				return "x = " + angls[2] + "pi*n, n=Z";
+			} else if (x2 == -(Math.sqrt(3))) {
+
+				return "x = " + neg_angls[2] + "pi*n, n=Z";
+			} else if (x2 == -(1 / (Math.sqrt(3)))) {
+
+				return "x = " + neg_angls[0] + "pi*n, n=Z";
+			} else if (x2 == -1) {
+
+				return "x = " + neg_angls[5] + "pi*n, n=Z";
+			} else if (x2 > COUNT || x2 < -COUNT) {
+
+				return "does not exist";
+			}
+
+		}
+
+		return "ERROR";
+	}
 
 }

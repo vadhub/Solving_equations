@@ -288,14 +288,17 @@ public class Run {
 	
 	public static void deleteSymbol(String str){   	      	       
 	       char[] strToSymbols = str.toCharArray();
-	       ArrayList<Integer> vchk = new ArrayList<Integer>();
-	       
+	       ArrayList<Integer> inm = new ArrayList<Integer>();	     
+	       char s;
+	       int in = 0;
+	       String sr;
 	       for (int i = 0;i<strToSymbols.length;i++){ 
-				if (Character.isDigit(strToSymbols.length)) {
-															
+				if (Character.isDigit(str.charAt(i))) {	
+					s = strToSymbols[i];
+					in = s;
 				}
-//					elem = Character.digit( strToSymbols.charAt(i), 10);	 
-	    	   System.out.println(strToSymbols[i]);
+ 
+	    	   System.out.println(in);
 	       }
 	       
 	}
