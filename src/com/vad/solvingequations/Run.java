@@ -283,10 +283,11 @@ public class Run {
 			}
 		});
 		
-	deleteSymbol("8-x=9");
+	System.out.println(deleteSymbol("8-x+888=9"));
+	
 	}
 	
-	public static void deleteSymbol(String str){     
+	public static ArrayList<Integer> deleteSymbol(String str){     
 	       ArrayList<Integer> inm = new ArrayList<Integer>();       
 	       int in = 0;	      
 	       for (int i = 0;i<str.length();i++){ 
@@ -294,16 +295,15 @@ public class Run {
 					in = Character.getNumericValue(str.charAt(i));
 					inm.add(in);
 				}				 
-	       }
-	       
-	       for (int i = 0;i<inm.size();i++){
-	    	   System.out.println(inm.get(i));
-	       }
-	       
-	      
+	       }	       
+	       return inm;
 	       
 	}
 	public static boolean detectSymbol(String str, String s){
 		return str.contains(s);		
+	}
+	
+	public void mathOperations(){
+		
 	}
 }
