@@ -286,20 +286,16 @@ public class Run {
 	deleteSymbol("8-x=9");
 	}
 	
-	public static void deleteSymbol(String str){   	      	       
-	       char[] strToSymbols = str.toCharArray();
-	       ArrayList<Integer> inm = new ArrayList<Integer>();	     
-	       char s;
-	       int in = 0;
-	       String sr;
-	       for (int i = 0;i<strToSymbols.length;i++){ 
-				if (Character.isDigit(str.charAt(i))) {	
-					s = strToSymbols[i];
-					in = s;
-				}
- 
-	    	   System.out.println(in);
+	public static void deleteSymbol(String str){     
+	       ArrayList<Integer> inm = new ArrayList<Integer>();       
+	       int in = 0;	      
+	       for (int i = 0;i<str.length();i++){ 
+				if (Character.isDigit(str.charAt(i))) {					
+					in = Character.getNumericValue(str.charAt(i));
+				}				
 	       }
+	       
+	       System.out.println(in);
 	       
 	}
 	public static boolean detectSymbol(String str, String s){
