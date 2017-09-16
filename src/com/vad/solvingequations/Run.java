@@ -292,10 +292,15 @@ public class Run {
 	       for (int i = 0;i<str.length();i++){ 
 				if (Character.isDigit(str.charAt(i))) {					
 					in = Character.getNumericValue(str.charAt(i));
-				}				
+					inm.add(in);
+				}				 
 	       }
 	       
-	       System.out.println(in);
+	       for (int i = 0;i<inm.size();i++){
+	    	   System.out.println(inm.get(i));
+	       }
+	       
+	      
 	       
 	}
 	public static boolean detectSymbol(String str, String s){
