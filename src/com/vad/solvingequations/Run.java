@@ -283,8 +283,8 @@ public class Run {
 			}
 		});
 		
-	System.out.println(deleteSymbol("8-x+888=9"));
-	mathOperations("8-x=9");
+	System.out.println(deleteSymbol("8-x=9"));
+	mathOperations("2+8-x=9");
 	
 	}
 	
@@ -306,9 +306,11 @@ public class Run {
 	
 	public static void mathOperations(String str){
 		int o = 0;
+		
 		if(detectSymbol(str, "-")==true){
 			for(int i = 0;i<deleteSymbol(str).size();i++){
-				o = o-deleteSymbol(str).get(i);				
+				if(deleteSymbol(str).get(i)>deleteSymbol(str).get(0))
+				o = deleteSymbol(str).get(i)-deleteSymbol(str).get(i-1);				
 			}			
 		}
 		System.out.println(o);
