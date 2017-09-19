@@ -306,7 +306,12 @@ public class Run {
 	
 	public static void mathOperations(String str){
 		int o = 0;
-		
+		if(detectSymbol(str, "+")==true){
+			for(int i = 0;i<deleteSymbol(str).size();i++){				
+				o =o + deleteSymbol(str).get(i);				
+			}			
+		}
+		System.out.println(o);
 		if(detectSymbol(str, "-")==true){
 			for(int i = 0;i<deleteSymbol(str).size();i++){
 				if(deleteSymbol(str).get(i)>deleteSymbol(str).get(0))
