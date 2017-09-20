@@ -286,8 +286,8 @@ public class Run {
 			}
 		});
 
-		System.out.println(deleteSymbol("10-x=9"));
-		mathOperations("10-x=9");
+		System.out.println(deleteSymbol("x+1=9"));
+		mathOperations("3+x=9");
 
 	}
 
@@ -318,8 +318,9 @@ public class Run {
 					o = deleteSymbol(str).get(i)-o;
 				}			
 			}
+			System.out.println(o);
 		}
-		System.out.println(o);
+		
 		if (detectSymbol(str, "-") == true) {
 			for (int i = 0; i < deleteSymbol(str).size(); i++) {
 				if (deleteSymbol(str).get(i) > deleteSymbol(str).get(0))
