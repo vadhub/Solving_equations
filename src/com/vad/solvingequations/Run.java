@@ -296,12 +296,14 @@ public class Run {
 		int in = 0;
 		String plusString = "0";
 		for (int i = 0; i < str.length(); i++) {
+
 			if (Character.isDigit(str.charAt(i))) {
-				plusString += str.charAt(i);				
-			}		
+				plusString += str.charAt(i);
+			}
+			in = Integer.valueOf(plusString);
+			inm.add(in);
 		}
-		in = Integer.valueOf(plusString);
-		inm.add(in);			
+
 		return inm;
 
 	}
@@ -314,15 +316,15 @@ public class Run {
 		int o = 0;
 		if (detectSymbol(str, "+") == true) {
 			for (int i = 0; i < deleteSymbol(str).size(); i++) {
-				if(detectSymbol(str, "=") == false){
+				if (detectSymbol(str, "=") == false) {
 					o = o + deleteSymbol(str).get(i);
-				}else{
-					o = deleteSymbol(str).get(i)-o;
-				}			
+				} else {
+					o = deleteSymbol(str).get(i) - o;
+				}
 			}
 			System.out.println(o);
 		}
-		
+
 		if (detectSymbol(str, "-") == true) {
 			for (int i = 0; i < deleteSymbol(str).size(); i++) {
 				if (deleteSymbol(str).get(i) > deleteSymbol(str).get(0))
