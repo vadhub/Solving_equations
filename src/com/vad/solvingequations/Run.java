@@ -286,20 +286,22 @@ public class Run {
 			}
 		});
 
-		System.out.println(deleteSymbol("x+1=9"));
-		mathOperations("3+x=9");
+		System.out.println(deleteSymbol("x+11=9"));
+		mathOperations("31+x=9");
 
 	}
 
 	public static ArrayList<Integer> deleteSymbol(String str) {
 		ArrayList<Integer> inm = new ArrayList<Integer>();
 		int in = 0;
+		String plusString = "0";
 		for (int i = 0; i < str.length(); i++) {
 			if (Character.isDigit(str.charAt(i))) {
-				in = Character.getNumericValue(str.charAt(i));
-				inm.add(in);
-			}
+				plusString += str.charAt(i);				
+			}		
 		}
+		in = Integer.valueOf(plusString);
+		inm.add(in);			
 		return inm;
 
 	}
