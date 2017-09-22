@@ -298,10 +298,14 @@ public class Run {
 		for (int i = 0; i < str.length(); i++) {
 
 			if (Character.isDigit(str.charAt(i))) {
+				
+				while(!detectSymbol(str, "=")){
 				plusString += str.charAt(i);
+				}
+				in = Integer.valueOf(plusString);
+				inm.add(in);
 			}
-			in = Integer.valueOf(plusString);
-			inm.add(in);
+			
 		}
 
 		return inm;
