@@ -296,16 +296,15 @@ public class Run {
 		int in = 0;
 		String plusString = "0";
 		
-		String comparison = "=";
 		for (int i = 0; i < str.length(); i++) {
-
 			if (Character.isDigit(str.charAt(i))) {
-
-				while (comparison.equals(detectSymbol(str, "="))) {
+				if(Character.isLetter(str.charAt(i))){
+					in = Integer.valueOf(plusString);
+					inm.add(in);
+					plusString = "0";
+				}else {
 					plusString += str.charAt(i);
-				}
-				in = Integer.valueOf(plusString);
-				inm.add(in);
+				}			
 			}
 
 		}
@@ -321,12 +320,10 @@ public class Run {
 	public static void mathOperations(String str) {
 		int o = 0;
 		if (detectSymbol(str, "+") == true) {
-			for (int i = 0; i < deleteSymbol(str).size(); i++) {
-				if (detectSymbol(str, "=") == false) {
-					o = o + deleteSymbol(str).get(i);
-				} else {
+			for (int i = 0; i < deleteSymbol(str).size(); i++) {				
+					o = o + deleteSymbol(str).get(i);				
 					o = deleteSymbol(str).get(i) - o;
-				}
+				
 			}
 			System.out.println(o);
 		}
