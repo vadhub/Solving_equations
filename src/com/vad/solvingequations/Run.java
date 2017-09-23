@@ -294,17 +294,14 @@ public class Run {
 	public static ArrayList<Integer> deleteSymbol(String str) {
 		ArrayList<Integer> inm = new ArrayList<Integer>();
 		int in = 0;
-		String plusString = "0";
-		
+		String plusString = "0";		
 		for (int i = 0; i < str.length(); i++) {
-			if (Character.isDigit(str.charAt(i))) {
-				if(Character.isLetter(str.charAt(i))){
-					in = Integer.valueOf(plusString);
-					inm.add(in);
-					plusString = "0";
-				}else {
-					plusString += str.charAt(i);
-				}			
+			if (Character.isDigit(str.charAt(i))) {				
+					plusString += str.charAt(i);			
+			}else{
+				in = Integer.valueOf(plusString);
+				inm.add(in);
+				plusString = "0";				
 			}
 
 		}
