@@ -294,16 +294,15 @@ public class Run {
 	public static ArrayList<Integer> deleteSymbol(String str) {
 		ArrayList<Integer> inm = new ArrayList<Integer>();
 		int in = 0;
-		String plusString = "0";		
+		String plusString = "0";
 		for (int i = 0; i < str.length(); i++) {
-			if (Character.isDigit(str.charAt(i))) {				
-					plusString += str.charAt(i);			
-			}else{
+			if (Character.isDigit(str.charAt(i))) {
+				plusString += str.charAt(i);
+			} else {
 				in = Integer.valueOf(plusString);
 				inm.add(in);
-				plusString = "0";				
+				plusString = "0";
 			}
-
 		}
 
 		return inm;
@@ -317,10 +316,12 @@ public class Run {
 	public static void mathOperations(String str) {
 		int o = 0;
 		if (detectSymbol(str, "+") == true) {
-			for (int i = 0; i < deleteSymbol(str).size(); i++) {				
-					o = o + deleteSymbol(str).get(i);				
+			for (int i = 0; i < deleteSymbol(str).size(); i++) {
+				o = o + deleteSymbol(str).get(i);
+				if (detectSymbol(str, "=") == true) {
 					o = deleteSymbol(str).get(i) - o;
-				
+				}
+
 			}
 			System.out.println(o);
 		}
