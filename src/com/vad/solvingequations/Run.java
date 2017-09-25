@@ -286,12 +286,12 @@ public class Run {
 			}
 		});
 
-		System.out.println(deleteSymbol("x+11=9"));
-		mathOperations("31+x=9");
+		System.out.println(detectInteger("x+11=9;"));
+		mathOperations("x+11=9;");
 
 	}
 
-	public static ArrayList<Integer> deleteSymbol(String str) {
+	public static ArrayList<Integer> detectInteger(String str) {
 		ArrayList<Integer> inm = new ArrayList<Integer>();
 		int in = 0;
 		String plusString = "0";
@@ -316,20 +316,19 @@ public class Run {
 	public static void mathOperations(String str) {
 		int o = 0;
 		if (detectSymbol(str, "+") == true) {
-			for (int i = 0; i < deleteSymbol(str).size(); i++) {
-				o = o + deleteSymbol(str).get(i);
-				if (detectSymbol(str, "=") == true) {
-					o = deleteSymbol(str).get(i) - o;
-				}
+			for (int i = 0; i < detectInteger(str).size(); i++) {
+				o = o + detectInteger(str).get(i);				
+				o = detectInteger(str).get(i) - o;
+				
 
 			}
 			System.out.println(o);
 		}
 
 		if (detectSymbol(str, "-") == true) {
-			for (int i = 0; i < deleteSymbol(str).size(); i++) {
-				if (deleteSymbol(str).get(i) > deleteSymbol(str).get(0))
-					o = deleteSymbol(str).get(i) - deleteSymbol(str).get(i - 1);
+			for (int i = 0; i < detectInteger(str).size(); i++) {
+				if (detectInteger(str).get(i) > detectInteger(str).get(0))
+					o = detectInteger(str).get(i) - detectInteger(str).get(i - 1);
 			}
 		}
 		System.out.println(o);
