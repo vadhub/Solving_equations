@@ -317,20 +317,21 @@ public class Run {
 		int o = 0;
 		if (detectSymbol(str, "+") == true) {
 			for (int i = 0; i < detectInteger(str).size(); i++) {
-				o = o + detectInteger(str).get(i);				
-				o = detectInteger(str).get(i) - o;
-				
-
+				o = o + detectInteger(str).get(i);
+				if(detectSymbol(str, "=")&&i!=0){
+					o = o - detectInteger(str).get(i-1);
+				}
+					
 			}
 			System.out.println(o);
 		}
 
-		if (detectSymbol(str, "-") == true) {
-			for (int i = 0; i < detectInteger(str).size(); i++) {
-				if (detectInteger(str).get(i) > detectInteger(str).get(0))
-					o = detectInteger(str).get(i) - detectInteger(str).get(i - 1);
-			}
-		}
-		System.out.println(o);
+//		if (detectSymbol(str, "-") == true) {
+//			for (int i = 0; i < detectInteger(str).size(); i++) {
+//				if (detectInteger(str).get(i) > detectInteger(str).get(0))
+//					o = detectInteger(str).get(i) - detectInteger(str).get(i - 1);
+//			}
+//		}
+//		System.out.println(o);
 	}
 }
