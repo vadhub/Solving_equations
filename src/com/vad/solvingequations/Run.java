@@ -317,8 +317,11 @@ public class Run {
 		int summ = 0;
 		String st = "=";
 		if (detectSymbol(str, "+") == true) {
-			for (int i = 0; i < detectInteger(str).size(); i++) {				
-				summ = summ + detectInteger(str).get(i);
+			for (int i = 0; i < str.length(); i++) {
+				if(i<=detectInteger(str).size()){
+					summ = summ + detectInteger(str).get(i);
+				}
+				
 				if(st.equals(str.charAt(i))&&i!=0){
 					summ = summ - detectInteger(str).get(i);
 				}
