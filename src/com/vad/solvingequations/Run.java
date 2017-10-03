@@ -286,8 +286,8 @@ public class Run {
 			}
 		});
 
-		System.out.println(detectInteger("x+11=9;"));
-		mathOperations("x+11=9;");
+		System.out.println(detectInteger("x+11=12;"));
+		mathOperations("x+11=12;");
 
 	}
 
@@ -314,16 +314,17 @@ public class Run {
 	}
 
 	public static void mathOperations(String str) {
-		int o = 0;
+		int summ = 0;
+		String st = "=";
 		if (detectSymbol(str, "+") == true) {
-			for (int i = 0; i < detectInteger(str).size(); i++) {
-				o = o + detectInteger(str).get(i);
-				if(detectSymbol(str, "=")&&i!=0){
-					o = o - detectInteger(str).get(i-1);
+			for (int i = 0; i < detectInteger(str).size(); i++) {				
+				summ = summ + detectInteger(str).get(i);
+				if(st.equals(str.charAt(i))&&i!=0){
+					summ = summ - detectInteger(str).get(i);
 				}
 					
 			}
-			System.out.println(o);
+			System.out.println(summ);
 		}
 
 //		if (detectSymbol(str, "-") == true) {
