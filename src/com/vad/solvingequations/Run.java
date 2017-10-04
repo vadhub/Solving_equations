@@ -286,8 +286,8 @@ public class Run {
 			}
 		});
 
-		System.out.println(detectInteger("x+11=12;"));
-		mathOperations("x+11=12;");
+		System.out.println(detectInteger("x+11-1=12;"));
+		mathOperations("x+11-1=12;");
 
 	}
 
@@ -317,25 +317,22 @@ public class Run {
 		int summ = 0;
 		String st = "=";
 		if (detectSymbol(str, "+") == true) {
-			for (int i = 0; i < str.length(); i++) {
-				if(i<=detectInteger(str).size()){
+			for (int i = 0; i < detectInteger(str).size(); i++) {				
 					summ = summ + detectInteger(str).get(i);
-				}
-				
+					
 				if(st.equals(str.charAt(i))&&i!=0){
 					summ = summ - detectInteger(str).get(i);
 				}
 					
 			}
 			System.out.println(summ);
+		}else
+		if (detectSymbol(str, "-") == true) {
+			for (int i = 0; i < detectInteger(str).size(); i++) {
+				if (detectInteger(str).get(i) > detectInteger(str).get(0))
+					summ = summ - detectInteger(str).get(i);
+			}
 		}
-
-//		if (detectSymbol(str, "-") == true) {
-//			for (int i = 0; i < detectInteger(str).size(); i++) {
-//				if (detectInteger(str).get(i) > detectInteger(str).get(0))
-//					o = detectInteger(str).get(i) - detectInteger(str).get(i - 1);
-//			}
-//		}
-//		System.out.println(o);
+		System.out.println(summ);
 	}
 }
