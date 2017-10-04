@@ -315,24 +315,18 @@ public class Run {
 
 	public static void mathOperations(String str) {
 		int summ = 0;
-		String st = "=";
 		if (detectSymbol(str, "+") == true) {
-			for (int i = 0; i < detectInteger(str).size(); i++) {				
-					summ = summ + detectInteger(str).get(i);
-					
-				if(st.equals(str.charAt(i))&&i!=0){
-					summ = summ - detectInteger(str).get(i);
-				}
-					
+			for (int i = 0; i < detectInteger(str).size(); i++) {
+				summ = summ + detectInteger(str).get(i);
+
 			}
 			System.out.println(summ);
-		}else
-		if (detectSymbol(str, "-") == true) {
+		} else if (detectSymbol(str, "-") == true) {
 			for (int i = 0; i < detectInteger(str).size(); i++) {
-				if (detectInteger(str).get(i) > detectInteger(str).get(0))
-					summ = summ - detectInteger(str).get(i);
+				summ = summ - detectInteger(str).get(i);
+
 			}
+			System.out.println(summ);
 		}
-		System.out.println(summ);
 	}
 }
