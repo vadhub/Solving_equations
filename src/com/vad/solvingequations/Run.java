@@ -310,18 +310,27 @@ public class Run {
 	}
 
 	public static boolean detectSymbol(String str, String s) {
-		return str.contains(s);
+		char[] r = str.toCharArray();
+		for (int i = 0; i < str.length(); i++) {
+			if (r[i] == s.charAt(i)) {				
+				return true;				
+			}
+		}
+		return false;
+
 	}
 
 	public static void mathOperations(String str) {
 		int summ = 0;
-		if (detectSymbol(str, "+") == true) {
-			for (int i = 0; i < detectInteger(str).size(); i++) {
-				summ = summ + detectInteger(str).get(i);
-
+		for (int j = 0; j < str.length(); j++) {
+			if (j== 0) {
+				for (int i = 0; i < detectInteger(str).size(); i++) {
+					summ = summ + detectInteger(str).get(i);
+				}
 			}
-			System.out.println(summ);
-		} else if (detectSymbol(str, "-") == true) {
+		}
+		System.out.println(summ);
+		if (detectSymbol(str, "-") == true) {
 			for (int i = 0; i < detectInteger(str).size(); i++) {
 				summ = summ - detectInteger(str).get(i);
 
