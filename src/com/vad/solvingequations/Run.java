@@ -312,10 +312,13 @@ public class Run {
 	public static boolean detectSymbol(String str, String s) {
 		char[] r = str.toCharArray();
 		for (int i = 0; i < str.length(); i++) {
-			if (r[i] == s.charAt(i)) {		
+			if (s.equals(r[i])) {	
+				System.out.println("o");
 				break;
 			}else{
+				System.out.println("oj");
 				return false;
+				
 			}
 		}
 		return true;
@@ -325,7 +328,7 @@ public class Run {
 	public static void mathOperations(String str) {
 		int summ = 0;
 		for (int j = 0; j < str.length(); j++) {
-			if (detectSymbol(str, "+")) {
+			if (detectSymbol(str, "+")) {				
 				for (int i = 0; i < detectInteger(str).size(); i++) {
 					summ = summ + detectInteger(str).get(i);
 				}
