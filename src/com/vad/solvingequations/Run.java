@@ -312,7 +312,7 @@ public class Run {
 	public static boolean detectSymbol(String str, String s) {
 		char[] r = str.toCharArray();
 		for (int i = 0; i < str.length(); i++) {
-			if (s.equals(r[i])) {	
+			if (r[i]==s.charAt(0)) {	
 				System.out.println("o");
 				break;
 			}else{
