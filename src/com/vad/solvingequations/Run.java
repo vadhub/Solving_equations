@@ -309,19 +309,17 @@ public class Run {
 
 	}
 
+	
 	public static boolean detectSymbol(String str, String s) {
-		char[] r = str.toCharArray();
-		for (int i = 0; i < str.length(); i++) {
-			if (r[i]==s.charAt(0)) {	
-				System.out.println("o");
-				break;
-			}else{
-				System.out.println("oj");
-				return false;
-				
+		char[] charArray = str.toCharArray();
+		for (int i = 0; i < charArray.length; i++) {
+			System.out.print(charArray[i]+" ");
+			if(charArray[i]==s.charAt(0)){
+				System.out.println("OK");				
+				return true;
 			}
 		}
-		return true;
+		return false;
 
 	}
 
