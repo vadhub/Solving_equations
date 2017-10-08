@@ -292,7 +292,7 @@ public class Run {
 	}
 
 	public static ArrayList<Integer> detectInteger(String str) {
-		//adding numbers
+		// adding numbers
 		ArrayList<Integer> inm = new ArrayList<Integer>();
 		int in = 0;
 		String plusString = "0";
@@ -305,40 +305,48 @@ public class Run {
 				plusString = "0";
 			}
 		}
-		//delete '0'
-		for(int i = 0;i<inm.size();i++){
-			if(inm.contains(0)){
+		// delete '0'
+		for (int i = 0; i < inm.size(); i++) {
+			if (inm.contains(0)) {
 				inm.remove(inm.get(i));
 			}
 		}
+		
+		str = str.replaceAll("[x ]", "");
+		System.out.println(str);
 
 		return inm;
 
 	}
 
-	//detect symbols in string
+	// detect symbols in string
 	public static boolean detectSymbol(String str, String s) {
 		char[] charArray = str.toCharArray();
+
 		for (int i = 0; i < charArray.length; i++) {
-			System.out.print(charArray[i]+" ");
-			if(charArray[i]==s.charAt(0)){
-				System.out.println("OK");				
+
+			System.out.print(charArray[i] + " ");
+
+			if (charArray[i] == s.charAt(0)) {
+
+				System.out.println("OK");
 				return true;
 			}
 		}
 		return false;
 
 	}
-//fulfill math operations
+
+	// fulfill math operations
 	public static void mathOperations(String str) {
 		int summ = 0;
 		for (int j = 0; j < str.length(); j++) {
-			if (detectSymbol(str, "+")) {				
+			if (detectSymbol(str, "+")) {
 				for (int i = 0; i < detectInteger(str).size(); i++) {
 					summ = summ + detectInteger(str).get(i);
 				}
 			}
 		}
-		System.out.println(summ);		
+		System.out.println(summ);
 	}
 }
