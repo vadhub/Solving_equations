@@ -286,12 +286,13 @@ public class Run {
 			}
 		});
 
-		System.out.println(detectInteger("x+11-1=12;"));
+		System.out.println(detectInteger("x +11 -1 =12;"));
 		mathOperations("x+11-1=12;");
 
 	}
 
 	public static ArrayList<Integer> detectInteger(String str) {
+		//adding numbers
 		ArrayList<Integer> inm = new ArrayList<Integer>();
 		int in = 0;
 		String plusString = "0";
@@ -304,12 +305,18 @@ public class Run {
 				plusString = "0";
 			}
 		}
+		//delete '0'
+		for(int i = 0;i<inm.size();i++){
+			if(inm.contains(0)){
+				inm.remove(inm.get(i));
+			}
+		}
 
 		return inm;
 
 	}
 
-	
+	//detect symbols in string
 	public static boolean detectSymbol(String str, String s) {
 		char[] charArray = str.toCharArray();
 		for (int i = 0; i < charArray.length; i++) {
@@ -322,7 +329,7 @@ public class Run {
 		return false;
 
 	}
-
+//fulfill math operations
 	public static void mathOperations(String str) {
 		int summ = 0;
 		for (int j = 0; j < str.length(); j++) {
