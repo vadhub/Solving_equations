@@ -287,7 +287,8 @@ public class Run {
 		});
 
 		System.out.println(detectInteger("x +11 -1 =12 ;"));
-		mathOperations("x+11-1=12;");
+//		mathOperations("x+11-1=12;");
+		System.out.println(detectInteger("x +11 -1 =12 ;"));
 
 	}
 	//Second method
@@ -295,43 +296,48 @@ public class Run {
 	public static ArrayList<Integer> detectInteger(String str){
 		
 		String[] arrStirng = str.split(" ");
+		ArrayList<Integer> intList = new ArrayList<Integer>();
 		
 		for(String s: arrStirng){
-			Integer.parseInt(s);
+			try{
+			intList.add(Integer.parseInt(s));			
+			}catch(Exception e){
+				intList.add(0);
+			}
 		}
-		return null;
+		return intList;
 		
 	}
 	
 
 	// detect symbols in string
-	public static boolean detectSymbol(String str, String s) {
-		char[] charArray = str.toCharArray();
-
-		for (int i = 0; i < charArray.length; i++) {
-
-			System.out.print(charArray[i] + " ");
-
-			if (charArray[i] == s.charAt(0)) {
-
-				System.out.println("OK");
-				return true;
-			}
-		}
-		return false;
-
-	}
-
-	// fulfill math operations
-	public static void mathOperations(String str) {
-		int summ = 0;
-		for (int j = 0; j < str.length(); j++) {
-			if (detectSymbol(str, "+")) {
-				for (int i = 0; i < detectInteger(str).size(); i++) {
-					summ = summ + detectInteger(str).get(i);
-				}
-			}
-		}
-		System.out.println(summ);
-	}
+//	public static boolean detectSymbol(String str, String s) {
+//		char[] charArray = str.toCharArray();
+//
+//		for (int i = 0; i < charArray.length; i++) {
+//
+//			System.out.print(charArray[i] + " ");
+//
+//			if (charArray[i] == s.charAt(0)) {
+//
+//				System.out.println("OK");
+//				return true;
+//			}
+//		}
+//		return false;
+//
+//	}
+//
+//	// fulfill math operations
+//	public static void mathOperations(String str) {
+//		int summ = 0;
+//		for (int j = 0; j < str.length(); j++) {
+//			if (detectSymbol(str, "+")) {
+//				for (int i = 0; i < detectInteger(str).size(); i++) {
+//					summ = summ + detectInteger(str).get(i);
+//				}
+//			}
+//		}
+//		System.out.println(summ);
+//	}
 }
