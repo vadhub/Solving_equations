@@ -299,7 +299,8 @@ public class Run {
 		ArrayList<Integer> intList = new ArrayList<Integer>();
 		
 		for(String s: arrStirng){
-			try{
+			try{				
+			s.replace('=', '-');				
 			intList.add(Integer.parseInt(s));			
 			}catch(Exception e){
 				intList.add(0);
