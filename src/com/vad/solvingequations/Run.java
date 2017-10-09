@@ -286,38 +286,23 @@ public class Run {
 			}
 		});
 
-		System.out.println(detectInteger("x +11 -1 =12;"));
+		System.out.println(detectInteger("x +11 -1 =12 ;"));
 		mathOperations("x+11-1=12;");
 
 	}
-
-	public static ArrayList<Integer> detectInteger(String str) {
-		// adding numbers
-		ArrayList<Integer> inm = new ArrayList<Integer>();
-		int in = 0;
-		String plusString = "0";
-		for (int i = 0; i < str.length(); i++) {
-			if (Character.isDigit(str.charAt(i))) {
-				plusString += str.charAt(i);
-			} else {
-				in = Integer.valueOf(plusString);
-				inm.add(in);
-				plusString = "0";
-			}
-		}
-		// delete '0'
-		for (int i = 0; i < inm.size(); i++) {
-			if (inm.contains(0)) {
-				inm.remove(inm.get(i));
-			}
-		}
+	//Second method
+	
+	public static ArrayList<Integer> detectInteger(String str){
 		
-		str = str.replaceAll("[x ]", "");
-		System.out.println(str);
-
-		return inm;
-
+		String[] arrStirng = str.split(" ");
+		
+		for(String s: arrStirng){
+			Integer.parseInt(s);
+		}
+		return null;
+		
 	}
+	
 
 	// detect symbols in string
 	public static boolean detectSymbol(String str, String s) {
