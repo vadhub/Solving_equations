@@ -286,7 +286,7 @@ public class Run {
 			}
 		});
 
-		System.out.println(detectInteger("x +11 -1 =12 ;"));
+		System.out.println(detectInteger("x +11 -1 = 12 ;"));
 //		mathOperations("x+11-1=12;");
 		System.out.println(detectInteger("x +11 -1 =12 ;"));
 
@@ -299,8 +299,12 @@ public class Run {
 		ArrayList<Integer> intList = new ArrayList<Integer>();
 		
 		for(String s: arrStirng){
-			try{				
-			s.replace('=', '-');				
+			
+			if(arrStirng.equals(str.indexOf('='))){
+				intList.add(Integer.parseInt(s)*-1);						
+			}
+			try{
+				
 			intList.add(Integer.parseInt(s));			
 			}catch(Exception e){
 				intList.add(0);
