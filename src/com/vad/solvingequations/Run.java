@@ -287,66 +287,66 @@ public class Run {
 		});
 
 		System.out.println(detectInteger("x +11 -1 =12 ;"));
-//		mathOperations("x+11-1=12;");
+		// mathOperations("x+11-1=12;");
 		System.out.println(detectInteger("x +11 -1 =12 ;"));
 
 	}
-	//Second method
-	
-	public static ArrayList<Integer> detectInteger(String str){
+
+	// Second method
+
+	public static ArrayList<Integer> detectInteger(String str) {
+		int pass = str.indexOf("=");
+
+		if (pass == -1) {
+			System.out.println("not");
+		} else {
+			str = str.replace('=', '-');
+		}
 		
 		String[] arrStirng = str.split(" ");
 		ArrayList<Integer> intList = new ArrayList<Integer>();
+
 		
-		int pass = str.indexOf("=");
-		
-		for(String s: arrStirng){
-			
-			if(pass == -1){
-				System.out.println("not");					
-			}else{
-				str =str.replace('=', '-');
-			}
-			try{
-				
-			intList.add(Integer.parseInt(s));			
-			}catch(Exception e){
+		for (String s : arrStirng) {
+			try {
+				intList.add(Integer.parseInt(s));
+			} catch (Exception e) {
 				intList.add(0);
 			}
 		}
+		System.out.println(str);
 		return intList;
-		
+
 	}
-	
 
 	// detect symbols in string
-//	public static boolean detectSymbol(String str, String s) {
-//		char[] charArray = str.toCharArray();
-//
-//		for (int i = 0; i < charArray.length; i++) {
-//
-//			System.out.print(charArray[i] + " ");
-//
-//			if (charArray[i] == s.charAt(0)) {
-//
-//				System.out.println("OK");
-//				return true;
-//			}
-//		}
-//		return false;
-//
-//	}
-//
-//	// fulfill math operations
-//	public static void mathOperations(String str) {
-//		int summ = 0;
-//		for (int j = 0; j < str.length(); j++) {
-//			if (detectSymbol(str, "+")) {
-//				for (int i = 0; i < detectInteger(str).size(); i++) {
-//					summ = summ + detectInteger(str).get(i);
-//				}
-//			}
-//		}
-//		System.out.println(summ);
-//	}
+	// public static boolean detectSymbol(String str, String s) {
+	// char[] charArray = str.toCharArray();
+	//
+	// for (int i = 0; i < charArray.length; i++) {
+	//
+	// System.out.print(charArray[i] + " ");
+	//
+	// if (charArray[i] == s.charAt(0)) {
+	//
+	// System.out.println("OK");
+	// return true;
+	// }
+	// }
+	// return false;
+	//
+	// }
+	//
+	// // fulfill math operations
+	// public static void mathOperations(String str) {
+	// int summ = 0;
+	// for (int j = 0; j < str.length(); j++) {
+	// if (detectSymbol(str, "+")) {
+	// for (int i = 0; i < detectInteger(str).size(); i++) {
+	// summ = summ + detectInteger(str).get(i);
+	// }
+	// }
+	// }
+	// System.out.println(summ);
+	// }
 }
