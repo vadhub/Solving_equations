@@ -1,12 +1,7 @@
 package com.vad.solvingequations;
 
-public class Equations {	
-	// a+x=b
-	// x+a=b	
-	public double solvSum(double a, double b) {
-		double x = b - a;
-		return x;
-	}
+public class Equations {
+	
 
 	// a*x^2+b*x+c=0
 	// D=b^2-4*a*c

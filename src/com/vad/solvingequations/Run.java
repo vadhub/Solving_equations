@@ -104,13 +104,7 @@ public class Run {
 				int_d = Double.parseDouble(d.getText());
 				int_e = Double.parseDouble(e.getText());
 
-				if (ch.getSelectedIndex() == 0) {
-					double x = equations.solvSum(int_a, int_b);
-
-					mappingSol.DisplayForSum(int_a, int_b, x);
-
-					result.setText(String.valueOf(x));
-				} else if (ch.getSelectedIndex() == 1) {
+				 if (ch.getSelectedIndex() == 1) {
 
 					double x = equations.solvR_X1(int_a, int_b, int_c);
 					double x2 = equations.solvR_X2(int_a, int_b, int_c);
@@ -319,6 +313,7 @@ public class Run {
 				intList.remove(i);
 			}
 		}
+		
 		return intList;
 
 	}
