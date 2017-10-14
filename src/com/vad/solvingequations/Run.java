@@ -286,8 +286,8 @@ public class Run {
 			}
 		});
 
-		System.out.println(detectInteger("x +10 -1 =12 ;"));
-		System.out.println(mathOperations("x +10 -1 =12 ;"));
+		System.out.println(detectInteger("x +10 -1 =12"));
+		System.out.println(mathOperations("x +10 -1 =12"));		
 
 	}
 
@@ -312,6 +312,13 @@ public class Run {
 				intList.add(0);
 			}
 		}
+		
+		//delete '0'
+		for(int i = 0; i<intList.size();i++){
+			if(intList.get(i) == 0){
+				intList.remove(i);
+			}
+		}
 		return intList;
 
 	}
@@ -320,8 +327,7 @@ public class Run {
 	public static int mathOperations(String str1) {
 		int summ = 0;
 		ArrayList<Integer> listNumbers= detectInteger(str1);
-		for(int i =0; i<listNumbers.size();i++){
-			
+		for(int i =0; i<listNumbers.size();i++){			
 			summ = summ + listNumbers.get(i);			
 		}
 		return summ*-1;
