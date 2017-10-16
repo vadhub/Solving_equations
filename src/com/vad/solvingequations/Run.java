@@ -18,7 +18,20 @@ public class Run {
 		// gui bloc
 
 		JFrame frame = new JFrame();
-
+		
+		JFrame frame2 = new JFrame();
+		
+		JPanel panelBase = new JPanel();
+		JButton solv = new JButton("Solov");
+		JTextField inText = new JTextField(6);
+		
+		panelBase.add(solv);
+		panelBase.add(inText);
+		
+		frame2.setSize(200, 100);
+		frame2.setVisible(true);
+		frame2.add(panelBase);
+		
 		JTextField result = new JTextField(17);
 		JButton enter = new JButton("Enter");
 
