@@ -10,41 +10,7 @@ public class MappingSolutions {
 	private Font font = new Font("SERIF", Font.BOLD, 20);
 	EquationsTrigeometry equationsTrigeometry = new EquationsTrigeometry();
 
-	public void DisplayForSum(double int_a, double b, double x) {
-		JFrame frame = new JFrame();
-		JTextArea mainTxt = new JTextArea();
-
-		mainTxt.setBackground(Color.green.darker().darker().darker());
-
-		mainTxt.setForeground(Color.WHITE);
-
-		mainTxt.setFont(font);
-
-		mainTxt.append("solving: ");
-
-		mainTxt.append("\n");
-
-		mainTxt.append(String.valueOf(int_a) + "+ x = " + String.valueOf(b)
-				+ ";");
-
-		mainTxt.append("\n");
-
-		mainTxt.append("x = " + String.valueOf(b) + " "
-				+ String.valueOf(int_a * -1) + ";");
-
-		mainTxt.append("\n");
-
-		mainTxt.append("x = " + String.valueOf(x) + ";");
-
-		frame.add(mainTxt);
-
-		frame.setSize(200, 200);
-		frame.setLocation(400, 455);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setVisible(true);
-
-	}
-
+	
 	public void DisplayForR(double a, double b, double c) {
 
 		double d = b * b - 4 * a * c;

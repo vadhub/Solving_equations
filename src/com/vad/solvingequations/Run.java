@@ -31,7 +31,7 @@ public class Run {
 
 		Choice ch = new Choice();
 
-		ch.add("a+x=b");
+		ch.add(" ");
 		ch.add("x^2*a+bx+c=0");
 		ch.add("x/b=a");
 		ch.add("b/x=a");
@@ -102,8 +102,8 @@ public class Run {
 				int_b = Double.parseDouble(b.getText());
 				int_c = Double.parseDouble(c.getText());
 				int_d = Double.parseDouble(d.getText());
-				int_e = Double.parseDouble(e.getText());
-
+				int_e = Double.parseDouble(e.getText());		
+				
 				 if (ch.getSelectedIndex() == 1) {
 
 					double x = equations.solvR_X1(int_a, int_b, int_c);
