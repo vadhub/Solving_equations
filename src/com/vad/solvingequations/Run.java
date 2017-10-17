@@ -31,10 +31,22 @@ public class Run {
 		frame2.setSize(200, 100);
 		frame2.setVisible(true);
 		frame2.add(panelBase);
+		frame2.setLocation(400, 400);		
 		
 		JTextField result = new JTextField(17);
 		JButton enter = new JButton("Enter");
-
+		
+		String str = inText.toString();		
+		
+		solv.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				
+			}
+		});
+		
 		JLabel l_a = new JLabel("a: ");
 		JLabel l_b = new JLabel("b: ");
 		JLabel l_c = new JLabel("c: ");
@@ -96,7 +108,7 @@ public class Run {
 		panel1.add(result);
 
 		frame.add(panel1);
-		frame.setVisible(true);
+//		frame.setVisible(true);
 		frame.setSize(629, 100);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocation(400, 430);
