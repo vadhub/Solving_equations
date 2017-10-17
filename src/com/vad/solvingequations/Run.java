@@ -42,7 +42,7 @@ public class Run {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				JOptionPane.showMessageDialog(null, mathOperations(str));
 				
 			}
 		});
