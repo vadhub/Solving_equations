@@ -15,10 +15,7 @@ public class Run {
 		EquationsTrigeometry equationsTri = new EquationsTrigeometry();
 		MappingSolutions mappingSol = new MappingSolutions();
 
-		// gui bloc
-
-		JFrame frame = new JFrame();
-		
+		// gui bloc		
 		JFrame frame2 = new JFrame();
 		
 		JPanel panelBase = new JPanel();
@@ -106,13 +103,7 @@ public class Run {
 		panel1.add(l_e);
 		panel1.add(e);
 		panel1.add(l_result);
-		panel1.add(result);
-
-		frame.add(panel1);
-//		frame.setVisible(true);
-		frame.setSize(629, 100);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setLocation(400, 430);
+		panel1.add(result);	
 
 		enter.addActionListener(new ActionListener() {
 
