@@ -23,12 +23,12 @@ public class Run {
 		
 		JPanel panelBase = new JPanel();
 		JButton solv = new JButton("Solov");
-		JTextField inText = new JTextField(6);
+		JTextField inText = new JTextField(10);
 		
 		panelBase.add(solv);
 		panelBase.add(inText);
 		
-		frame2.setSize(200, 100);
+		frame2.setSize(300, 100);
 		frame2.setVisible(true);
 		frame2.add(panelBase);
 		frame2.setLocation(400, 400);		
@@ -36,13 +36,14 @@ public class Run {
 		JTextField result = new JTextField(17);
 		JButton enter = new JButton("Enter");
 		
-		String str = inText.toString();		
+				
 		
 		solv.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(null, mathOperations(str));
+				detectInteger(inText.getText());
+				JOptionPane.showMessageDialog(null, mathOperations(inText.getText()));
 				
 			}
 		});
@@ -305,8 +306,8 @@ public class Run {
 			}
 		});
 
-		System.out.println(detectInteger("x +10 -1 =12"));
-		System.out.println(mathOperations("x +10 -1 =12"));		
+//		System.out.println(detectInteger("x +10 -1 =12"));
+//		System.out.println(mathOperations("x +10 -1 =12"));		
 
 	}
 
