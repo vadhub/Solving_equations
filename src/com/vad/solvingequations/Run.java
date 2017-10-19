@@ -297,8 +297,8 @@ public class Run {
 			}
 		});
 
-//		System.out.println(detectInteger("x +10 -1 =12"));
-//		System.out.println(mathOperations("x +10 -1 =12"));		
+		System.out.println(detectInteger("x/2=12"));
+		System.out.println(mathOperations("x/2=12"));		
 
 	}
 
@@ -313,24 +313,29 @@ public class Run {
 			str = str.replace('=', '-');
 		}
 
-		String[] arrStirng = str.split(" ");
+		char[] arrStirng = str.toCharArray();
 		ArrayList<Integer> intList = new ArrayList<Integer>();
 
-		for (String s : arrStirng) {
+		for (int i =0;i<arrStirng.length;i++) {
 			try {
-				intList.add(Integer.parseInt(s));
+				intList.add(Integer.parseInt(arrStirng[i]));
 			} catch (Exception e) {
 				intList.add(0);
 			}
 		}
 		
+		
 		//delete '0'
 		for(int i = 0; i<intList.size();i++){
+					
 			if(intList.get(i) == 0){
 				intList.remove(i);
 			}
 		}
 		
+		
+				
+	
 		return intList;
 
 	}
