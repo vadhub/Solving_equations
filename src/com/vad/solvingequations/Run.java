@@ -302,26 +302,24 @@ public class Run {
 
 	}
 
-	// Second method
+
 	// detect symbols in string
 	public static ArrayList<Integer> detectInteger(String str) {
 		int pass = str.indexOf("=");
+		
+		String ast = "";
 
 		if (pass == -1) {
 			System.out.println("not");
 		} else {
 			str = str.replace('=', '-');
-		}
-
-		char[] arrStirng = str.toCharArray();
+		}	
 		ArrayList<Integer> intList = new ArrayList<Integer>();
 
-		for (int i =0;i<arrStirng.length;i++) {
-			try {
-				intList.add(Integer.parseInt(arrStirng[i]));
-			} catch (Exception e) {
-				intList.add(0);
-			}
+		for (int i =0;i<ast.length();i++) {
+				if(ast.charAt(i)=='/'){
+					System.out.println("ok");
+				}
 		}
 		
 		
