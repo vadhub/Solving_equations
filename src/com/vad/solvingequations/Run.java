@@ -311,12 +311,21 @@ public class Run {
 		String ast = "";
 		
 		for (int i =0;i<str.length();i++) {
-			char c = str.charAt(i);
-			System.out.println(8);
+			char c = str.charAt(i);		
 				if(c=='/'){					
-					intList.add(1);
+					ast+=c+" ";
+				}else if(c=='-'){					
+					ast+=c+" ";
+				}else if(c=='+'){
+					ast+=c+" ";
 				}
+				else if(c=='='){
+					ast+=c+" ";
+				}
+				
 		}
+		
+		System.out.println(ast);
 
 		if (pass == -1) {
 			System.out.println("not");
