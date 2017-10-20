@@ -305,23 +305,24 @@ public class Run {
 
 	// detect symbols in string
 	public static ArrayList<Integer> detectInteger(String str) {
+		ArrayList<Integer> intList = new ArrayList<Integer>();	
 		int pass = str.indexOf("=");
 		
 		String ast = "";
+		
+		for (int i =0;i<str.length();i++) {
+			char c = str.charAt(i);
+			System.out.println(8);
+				if(c=='/'){					
+					intList.add(1);
+				}
+		}
 
 		if (pass == -1) {
 			System.out.println("not");
 		} else {
 			str = str.replace('=', '-');
-		}	
-		ArrayList<Integer> intList = new ArrayList<Integer>();
-
-		for (int i =0;i<ast.length();i++) {
-				if(ast.charAt(i)=='/'){
-					System.out.println("ok");
-				}
-		}
-		
+		}		
 		
 		//delete '0'
 		for(int i = 0; i<intList.size();i++){
