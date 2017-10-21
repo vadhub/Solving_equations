@@ -15,36 +15,35 @@ public class Run {
 		EquationsTrigeometry equationsTri = new EquationsTrigeometry();
 		MappingSolutions mappingSol = new MappingSolutions();
 
-		// gui bloc		
+		// gui bloc
 		JFrame frame2 = new JFrame();
-		
+
 		JPanel panelBase = new JPanel();
 		JButton solv = new JButton("Solov");
 		JTextField inText = new JTextField(10);
-		
+
 		panelBase.add(solv);
 		panelBase.add(inText);
-		
+
 		frame2.setSize(300, 100);
 		frame2.setVisible(true);
 		frame2.add(panelBase);
-		frame2.setLocation(400, 400);		
-		
+		frame2.setLocation(400, 400);
+
 		JTextField result = new JTextField(17);
 		JButton enter = new JButton("Enter");
-		
-				
-		
+
 		solv.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				detectInteger(inText.getText());
-				JOptionPane.showMessageDialog(null, mathOperations(inText.getText()));
-				
+				JOptionPane.showMessageDialog(null,
+						mathOperations(inText.getText()));
+
 			}
 		});
-		
+
 		JLabel l_a = new JLabel("a: ");
 		JLabel l_b = new JLabel("b: ");
 		JLabel l_c = new JLabel("c: ");
@@ -103,7 +102,7 @@ public class Run {
 		panel1.add(l_e);
 		panel1.add(e);
 		panel1.add(l_result);
-		panel1.add(result);	
+		panel1.add(result);
 
 		enter.addActionListener(new ActionListener() {
 
@@ -119,9 +118,9 @@ public class Run {
 				int_b = Double.parseDouble(b.getText());
 				int_c = Double.parseDouble(c.getText());
 				int_d = Double.parseDouble(d.getText());
-				int_e = Double.parseDouble(e.getText());		
-				
-				 if (ch.getSelectedIndex() == 1) {
+				int_e = Double.parseDouble(e.getText());
+
+				if (ch.getSelectedIndex() == 1) {
 
 					double x = equations.solvR_X1(int_a, int_b, int_c);
 					double x2 = equations.solvR_X2(int_a, int_b, int_c);
@@ -297,57 +296,61 @@ public class Run {
 			}
 		});
 
-		System.out.println(detectInteger("x/2=12"));
-		System.out.println(mathOperations("x/2=12"));		
+		System.out.println(detectInteger("x-2=12"));
+		System.out.println(mathOperations("x-2=12"));
 
 	}
 
-
 	// detect symbols in string
 	public static ArrayList<Integer> detectInteger(String str) {
-		ArrayList<Integer> intList = new ArrayList<Integer>();	
+
+		ArrayList<Integer> intList = new ArrayList<Integer>();
+
 		int pass = str.indexOf("=");
-		
+
 		String ast = "";
-				
-		for (int i =0;i<str.length();i++) {
-			
-			char c = str.charAt(i);		
-				if(c=='/'){					
-					ast+=" "+c;
-				}else if(c=='-'){					
-					ast+=" "+c;
-				}else if(c=='+'){
-					ast+=" "+c;
-				}
-				else if(c=='='){
-					ast+=" "+c;
-				}else{
-					ast+=c;
-				}
-				
-				
+
+		for (int i = 0; i < str.length(); i++) {
+
+			char c = str.charAt(i);
+			if (c == '/') {
+				ast += " " + c;
+			} else if (c == '-') {
+				ast += " " + c;
+			} else if (c == '+') {
+				ast += " " + c;
+			} else if (c == '=') {
+				ast += " " + c;
+			} else {
+				ast += c;
+			}
 		}
-		
-		System.out.println(ast);
+
+		char[] arrString = ast.toCharArray();
+		String[] arrStirng = ast.split(" ");
 
 		if (pass == -1) {
 			System.out.println("not");
 		} else {
-			str = str.replace('=', '-');
-		}		
+			ast = ast.replace('=', '-');
+		}
 		
-		//delete '0'
-		for(int i = 0; i<intList.size();i++){
-					
-			if(intList.get(i) == 0){
+		for (String s : arrStirng) {
+			try {
+				intList.add(Integer.parseInt(s));
+			} catch (Exception e) {
+				intList.add(0);
+			}
+		}		
+
+		// delete '0'
+		for (int i = 0; i < intList.size(); i++) {
+
+			if (intList.get(i) == 0) {
 				intList.remove(i);
 			}
 		}
-		
-		
-				
-	
+
 		return intList;
 
 	}
@@ -355,11 +358,11 @@ public class Run {
 	// fulfill math operations
 	public static int mathOperations(String str1) {
 		int summ = 0;
-		ArrayList<Integer> listNumbers= detectInteger(str1);
-		for(int i =0; i<listNumbers.size();i++){			
-			summ = summ + listNumbers.get(i);			
+		ArrayList<Integer> listNumbers = detectInteger(str1);
+		for (int i = 0; i < listNumbers.size(); i++) {
+			summ = summ + listNumbers.get(i);
 		}
-		return summ*-1;
+		return summ * -1;
 	}
-	
+
 }
