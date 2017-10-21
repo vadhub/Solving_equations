@@ -304,9 +304,7 @@ public class Run {
 	// detect symbols in string
 	public static ArrayList<Integer> detectInteger(String str) {
 
-		ArrayList<Integer> intList = new ArrayList<Integer>();
-
-		int pass = str.indexOf("=");
+		ArrayList<Integer> intList = new ArrayList<Integer>();		
 
 		String ast = "";
 
@@ -324,16 +322,17 @@ public class Run {
 			} else {
 				ast += c;
 			}
-		}
-
-		char[] arrString = ast.toCharArray();
-		String[] arrStirng = ast.split(" ");
+		}	
+		
+		int pass = ast.indexOf("=");		
 
 		if (pass == -1) {
 			System.out.println("not");
 		} else {
 			ast = ast.replace('=', '-');
 		}
+		
+		String[] arrStirng = ast.split(" ");
 		
 		for (String s : arrStirng) {
 			try {
