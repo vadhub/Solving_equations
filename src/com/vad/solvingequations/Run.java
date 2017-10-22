@@ -304,7 +304,7 @@ public class Run {
 	// detect symbols in string
 	public static ArrayList<Integer> detectInteger(String str) {
 
-		ArrayList<Integer> intList = new ArrayList<Integer>();		
+		ArrayList<Integer> intList = new ArrayList<Integer>();
 
 		String ast = "";
 
@@ -322,25 +322,25 @@ public class Run {
 			} else {
 				ast += c;
 			}
-		}	
-		
-		int pass = ast.indexOf("=");		
+		}
+
+		int pass = ast.indexOf("=");
 
 		if (pass == -1) {
 			System.out.println("not");
 		} else {
 			ast = ast.replace('=', '-');
 		}
-		
+
 		String[] arrStirng = ast.split(" ");
-		
+
 		for (String s : arrStirng) {
 			try {
 				intList.add(Integer.parseInt(s));
 			} catch (Exception e) {
 				intList.add(0);
 			}
-		}		
+		}
 
 		// delete '0'
 		for (int i = 0; i < intList.size(); i++) {
@@ -353,6 +353,19 @@ public class Run {
 		return intList;
 
 	}
+	
+	public static int numX(String str){
+		int num = 0;
+		
+		for (int i = 0; i < str.length(); i++) {
+			char c = str.charAt(i);
+			if(c == 'x'){
+				num++;
+			}
+		}
+		return num;
+		
+	}
 
 	// fulfill math operations
 	public static int mathOperations(String str1) {
@@ -361,7 +374,13 @@ public class Run {
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
 		}
-		return summ * -1;
+		try{
+			return (summ *-1)/numX(str1);			
+		}catch(Exception ex){
+			return summ * -1;
+		}
+		
 	}
+	
 
 }
