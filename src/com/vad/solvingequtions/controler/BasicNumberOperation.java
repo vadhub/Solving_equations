@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class BasicNumberOperation {
 
 	// detect symbols in string
-	public static ArrayList<Integer> detectInteger(String str) {
+	public ArrayList<Integer> detectInteger(String str) {
 
 		ArrayList<Integer> intList = new ArrayList<Integer>();
 
@@ -58,7 +58,7 @@ public class BasicNumberOperation {
 	}
 
 	// current x
-	public static int numX(String str) {
+	public int numX(String str) {
 		int num = 0;
 
 		for (int i = 0; i < str.length(); i++) {
@@ -72,7 +72,7 @@ public class BasicNumberOperation {
 	}
 
 	// fulfill math operations
-	public static int mathOperations(String str1) {
+	public int mathOperations(String str1) {
 		int summ = 0;
 		ArrayList<Integer> listNumbers = detectInteger(str1);
 		for (int i = 0; i < listNumbers.size(); i++) {
