@@ -2,7 +2,7 @@ package com.vad.solvingequtions.controler;
 
 import java.util.ArrayList;
 
-public class BasicNumberOperation {
+public class BasicNumberOperations {
 
 	// detect symbols in string
 	public ArrayList<Integer> detectInteger(String str) {

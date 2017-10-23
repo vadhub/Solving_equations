@@ -8,12 +8,15 @@ import java.util.ArrayList;
 
 import javax.swing.*;
 
+import com.vad.solvingequtions.controler.BasicNumberOperations;
+
 public class Run {
 
 	public static void main(String[] args) {
 		Equations equations = new Equations();
 		EquationsTrigeometry equationsTri = new EquationsTrigeometry();
 		MappingSolutions mappingSol = new MappingSolutions();
+		BasicNumberOperations basicNumOps = new BasicNumberOperations();
 
 		// gui bloc
 		JFrame frame2 = new JFrame();
@@ -37,9 +40,9 @@ public class Run {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				detectInteger(inText.getText());
+				basicNumOps.detectInteger(inText.getText());
 				JOptionPane.showMessageDialog(null,
-						mathOperations(inText.getText()));
+						basicNumOps.mathOperations(inText.getText()));
 
 			}
 		});
@@ -296,8 +299,8 @@ public class Run {
 			}
 		});
 
-		System.out.println(detectInteger("x-2=12"));
-		System.out.println(mathOperations("x-2=12"));
+		System.out.println(basicNumOps.detectInteger("x-2=12"));
+		System.out.println(basicNumOps.mathOperations("x-2=12"));
 
 	}
 
