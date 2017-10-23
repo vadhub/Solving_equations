@@ -354,6 +354,7 @@ public class Run {
 
 	}
 	
+	//current x
 	public static int numX(String str){
 		int num = 0;
 		
