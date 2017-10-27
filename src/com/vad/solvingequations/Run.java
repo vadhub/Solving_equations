@@ -25,7 +25,8 @@ public class Run {
 		frame2.setVisible(true);
 		frame2.add(panelBase);
 		frame2.setLocation(400, 400);	
-
+		frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		solv.addActionListener(new ActionListener() {
 
 			@Override
