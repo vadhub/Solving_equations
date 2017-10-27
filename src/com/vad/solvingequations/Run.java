@@ -1,6 +1,4 @@
 package com.vad.solvingequations;
-
-import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -37,13 +35,7 @@ public class Run {
 						basicNumOps.mathOperations(inText.getText()));
 
 			}
-		});
-		
-		JPanel panel1 = new JPanel();
-		panel1.setLayout(new FlowLayout());
-
-		
-		
+		});		
 		
 		System.out.println(basicNumOps.detectInteger("x-2=12"));
 		System.out.println(basicNumOps.mathOperations("x-2=12"));
