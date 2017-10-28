@@ -60,16 +60,18 @@ public class BasicNumberOperations {
 	// current x
 	public int numX(String str) {
 		int num = 0;
+		int numSub = 0;
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			if(c == Integer.valueOf(c)){
-				num = c;
-			}
+			if(Character.isDigit(c)){
+				numSub = c;				
+				System.out.println(c);
+			}else
 			if (c == 'x') {
 				num++;
 			}
 		}
-		return num;
+		return num+numSub;
 
 	}
 
