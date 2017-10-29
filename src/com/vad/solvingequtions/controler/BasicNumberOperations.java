@@ -68,14 +68,14 @@ public class BasicNumberOperations {
 			if (c == 'x') {
 				if(Character.isDigit(str.charAt(i-1))){
 					numSub = Character.getNumericValue(str.charAt(i-1));
-					System.out.println(numSub);
-				
-				}
-				num++;
+					System.out.println(numSub);				
+				}else {
+					num++;
+				}				
 			}
 		}
 		
-		return num+numSub;
+		return numSub+num;
 
 	}
 

@@ -38,8 +38,8 @@ public class Run {
 			}
 		});		
 		
-		System.out.println(basicNumOps.detectInteger("2x=12"));
-		System.out.println(basicNumOps.mathOperations("2x=12"));
+		System.out.println(basicNumOps.detectInteger("2x+x=12"));
+		System.out.println(basicNumOps.mathOperations("2x+x=12"));
 
 	}
 
