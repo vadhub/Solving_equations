@@ -80,7 +80,7 @@ public class BasicNumberOperations {
 	}
 
 	// fulfill math operations
-	public int mathOperations(String str1) {
+	public double mathOperations(String str1) {
 		int summ = 0;
 		ArrayList<Integer> listNumbers = detectInteger(str1);
 		for (int i = 0; i < listNumbers.size(); i++) {
