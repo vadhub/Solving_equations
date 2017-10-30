@@ -67,7 +67,7 @@ public class BasicNumberOperations {
 			char c = str.charAt(i);			
 			if (c == 'x') {
 				if(Character.isDigit(str.charAt(i-1))){
-					numSub = Character.getNumericValue(str.charAt(i-1));
+					numSub =numSub + Character.getNumericValue(str.charAt(i-1));
 					System.out.println(numSub);				
 				}else {
 					num++;
