@@ -25,14 +25,11 @@ public class BasicNumberOperations {
 			} else {
 				ast += c;
 			}
-		}
-		
-		System.out.println(ast);
+		}		
 
 		int pass = ast.indexOf("=");
 
 		if (pass == -1) {
-			System.out.println("not");
 		} else {
 			ast = ast.replace('=', '-');
 		}
@@ -64,18 +61,18 @@ public class BasicNumberOperations {
 		int num = 0;
 		int numSub = 0;
 		for (int i = 0; i < str.length(); i++) {
-			char c = str.charAt(i);			
+			char c = str.charAt(i);
 			if (c == 'x') {
-				if(Character.isDigit(str.charAt(i-1))){
-					numSub =numSub + Character.getNumericValue(str.charAt(i-1));
-					System.out.println(numSub);				
-				}else {
+				if (Character.isDigit(str.charAt(i - 1))) {
+					numSub = numSub
+							+ Character.getNumericValue(str.charAt(i - 1));
+				} else {
 					num++;
-				}				
+				}
 			}
 		}
-		
-		return numSub+num;
+
+		return numSub + num;
 
 	}
 
@@ -89,7 +86,7 @@ public class BasicNumberOperations {
 		try {
 			return (summ * -1) / numX(str1);
 		} catch (Exception ex) {
-			return summ * -1;
+			return summ;
 		}
 
 	}
