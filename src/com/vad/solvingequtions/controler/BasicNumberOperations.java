@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class BasicNumberOperations {
 
 	// detect symbols in string
-	public ArrayList<Integer> detectInteger(String str) {
+	public ArrayList<Double> detectInteger(String str) {
 
-		ArrayList<Integer> intList = new ArrayList<Integer>();
+		ArrayList<Double> intList = new ArrayList<Double>();
 
 		String ast = "";
 
@@ -38,9 +38,9 @@ public class BasicNumberOperations {
 
 		for (String s : arrStirng) {
 			try {
-				intList.add(Integer.parseInt(s));
+				intList.add(Double.parseDouble(s));
 			} catch (Exception e) {
-				intList.add(0);
+				intList.add(0.0);
 			}
 		}
 
@@ -78,8 +78,8 @@ public class BasicNumberOperations {
 
 	// fulfill math operations
 	public double mathOperations(String str1) {
-		int summ = 0;
-		ArrayList<Integer> listNumbers = detectInteger(str1);
+		double summ = 0;
+		ArrayList<Double> listNumbers = detectInteger(str1);
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
 		}
