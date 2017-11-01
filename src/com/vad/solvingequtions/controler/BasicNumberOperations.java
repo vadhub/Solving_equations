@@ -3,6 +3,10 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
+	
+	public double square(double a){
+		return a*a;
+	}
 
 	// detect symbols in string
 	public ArrayList<Double> detectInteger(String str) {
@@ -25,7 +29,7 @@ public class BasicNumberOperations {
 			} else {
 				ast += c;
 			}
-		}		
+		}
 
 		int pass = ast.indexOf("=");
 
@@ -64,8 +68,7 @@ public class BasicNumberOperations {
 			char c = str.charAt(i);
 			if (c == 'x') {
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub
-							+ Character.getNumericValue(str.charAt(i - 1));
+					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));
 				} else {
 					num++;
 				}

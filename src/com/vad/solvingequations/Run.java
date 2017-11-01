@@ -33,9 +33,7 @@ public class Run {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				basicNumOps.detectInteger(inText.getText());
-				JOptionPane.showMessageDialog(null,
-						basicNumOps.mathOperations(inText.getText()));
-
+				JOptionPane.showMessageDialog(null, basicNumOps.mathOperations(inText.getText()));
 			}
 		});
 
