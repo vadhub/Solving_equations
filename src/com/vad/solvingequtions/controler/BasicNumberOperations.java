@@ -3,9 +3,8 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
-	
-	public double square(double a){
-		return a*a;
+	public double square(double a) {
+		return a * a;
 	}
 
 	// detect symbols in string
@@ -57,7 +56,6 @@ public class BasicNumberOperations {
 		}
 
 		return intList;
-
 	}
 
 	// current x
@@ -91,7 +89,6 @@ public class BasicNumberOperations {
 		} catch (Exception ex) {
 			return summ;
 		}
-
 	}
 
 }
