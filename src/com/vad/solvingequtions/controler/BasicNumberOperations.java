@@ -6,7 +6,7 @@ public class BasicNumberOperations {
 	public double square(double a) {
 		return a * a;
 	}
-
+	
 	// detect symbols in string
 	public ArrayList<Double> detectInteger(String str) {
 
@@ -24,12 +24,16 @@ public class BasicNumberOperations {
 			} else if (c == '+') {
 				ast += " " + c;
 			} else if (c == '=') {
+				if(c=='t'){
+					ast += "s" + c;
+				}
 				ast += " " + c;
 			} else {
 				ast += c;
 			}
 		}
-
+		
+		System.out.println(ast);
 		int pass = ast.indexOf("=");
 
 		if (pass == -1) {
@@ -74,7 +78,6 @@ public class BasicNumberOperations {
 		}
 
 		return numSub + num;
-
 	}
 
 	// fulfill math operations
