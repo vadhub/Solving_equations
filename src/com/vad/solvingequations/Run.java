@@ -38,5 +38,8 @@ public class Run {
 				JOptionPane.showMessageDialog(null, basicNumOps.mathOperations(inText.getText()));
 			}
 		});
+
+		System.out.println(basicNumOps.deleteSpace("sddd sdsd sdsd sd "));
 	}
+	
 }

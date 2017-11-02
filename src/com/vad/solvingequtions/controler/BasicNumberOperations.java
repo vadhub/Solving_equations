@@ -6,7 +6,12 @@ public class BasicNumberOperations {
 	public double square(double a) {
 		return a * a;
 	}
-	
+
+	public String deleteSpace(String s){
+		s = s.replace(" ", "");
+		return s;
+	}
+
 	// detect symbols in string
 	public ArrayList<Double> detectInteger(String str) {
 
@@ -32,7 +37,7 @@ public class BasicNumberOperations {
 				ast += c;
 			}
 		}
-		
+
 		System.out.println(ast);
 		int pass = ast.indexOf("=");
 
