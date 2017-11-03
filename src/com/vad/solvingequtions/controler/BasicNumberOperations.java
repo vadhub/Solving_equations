@@ -28,13 +28,13 @@ public class BasicNumberOperations {
 				ast += " " + c;
 			} else if (c == '+') {
 				ast += " " + c;
-			} else if (c == '=') {				
+			} else if (c == '=') {
 				ast += " " + c;
 			}else if(c=='('){
 				if(str.charAt(i-1)=='t'){
 					System.out.println("Ok");
 				}
-			}else {			
+			}else {
 				ast += c;
 			}
 		}
@@ -80,7 +80,7 @@ public class BasicNumberOperations {
 			if (c == 'x') {
 				
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));					
+					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));
 				} else {
 					num++;
 				}
