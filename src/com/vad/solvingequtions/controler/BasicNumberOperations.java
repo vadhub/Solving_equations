@@ -30,8 +30,10 @@ public class BasicNumberOperations {
 				ast += " " + c;
 			} else if (c == '=') {				
 				ast += " " + c;
-			}else if(c=='t'){
-				ast += "q"+c;				
+			}else if(c=='('){
+				if(str.charAt(i-1)=='t'){
+					System.out.println("Ok");
+				}
 			}else {			
 				ast += c;
 			}
