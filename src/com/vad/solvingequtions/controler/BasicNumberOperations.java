@@ -28,17 +28,15 @@ public class BasicNumberOperations {
 				ast += " " + c;
 			} else if (c == '+') {
 				ast += " " + c;
-			} else if (c == '=') {
-				if(c=='t'){
-					ast += "s" + c;
-				}
+			} else if (c == '=') {				
 				ast += " " + c;
-			} else {
+			}else if(c=='t'){
+				ast += "q"+c;				
+			}else {			
 				ast += c;
 			}
 		}
-
-		System.out.println(ast);
+		
 		int pass = ast.indexOf("=");
 
 		if (pass == -1) {
@@ -63,6 +61,8 @@ public class BasicNumberOperations {
 				intList.remove(i);
 			}
 		}
+		
+		System.out.println(ast);
 
 		return intList;
 	}
@@ -71,11 +71,14 @@ public class BasicNumberOperations {
 	public int numX(String str) {
 		int num = 0;
 		int numSub = 0;
+		
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
+			
 			if (c == 'x') {
+				
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));
+					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));					
 				} else {
 					num++;
 				}
@@ -88,10 +91,13 @@ public class BasicNumberOperations {
 	// fulfill math operations
 	public double mathOperations(String str1) {
 		double summ = 0;
+		
 		ArrayList<Double> listNumbers = detectInteger(str1);
+		
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
 		}
+		
 		try {
 			return (summ * -1) / numX(str1);
 		} catch (Exception ex) {
