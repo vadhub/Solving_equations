@@ -34,7 +34,7 @@ public class BasicNumberOperations {
 				intList.add(0.0);
 			}
 		}
-						
+
 		return intList;
 		
 	}
@@ -47,9 +47,9 @@ public class BasicNumberOperations {
 		
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			
+
 			if (c == 'x') {
-				
+
 				if (Character.isDigit(str.charAt(i - 1))) {
 					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));
 				} else {
@@ -63,7 +63,6 @@ public class BasicNumberOperations {
 	// delete '0'
 	public ArrayList<Double> deleteZ(ArrayList<Double> intList){
 		
-	
 	for (int i = 0; i < intList.size(); i++) {
 
 		if (intList.get(i) == 0) {
@@ -72,7 +71,7 @@ public class BasicNumberOperations {
 	}
 	return intList;
 }
-	
+
 	// detect symbols in string
 		public ArrayList<Double> detectInteger(String str) {
 
