@@ -11,49 +11,9 @@ public class BasicNumberOperations {
 		s = s.replace(" ", "");
 		return s;
 	}
-
-	// detect symbols in string
-	public ArrayList<Double> detectInteger(String str) {
-
-		ArrayList<Double> intList = new ArrayList<Double>();
-
-		String ast = "";
-
-		for (int i = 0; i < str.length(); i++) {
-
-			char c = str.charAt(i);
-			if (c == '/') {
-				ast += " " + c;
-			} else if (c == '-') {
-				ast += " " + c;
-			} else if (c == '+') {
-				ast += " " + c;
-			} else if (c == '=') {
-				ast += " " + c;
-			}else if(c=='('){
-				if(str.charAt(i-1)=='t'){
-					
-				}
-			}else {
-				ast += c;
-			}
-		}		
-		
-		
-		// delete '0'
-		for (int i = 0; i < intList.size(); i++) {
-
-			if (intList.get(i) == 0) {
-				intList.remove(i);
-			}
-		}
-		
-		System.out.println(ast);
-
-		return intList;
-	}
 	
-	public String chnageSymbol(String ast){
+	//change
+	public String changeSymbol(String ast){
 		int pass = ast.indexOf("=");
 
 		if (pass == -1) {
@@ -63,6 +23,7 @@ public class BasicNumberOperations {
 		return ast;
 	}
 	
+	//adding numbers into arraylist
 	public ArrayList<Double> addInt(String ast, ArrayList<Double> intList){
 		String[] arrStirng = ast.split(" ");
 
@@ -99,6 +60,54 @@ public class BasicNumberOperations {
 
 		return numSub + num;
 	}
+	// delete '0'
+	public ArrayList<Double> deleteZ(ArrayList<Double> intList){
+		
+	
+	for (int i = 0; i < intList.size(); i++) {
+
+		if (intList.get(i) == 0) {
+			intList.remove(i);
+		}
+	}
+	return intList;
+}
+	
+	// detect symbols in string
+		public ArrayList<Double> detectInteger(String str) {
+
+			ArrayList<Double> intList = new ArrayList<Double>();
+
+			String ast = "";
+
+			for (int i = 0; i < str.length(); i++) {
+
+				char c = str.charAt(i);
+				if (c == '/') {
+					ast += " " + c;
+				} else if (c == '-') {
+					ast += " " + c;
+				} else if (c == '+') {
+					ast += " " + c;
+				} else if (c == '=') {
+					ast += " " + c;
+				}else if(c=='('){
+					if(str.charAt(i-1)=='t'){
+						
+					}
+				}else {
+					ast += c;
+				}
+			}
+			
+			changeSymbol(ast);
+			addInt(ast, intList);
+			deleteZ(intList);
+			
+			System.out.println(ast);
+
+			return intList;
+		}
 
 	// fulfill math operations
 	public double mathOperations(String str1) {
