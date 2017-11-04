@@ -32,30 +32,14 @@ public class BasicNumberOperations {
 				ast += " " + c;
 			}else if(c=='('){
 				if(str.charAt(i-1)=='t'){
-					System.out.println("Ok");
+					
 				}
 			}else {
 				ast += c;
 			}
-		}
+		}		
 		
-		int pass = ast.indexOf("=");
-
-		if (pass == -1) {
-		} else {
-			ast = ast.replace('=', '-');
-		}
-
-		String[] arrStirng = ast.split(" ");
-
-		for (String s : arrStirng) {
-			try {
-				intList.add(Double.parseDouble(s));
-			} catch (Exception e) {
-				intList.add(0.0);
-			}
-		}
-
+		
 		// delete '0'
 		for (int i = 0; i < intList.size(); i++) {
 
@@ -68,6 +52,32 @@ public class BasicNumberOperations {
 
 		return intList;
 	}
+	
+	public String chnageSymbol(String ast){
+		int pass = ast.indexOf("=");
+
+		if (pass == -1) {
+		} else {
+			ast = ast.replace('=', '-');
+		}
+		return ast;
+	}
+	
+	public ArrayList<Double> addInt(String ast, ArrayList<Double> intList){
+		String[] arrStirng = ast.split(" ");
+
+		for (String s : arrStirng) {
+			try {
+				intList.add(Double.parseDouble(s));
+			} catch (Exception e) {
+				intList.add(0.0);
+			}
+		}
+						
+		return intList;
+		
+	}
+	
 
 	// current x
 	public int numX(String str) {
