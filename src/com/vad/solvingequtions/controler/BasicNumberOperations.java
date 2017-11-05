@@ -74,7 +74,7 @@ public class BasicNumberOperations {
 
 	// detect symbols in string
 		public ArrayList<Double> detectInteger(String str) {
-
+			deleteSpace(str);
 			ArrayList<Double> intList = new ArrayList<Double>();
 
 			String ast = "";
@@ -97,8 +97,7 @@ public class BasicNumberOperations {
 				}else {
 					ast += c;
 				}
-			}
-			
+			}						
 			changeSymbol(ast);
 			addInt(ast, intList);
 			deleteZ(intList);
