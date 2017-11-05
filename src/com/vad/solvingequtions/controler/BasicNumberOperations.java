@@ -97,11 +97,10 @@ public class BasicNumberOperations {
 				}else {
 					ast += c;
 				}
-			}						
+			}
 			changeSymbol(ast);
 			addInt(ast, intList);
 			deleteZ(intList);
-			
 			System.out.println(ast);
 
 			return intList;
