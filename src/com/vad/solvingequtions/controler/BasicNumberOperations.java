@@ -39,6 +39,20 @@ public class BasicNumberOperations {
 		
 	}
 	
+	public ArrayList<Double> squreNum(String ast, ArrayList<Double> sqList){
+		String[] arrStirng = ast.split(" ");
+
+		for (String s : arrStirng) {
+			try {
+				sqList.add(Double.parseDouble(s));
+			} catch (Exception e) {
+				sqList.add(0.0);
+			}
+		}
+
+		return sqList;
+		
+	}
 
 	// current x
 	public int numX(String str) {
@@ -92,7 +106,7 @@ public class BasicNumberOperations {
 					ast += " " + c;
 				}else if(c=='('){
 					if(str.charAt(i-1)=='t'){
-						
+						squreNum(ast, intList);
 					}
 				}else {
 					ast += c;
