@@ -108,7 +108,7 @@ public class BasicNumberOperations {
 				}else if(c=='('){
 					if(str.charAt(i-1)=='t'){
 						squreNum(ast, intList);
-						l = l - 1;					
+						l = l - 1;
 					}
 				}else {
 					ast += c;
