@@ -90,6 +90,7 @@ public class BasicNumberOperations {
 		public ArrayList<Double> detectInteger(String str) {
 			deleteSpace(str);
 			ArrayList<Double> intList = new ArrayList<Double>();
+			int l =str.length();
 
 			String ast = "";
 
@@ -107,6 +108,7 @@ public class BasicNumberOperations {
 				}else if(c=='('){
 					if(str.charAt(i-1)=='t'){
 						squreNum(ast, intList);
+						l = l - 1;					
 					}
 				}else {
 					ast += c;
