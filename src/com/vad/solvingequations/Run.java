@@ -39,7 +39,9 @@ public class Run {
 			}
 		});
 
-		System.out.println(basicNumOps.deleteSpace("sddd sdsd sdsd sd "));
+		System.out.println(basicNumOps.detectInteger("2x=1"));
+		System.out.println(basicNumOps.numX("2x=1"));
+		System.out.println(basicNumOps.mathOperations("2x=1"));
 	}
 	
 }

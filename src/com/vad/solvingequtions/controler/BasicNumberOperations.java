@@ -12,19 +12,17 @@ public class BasicNumberOperations {
 		return s;
 	}
 	
-	//change
-	public String changeSymbol(String ast){
+	//adding numbers into arraylist
+	public ArrayList<Double> addInt(String ast, ArrayList<Double> intList){
+		
 		int pass = ast.indexOf("=");
 
 		if (pass == -1) {
 		} else {
 			ast = ast.replace('=', '-');
-		}
-		return ast;
-	}
-	
-	//adding numbers into arraylist
-	public ArrayList<Double> addInt(String ast, ArrayList<Double> intList){
+		}		
+		
+		
 		String[] arrStirng = ast.split(" ");
 
 		for (String s : arrStirng) {
@@ -70,8 +68,7 @@ public class BasicNumberOperations {
 					num++;
 				}
 			}
-		}
-
+		}			
 		return numSub + num;
 	}
 	// delete '0'
@@ -90,7 +87,6 @@ public class BasicNumberOperations {
 		public ArrayList<Double> detectInteger(String str) {
 			deleteSpace(str);
 			ArrayList<Double> intList = new ArrayList<Double>();
-			int l =str.length();
 
 			String ast = "";
 
@@ -104,20 +100,14 @@ public class BasicNumberOperations {
 				} else if (c == '+') {
 					ast += " " + c;
 				} else if (c == '=') {
-					ast += " " + c;
-				}else if(c=='('){
-					if(str.charAt(i-1)=='t'){
-						squreNum(ast, intList);
-						l = l - 1;
-					}
+					ast += " " + c;				
 				}else {
 					ast += c;
 				}
-			}
-			changeSymbol(ast);
+			}			
+			System.out.println(ast);
 			addInt(ast, intList);
 			deleteZ(intList);
-			System.out.println(ast);
 
 			return intList;
 		}
@@ -130,9 +120,9 @@ public class BasicNumberOperations {
 		
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
-		}
+		}	
 		
-		try {
+		try {			
 			return (summ * -1) / numX(str1);
 		} catch (Exception ex) {
 			return summ;
