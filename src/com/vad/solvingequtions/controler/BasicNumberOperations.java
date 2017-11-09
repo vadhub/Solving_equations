@@ -2,10 +2,7 @@ package com.vad.solvingequtions.controler;
 
 import java.util.ArrayList;
 
-public class BasicNumberOperations {
-	public double square(double a) {
-		return a * a;
-	}
+public class BasicNumberOperations {	
 
 	public String deleteSpace(String s) {
 		s = s.replace(" ", "");
@@ -105,8 +102,7 @@ public class BasicNumberOperations {
 			} else {
 				ast += c;
 			}
-		}
-		System.out.println(ast);
+		}		
 		addInt(ast, intList);
 		deleteZ(intList);
 
@@ -124,7 +120,7 @@ public class BasicNumberOperations {
 		}
 
 		try {
-			return (summ * -1) / numX(str1);
+			return (summ) / numX(str1);
 		} catch (Exception ex) {
 			return summ;
 		}
