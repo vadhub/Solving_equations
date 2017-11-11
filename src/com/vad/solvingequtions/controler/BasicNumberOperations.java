@@ -12,7 +12,7 @@ public class BasicNumberOperations {
 			return x2;
 		}else{
 			return x;
-		}		
+		}
 	}
 
 	public String deleteSpace(String s) {
@@ -113,7 +113,7 @@ public class BasicNumberOperations {
 			} else {
 				ast += c;
 			}
-		}		
+		}
 		addInt(ast, intList);
 		deleteZ(intList);
 
