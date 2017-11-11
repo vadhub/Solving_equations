@@ -2,7 +2,18 @@ package com.vad.solvingequtions.controler;
 
 import java.util.ArrayList;
 
-public class BasicNumberOperations {	
+public class BasicNumberOperations {
+	
+	public double sqSolv(double a, double b, double c){
+		double d = (b*b)-4*a*c;
+		double x = ((b*-1)-Math.sqrt(d))/2*a;
+		double x2 = ((b*-1)+Math.sqrt(d))/2*a;
+		if(x<x2){
+			return x2;
+		}else{
+			return x;
+		}		
+	}
 
 	public String deleteSpace(String s) {
 		s = s.replace(" ", "");
