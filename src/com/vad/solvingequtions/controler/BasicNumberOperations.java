@@ -119,6 +119,12 @@ public class BasicNumberOperations {
 
 		return intList;
 	}
+	
+	public boolean sqX(String str){
+		
+		return false;
+		
+	}
 
 	// fulfill math operations
 	public double mathOperations(String str1) {
