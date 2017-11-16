@@ -140,11 +140,11 @@ public class BasicNumberOperations {
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
 		}
-		
+
 		if(sqX(str1) == true){
-			
+			System.out.println("ok");
 		}
-		
+
 		try {
 			return (summ) / numX(str1);
 		} catch (Exception ex) {
