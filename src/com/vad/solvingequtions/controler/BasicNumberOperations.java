@@ -4,16 +4,27 @@ import java.util.ArrayList;
 
 public class BasicNumberOperations {
 	
-	public double sqSolv(double a, double b, double c){
-		double d = (b*b)-4*a*c;
-		double x = ((b*-1)-Math.sqrt(d))/2*a;
-		double x2 = ((b*-1)+Math.sqrt(d))/2*a;
+	public double sqSolv(ArrayList<Double> intList){
+		double d = (intList.get(1))-4*intList.get(0)*intList.get(2);
+		double x = ((intList.get(1)*-1)-Math.sqrt(d))/2*intList.get(0);
+		double x2 = ((intList.get(1)*-1)+Math.sqrt(d))/2*intList.get(0);
 		if(x<x2){
 			return x2;
 		}else{
 			return x;
 		}
 	}
+	
+	public boolean sqX(String str){
+		for(int i = 0;i<str.length();i++){
+			char c = str.charAt(i);
+			if(c == '^'){
+				return true;
+			}
+		}
+		return false;
+		
+	}	
 
 	public String deleteSpace(String s) {
 		s = s.replace(" ", "");
@@ -118,17 +129,6 @@ public class BasicNumberOperations {
 		deleteZ(intList);
 
 		return intList;
-	}
-	
-	public boolean sqX(String str){
-		for(int i = 0;i<str.length();i++){
-			char c = str.charAt(i);
-			if(c == '^'){
-				return true;
-			}
-		}
-		return false;
-		
 	}
 
 	// fulfill math operations
