@@ -7,12 +7,8 @@ public class BasicNumberOperations {
 	public double sqSolv(ArrayList<Double> intList){
 		double d = (intList.get(1))-4*intList.get(0)*intList.get(2);
 		double x = ((intList.get(1)*-1)-Math.sqrt(d))/2*intList.get(0);
-		double x2 = ((intList.get(1)*-1)+Math.sqrt(d))/2*intList.get(0);
-		if(x<x2){
-			return x2;
-		}else{
+		double x2 = ((intList.get(1)*-1)+Math.sqrt(d))/2*intList.get(0);		
 			return x;
-		}
 	}
 	
 	public boolean sqX(String str){
@@ -25,6 +21,29 @@ public class BasicNumberOperations {
 		return false;
 		
 	}	
+	
+	public ArrayList<Double> sqXdetectInteger(String str) {
+		deleteSpace(str);
+		ArrayList<Double> intList = new ArrayList<Double>();
+
+		String ast = "";
+
+		for (int i = 0; i < str.length(); i++) {
+
+			char c = str.charAt(i);
+			if (c == 'x') {
+				ast +=" " + '1';
+			} else if (c == '^') {
+				ast += " " + '1';
+			} else{
+				ast += c;
+			}
+		}
+		addInt(ast, intList);
+		deleteZ(intList);
+
+		return intList;
+	}
 
 	public String deleteSpace(String s) {
 		s = s.replace(" ", "");
@@ -121,7 +140,7 @@ public class BasicNumberOperations {
 				ast += " " + c;
 			} else if (c == '=') {
 				ast += " " + c;
-			} else {
+			} else{
 				ast += c;
 			}
 		}

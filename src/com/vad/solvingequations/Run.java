@@ -39,7 +39,7 @@ public class Run {
 			}
 		});
 
-		System.out.println(basicNumOps.detectInteger("2x=1"));		
+		System.out.println(basicNumOps.detectInteger("x^2 +x -1=0"));		
 	}
 	
 }
