@@ -142,7 +142,7 @@ public class BasicNumberOperations {
 		}
 
 		if(sqX(str1) == true){
-			System.out.println("ok");
+			return sqSolv(listNumbers);
 		}
 
 		try {
