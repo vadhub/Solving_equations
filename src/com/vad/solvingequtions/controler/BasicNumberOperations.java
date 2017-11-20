@@ -3,19 +3,19 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
-	
+
 	//method solving a*x^2 + b*x +c = 0
-	
+
 	public double sqSolv(ArrayList<Double> intList){
 		double d = (intList.get(1))-4*intList.get(0)*intList.get(2);
 		double x = ((intList.get(1)*-1)-Math.sqrt(d))/2*intList.get(0);
-		
+
 		if(d<0){
 			return 0;
 		}
 			return x;
 	}
-	
+
 	//detect symbol "^"
 	public boolean sqX(String str){
 		for(int i = 0;i<str.length();i++){
@@ -24,10 +24,10 @@ public class BasicNumberOperations {
 				return true;
 			}
 		}
-		return false;		
-		
+		return false;
+
 	}
-	
+
 	//special method for detecting symbols square the equation	
 	public ArrayList<Double> sqXdetectInteger(String str) {
 		deleteSpace(str);
@@ -81,7 +81,7 @@ public class BasicNumberOperations {
 		return intList;
 
 	}
-	
+
 	public ArrayList<Double> squreNum(String ast, ArrayList<Double> sqList) {
 		String[] arrStirng = ast.split(" ");
 
@@ -170,7 +170,7 @@ public class BasicNumberOperations {
 
 		if(sqX(str1) == true){
 			System.out.println(sqSolv(listNumbers));
-			return sqSolv(listNumbers);			
+			return sqSolv(listNumbers);
 		}
 
 		try {
