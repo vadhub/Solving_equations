@@ -8,7 +8,11 @@ public class BasicNumberOperations {
 	
 	public double sqSolv(ArrayList<Double> intList){
 		double d = (intList.get(1))-4*intList.get(0)*intList.get(2);
-		double x = ((intList.get(1)*-1)-Math.sqrt(d))/2*intList.get(0);		
+		double x = ((intList.get(1)*-1)-Math.sqrt(d))/2*intList.get(0);
+		
+		if(d<0){
+			return 0;
+		}
 			return x;
 	}
 	
@@ -165,7 +169,8 @@ public class BasicNumberOperations {
 		}
 
 		if(sqX(str1) == true){
-			return sqSolv(listNumbers);
+			System.out.println(sqSolv(listNumbers));
+			return sqSolv(listNumbers);			
 		}
 
 		try {
