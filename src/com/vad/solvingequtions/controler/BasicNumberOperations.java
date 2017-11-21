@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class BasicNumberOperations {
 	
+	//multiplies number on itself
 	public ArrayList<Double> sqrt(ArrayList<Double> sqrtInt){
 		for(int i=0;i<sqrtInt.size();i++){
 			sqrtInt.add(sqrtInt.get(i)*sqrtInt.get(i));
@@ -35,6 +36,18 @@ public class BasicNumberOperations {
 		return false;
 
 	}
+	
+	//detect symbol "t"
+		public boolean detectT(String str){
+			for(int i = 0;i<str.length();i++){
+				char c = str.charAt(i);
+				if(c == 't'){
+					return true;
+				}
+			}
+			return false;
+
+		}
 
 	//special method for detecting symbols square the equation	
 	public ArrayList<Double> sqXdetectInteger(String str) {
