@@ -3,6 +3,14 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
+	
+	public ArrayList<Double> sqrt(ArrayList<Double> sqrtInt){
+		for(int i=0;i<sqrtInt.size();i++){
+			sqrtInt.add(sqrtInt.get(i)*sqrtInt.get(i));
+		}
+		return sqrtInt;
+		
+	}
 
 	//method solving a*x^2 + b*x +c = 0
 

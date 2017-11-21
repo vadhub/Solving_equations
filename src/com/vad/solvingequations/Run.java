@@ -3,7 +3,6 @@ package com.vad.solvingequations;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 import javax.swing.*;
 
@@ -39,13 +38,6 @@ public class Run {
 				JOptionPane.showMessageDialog(null, basicNumOps.mathOperations(inText.getText()));
 			}
 		});
-		
-		ArrayList<Double> listNumbers = new ArrayList<Double>();
-		listNumbers.add(1.0);
-		listNumbers.add(2.0);
-		listNumbers.add(-2.0);
-
-		System.out.println(basicNumOps.sqSolv(listNumbers));		
-	}
+		}	
 	
 }
