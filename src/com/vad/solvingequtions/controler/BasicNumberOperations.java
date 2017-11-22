@@ -3,7 +3,7 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
-	
+
 	//multiplies number on itself
 	public ArrayList<Double> sqrt(ArrayList<Double> sqrtInt){
 		for(int i=0;i<sqrtInt.size();i++){
@@ -12,6 +12,18 @@ public class BasicNumberOperations {
 		return sqrtInt;
 		
 	}
+	
+	//detect symbol "t"
+			public boolean detectT(String str){
+				for(int i = 0;i<str.length();i++){
+					char c = str.charAt(i);
+					if(c == 't'){
+						return true;
+					}
+				}
+				return false;
+
+			}
 
 	//method solving a*x^2 + b*x +c = 0
 
@@ -35,20 +47,8 @@ public class BasicNumberOperations {
 		}
 		return false;
 
-	}
+	}	
 	
-	//detect symbol "t"
-		public boolean detectT(String str){
-			for(int i = 0;i<str.length();i++){
-				char c = str.charAt(i);
-				if(c == 't'){
-					return true;
-				}
-			}
-			return false;
-
-		}
-
 	//special method for detecting symbols square the equation	
 	public ArrayList<Double> sqXdetectInteger(String str) {
 		deleteSpace(str);
@@ -184,15 +184,18 @@ public class BasicNumberOperations {
 		double summ = 0;
 
 		ArrayList<Double> listNumbers = detectInteger(str1);
+		
+		if(detectT(str1) == true){
+			sqrt(listNumbers);
+		}
 
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
 		}
 
 		if(sqX(str1) == true){
-			System.out.println(sqSolv(listNumbers));
 			return sqSolv(listNumbers);
-		}
+		}	
 
 		try {
 			return (summ) / numX(str1);
