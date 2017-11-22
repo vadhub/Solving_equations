@@ -10,14 +10,14 @@ public class BasicNumberOperations {
 			sqrtInt.add(sqrtInt.get(i)*sqrtInt.get(i));
 		}
 		return sqrtInt;
-		
+
 	}
-	
+
 	//detect symbol "t"
 			public boolean detectT(String str){
 				for(int i = 0;i<str.length();i++){
 					char c = str.charAt(i);
-					if(c == 't'){
+					if(c == '('){
 						return true;
 					}
 				}
@@ -47,8 +47,8 @@ public class BasicNumberOperations {
 		}
 		return false;
 
-	}	
-	
+	}
+
 	//special method for detecting symbols square the equation	
 	public ArrayList<Double> sqXdetectInteger(String str) {
 		deleteSpace(str);
@@ -72,7 +72,7 @@ public class BasicNumberOperations {
 
 		return intList;
 	}
-	
+
 	//deleting space symbol
 	public String deleteSpace(String s) {
 		s = s.replace(" ", "");
@@ -129,8 +129,7 @@ public class BasicNumberOperations {
 			if (c == 'x') {
 
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub
-							+ Character.getNumericValue(str.charAt(i - 1));
+					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));
 				} else {
 					num++;
 				}
@@ -195,7 +194,7 @@ public class BasicNumberOperations {
 
 		if(sqX(str1) == true){
 			return sqSolv(listNumbers);
-		}	
+		}
 
 		try {
 			return (summ) / numX(str1);

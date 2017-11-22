@@ -38,6 +38,6 @@ public class Run {
 				JOptionPane.showMessageDialog(null, basicNumOps.mathOperations(inText.getText()));
 			}
 		});
-		}	
+		}
 	
 }
