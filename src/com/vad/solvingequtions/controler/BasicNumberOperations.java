@@ -7,6 +7,7 @@ public class BasicNumberOperations {
 	//multiplies number on itself
 	public ArrayList<Double> sqrt(ArrayList<Double> sqrtInt){
 		for(int i=0;i<sqrtInt.size();i++){
+			sqrtInt.add(Math.pow(sqrtInt.get(i), 2));
 			System.out.println(sqrtInt.get(i));
 		}
 		return sqrtInt;
@@ -176,8 +177,6 @@ public class BasicNumberOperations {
 		}
 		addInt(ast, intList);
 		deleteZ(intList);
-		
-		System.out.println(ast);
 
 		return intList;
 	}
@@ -189,7 +188,7 @@ public class BasicNumberOperations {
 		ArrayList<Double> listNumbers = detectInteger(str1);
 		
 		if(detectT(str1) == true){
-			sqrt(listNumbers);
+			sqrt(listNumbers);			
 		}
 
 		for (int i = 0; i < listNumbers.size(); i++) {
