@@ -169,13 +169,15 @@ public class BasicNumberOperations {
 			} else if (c == '=') {
 				ast += " " + c;
 			}else if (c == '(') {
-				ast += " " + c;
+				ast += c+" ";
 			}  else{
 				ast += c;
 			}
 		}
 		addInt(ast, intList);
 		deleteZ(intList);
+		
+		System.out.println(ast);
 
 		return intList;
 	}
