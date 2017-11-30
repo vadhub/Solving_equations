@@ -11,9 +11,8 @@ public class BasicNumberOperations {
 
 				if (intList.get(i) == 0) {
 					intList.remove(i);
-										
 				}
-			}			
+			}
 			return intList;
 		}
 
@@ -21,9 +20,9 @@ public class BasicNumberOperations {
 	//multiplies number on itself
 	public ArrayList<Double> sqrt(ArrayList<Double> sqrtInt){
 		for(int i=0;i<sqrtInt.size();i++){
-			sqrtInt.add(Math.pow(sqrtInt.get(i), 2));			
+			sqrtInt.add(Math.pow(sqrtInt.get(i), 2));
 		}		
-		deleteZ(sqrtInt);		
+		deleteZ(sqrtInt);
 		return sqrtInt;
 
 	}
@@ -190,7 +189,7 @@ public class BasicNumberOperations {
 		ArrayList<Double> listNumbers = detectInteger(str1);
 		
 		if(detectT(str1) == true){
-			sqrt(listNumbers);			
+			sqrt(listNumbers);
 		}
 
 		for (int i = 0; i < listNumbers.size(); i++) {
