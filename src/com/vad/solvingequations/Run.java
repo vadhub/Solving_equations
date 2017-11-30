@@ -3,6 +3,7 @@ package com.vad.solvingequations;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
@@ -38,6 +39,10 @@ public class Run {
 				JOptionPane.showMessageDialog(null, basicNumOps.mathOperations(inText.getText()));
 			}
 		});
+		ArrayList<Double> sqrtD = new ArrayList<Double>();
+		sqrtD.add(1.0);
+		sqrtD.add(2.0);
+		System.out.println(basicNumOps.sqrt(sqrtD));
 		}
 	
 }

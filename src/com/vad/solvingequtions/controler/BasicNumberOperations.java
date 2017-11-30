@@ -3,12 +3,27 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
+	
+	// delete '0'
+		public ArrayList<Double> deleteZ(ArrayList<Double> intList) {
+
+			for (int i = 0; i < intList.size(); i++) {
+
+				if (intList.get(i) == 0) {
+					intList.remove(i);
+										
+				}
+			}			
+			return intList;
+		}
+
 
 	//multiplies number on itself
 	public ArrayList<Double> sqrt(ArrayList<Double> sqrtInt){
 		for(int i=0;i<sqrtInt.size();i++){
-			Math.pow(sqrtInt.get(i), 2);
-		}
+			sqrtInt.add(Math.pow(sqrtInt.get(i), 2));			
+		}		
+		deleteZ(sqrtInt);		
 		return sqrtInt;
 
 	}
@@ -137,19 +152,7 @@ public class BasicNumberOperations {
 		}
 		return numSub + num;
 	}
-
-	// delete '0'
-	public ArrayList<Double> deleteZ(ArrayList<Double> intList) {
-
-		for (int i = 0; i < intList.size(); i++) {
-
-			if (intList.get(i) == 0) {
-				intList.remove(i);
-			}
-		}
-		return intList;
-	}
-
+	
 	// detect symbols in string
 	public ArrayList<Double> detectInteger(String str) {
 		deleteSpace(str);
@@ -187,7 +190,7 @@ public class BasicNumberOperations {
 		ArrayList<Double> listNumbers = detectInteger(str1);
 		
 		if(detectT(str1) == true){
-			sqrt(listNumbers);
+			sqrt(listNumbers);			
 		}
 
 		for (int i = 0; i < listNumbers.size(); i++) {
