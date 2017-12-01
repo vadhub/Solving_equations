@@ -20,7 +20,7 @@ public class BasicNumberOperations {
 	//multiplies number on itself
 	public ArrayList<Double> sqrt(ArrayList<Double> sqrtInt){
 		for(int i=0;i<sqrtInt.size();i++){
-			sqrtInt.add(Math.pow(sqrtInt.get(i), 2));
+			sqrtInt.set(i, Math.pow(sqrtInt.get(i), 2));
 		}		
 		deleteZ(sqrtInt);
 		return sqrtInt;

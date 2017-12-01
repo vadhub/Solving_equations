@@ -42,6 +42,7 @@ public class Run {
 		ArrayList<Double> sqrtD = new ArrayList<Double>();
 		sqrtD.add(1.0);
 		sqrtD.add(2.0);
+		sqrtD.add(6.0);
 		System.out.println(basicNumOps.sqrt(sqrtD));
 		}
 	
