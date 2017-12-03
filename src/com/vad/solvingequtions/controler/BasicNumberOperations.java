@@ -3,59 +3,34 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
-	
+
 	// delete '0'
-		public ArrayList<Double> deleteZ(ArrayList<Double> intList) {
+	public ArrayList<Double> deleteZ(ArrayList<Double> intList) {
 
-			for (int i = 0; i < intList.size(); i++) {
+		for (int i = 0; i < intList.size(); i++) {
 
-				if (intList.get(i) == 0) {
-					intList.remove(i);
-				}
+			if (intList.get(i) == 0) {
+				intList.remove(i);
 			}
-			return intList;
 		}
+		return intList;
+	}
 
-
-	//multiplies number on itself
-	public ArrayList<Double> sqrt(ArrayList<Double> sqrtInt){
-		for(int i=0;i<sqrtInt.size();i++){
+	// multiplies number on itself
+	public ArrayList<Double> sqrt(ArrayList<Double> sqrtInt) {
+		for (int i = 0; i < sqrtInt.size(); i++) {
 			sqrtInt.set(i, Math.pow(sqrtInt.get(i), 2));
-		}		
+		}
 		deleteZ(sqrtInt);
 		return sqrtInt;
 
 	}
 
-	//detect symbol "t"
-			public boolean detectT(String str){
-				for(int i = 0;i<str.length();i++){
-					char c = str.charAt(i);
-					if(c == '('){
-						return true;
-					}
-				}
-				return false;
-
-			}
-
-	//method solving a*x^2 + b*x +c = 0
-
-	public double sqSolv(ArrayList<Double> intList){
-		double d = (intList.get(1))-4*intList.get(0)*intList.get(2);
-		double x = ((intList.get(1)*-1)-Math.sqrt(d))/2*intList.get(0);
-
-		if(d<0){
-			return 0;
-		}
-			return x;
-	}
-
-	//detect symbol "^"
-	public boolean sqX(String str){
-		for(int i = 0;i<str.length();i++){
+	// detect symbol "("
+	public boolean detectO(String str) {
+		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			if(c == '^'){
+			if (c == '(') {
 				return true;
 			}
 		}
@@ -63,7 +38,43 @@ public class BasicNumberOperations {
 
 	}
 
-	//special method for detecting symbols square the equation	
+	// detect symbol "("
+	public boolean detectC(String str) {
+		for (int i = 0; i < str.length(); i++) {
+			char c = str.charAt(i);
+			if (c == '(') {
+				return true;
+			}
+		}
+		return false;
+
+	}
+
+	// method solving a*x^2 + b*x +c = 0
+
+	public double sqSolv(ArrayList<Double> intList) {
+		double d = (intList.get(1)) - 4 * intList.get(0) * intList.get(2);
+		double x = ((intList.get(1) * -1) - Math.sqrt(d)) / 2 * intList.get(0);
+
+		if (d < 0) {
+			return 0;
+		}
+		return x;
+	}
+
+	// detect symbol "^"
+	public boolean sqX(String str) {
+		for (int i = 0; i < str.length(); i++) {
+			char c = str.charAt(i);
+			if (c == '^') {
+				return true;
+			}
+		}
+		return false;
+
+	}
+
+	// special method for detecting symbols square the equation
 	public ArrayList<Double> sqXdetectInteger(String str) {
 		deleteSpace(str);
 		ArrayList<Double> intList = new ArrayList<Double>();
@@ -74,10 +85,10 @@ public class BasicNumberOperations {
 
 			char c = str.charAt(i);
 			if (c == 'x') {
-				ast +=" " + '1';
+				ast += " " + '1';
 			} else if (c == '^') {
 				ast += " " + '1';
-			} else{
+			} else {
 				ast += c;
 			}
 		}
@@ -87,7 +98,7 @@ public class BasicNumberOperations {
 		return intList;
 	}
 
-	//deleting space symbol
+	// deleting space symbol
 	public String deleteSpace(String s) {
 		s = s.replace(" ", "");
 		return s;
@@ -128,7 +139,8 @@ public class BasicNumberOperations {
 			if (c == 'x') {
 
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));
+					numSub = numSub
+							+ Character.getNumericValue(str.charAt(i - 1));
 				} else {
 					num++;
 				}
@@ -136,7 +148,7 @@ public class BasicNumberOperations {
 		}
 		return numSub + num;
 	}
-	
+
 	// detect symbols in string
 	public ArrayList<Double> detectInteger(String str) {
 		deleteSpace(str);
@@ -155,9 +167,9 @@ public class BasicNumberOperations {
 				ast += " " + c;
 			} else if (c == '=') {
 				ast += " " + c;
-			}else if (c == '(') {
-				ast += c+" ";
-			}  else{
+			} else if (c == '(') {
+				ast += c + " ";
+			} else {
 				ast += c;
 			}
 		}
@@ -172,16 +184,18 @@ public class BasicNumberOperations {
 		double summ = 0;
 
 		ArrayList<Double> listNumbers = detectInteger(str1);
-		
-		if(detectT(str1) == true){
+
+		if (detectO(str1) == true) {
 			sqrt(listNumbers);
+		}else if(detectC(str1) == true){
+			
 		}
 
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
 		}
 
-		if(sqX(str1) == true){
+		if (sqX(str1) == true) {
 			return sqSolv(listNumbers);
 		}
 
