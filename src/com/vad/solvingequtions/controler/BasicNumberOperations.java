@@ -139,8 +139,7 @@ public class BasicNumberOperations {
 			if (c == 'x') {
 
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub
-							+ Character.getNumericValue(str.charAt(i - 1));
+					numSub = numSub + Character.getNumericValue(str.charAt(i - 1));
 				} else {
 					num++;
 				}
@@ -187,11 +186,11 @@ public class BasicNumberOperations {
 
 		if (detectO(str1) == false) {
 			sqrt(listNumbers);
-		}else if(detectC(str1)==false){		
+		} else if (detectC(str1) == false) {
 
-		for (int i = 0; i < listNumbers.size(); i++) {
-			summ = summ + listNumbers.get(i);
-		}
+			for (int i = 0; i < listNumbers.size(); i++) {
+				summ = summ + listNumbers.get(i);
+			}
 		}
 
 		if (sqX(str1) == true) {
