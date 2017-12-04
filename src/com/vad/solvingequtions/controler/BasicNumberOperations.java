@@ -42,7 +42,7 @@ public class BasicNumberOperations {
 	public boolean detectC(String str) {
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			if (c == '(') {
+			if (c == ')') {
 				return true;
 			}
 		}
@@ -185,14 +185,13 @@ public class BasicNumberOperations {
 
 		ArrayList<Double> listNumbers = detectInteger(str1);
 
-		if (detectO(str1) == true) {
+		if (detectO(str1) == false) {
 			sqrt(listNumbers);
-		}else if(detectC(str1) == true){
-			
-		}
+		}else if(detectC(str1)==false){		
 
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
+		}
 		}
 
 		if (sqX(str1) == true) {
