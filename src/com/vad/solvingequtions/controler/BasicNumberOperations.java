@@ -3,6 +3,15 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
+	public ArrayList<Double> sqInt(String st1) {
+		if (detectO(st1) == true) {
+			return detectInteger(st1);
+		} else if (detectC(st1) == true) {
+			return null;
+		}
+		return null;
+
+	}
 
 	// delete '0'
 	public ArrayList<Double> deleteZ(ArrayList<Double> intList) {
@@ -139,7 +148,8 @@ public class BasicNumberOperations {
 			if (c == 'x') {
 
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub + Character.getNumericValue(str.charAt(i - 1));
+					numSub = numSub
+							+ Character.getNumericValue(str.charAt(i - 1));
 				} else {
 					num++;
 				}
@@ -183,6 +193,7 @@ public class BasicNumberOperations {
 		double summ = 0;
 
 		ArrayList<Double> listNumbers = detectInteger(str1);
+		ArrayList<Double> listNumbersSq = sqInt(str1);
 
 		if (detectO(str1) == true) {
 			sqrt(listNumbers);
