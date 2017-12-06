@@ -184,9 +184,9 @@ public class BasicNumberOperations {
 
 		ArrayList<Double> listNumbers = detectInteger(str1);
 
-		if (detectO(str1) == false) {
+		if (detectO(str1) == true) {
 			sqrt(listNumbers);
-		} else if (detectC(str1) == false) {
+		} else if (detectC(str1) == true) {
 
 			for (int i = 0; i < listNumbers.size(); i++) {
 				summ = summ + listNumbers.get(i);
