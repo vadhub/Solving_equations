@@ -26,14 +26,16 @@ public class BasicNumberOperations {
 	}
 
 	// detect symbol "("
-	public boolean detectO(String str) {
+	public ArrayList<Double> detectO(String str) {
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
 			if (c == '(') {
-				return true;
+				detectInteger(str);
+			} else if (c == ')') {
+				break;
 			}
 		}
-		return false;
+		return null;
 
 	}
 
@@ -138,7 +140,8 @@ public class BasicNumberOperations {
 			if (c == 'x') {
 
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub + Character.getNumericValue(str.charAt(i - 1));
+					numSub = numSub
+							+ Character.getNumericValue(str.charAt(i - 1));
 				} else {
 					num++;
 				}
@@ -181,15 +184,10 @@ public class BasicNumberOperations {
 	public double mathOperations(String str1) {
 		double summ = 0;
 
-		ArrayList<Double> listNumbers = detectInteger(str1);		
+		ArrayList<Double> listNumbers = detectInteger(str1);
 
-		if (detectO(str1) == true) {
-			sqrt(listNumbers);
-		} else if (detectC(str1) == true) {
-
-			for (int i = 0; i < listNumbers.size(); i++) {
-				summ = summ + listNumbers.get(i);
-			}
+		for (int i = 0; i < listNumbers.size(); i++) {
+			summ = summ + listNumbers.get(i);
 		}
 
 		if (sqX(str1) == true) {
