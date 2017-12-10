@@ -185,13 +185,16 @@ public class BasicNumberOperations {
 		double summ = 0;
 
 		ArrayList<Double> listNumbers = detectInteger(str1);
+		
+		if(detectC(str1)==true){
+			listNumbers =detectO(str1);
+		}
 
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
 		}
 
-		if (sqX(str1) == true) {
-			detectO(str1);
+		if (sqX(str1) == true) {			
 			return sqSolv(listNumbers);
 		}
 
