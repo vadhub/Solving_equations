@@ -191,13 +191,14 @@ public class BasicNumberOperations {
 		}
 
 		if (sqX(str1) == true) {
+			detectO(str1);
 			return sqSolv(listNumbers);
 		}
 
 		try {
-			return (summ) / numX(str1);
+			return (summ*-1) / numX(str1);
 		} catch (Exception ex) {
-			return summ;
+			return summ*-1;
 		}
 	}
 
