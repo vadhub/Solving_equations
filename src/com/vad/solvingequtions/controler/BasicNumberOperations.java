@@ -3,8 +3,9 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
+	
 	// delete '0'
-	public static ArrayList<Double> deleteZ(ArrayList<Double> intList) {
+	public ArrayList<Double> deleteZ(ArrayList<Double> intList) {
 
 		for (int i = 0; i < intList.size(); i++) {
 
@@ -101,13 +102,13 @@ public class BasicNumberOperations {
 	}
 
 	// deleting space symbol
-	public static String deleteSpace(String s) {
+	public String deleteSpace(String s) {
 		s = s.replace(" ", "");
 		return s;
 	}
 
 	// adding numbers into arraylist
-	public static ArrayList<Double> addInt(String ast, ArrayList<Double> intList) {
+	public ArrayList<Double> addInt(String ast, ArrayList<Double> intList) {
 
 		int pass = ast.indexOf("=");
 
@@ -152,7 +153,7 @@ public class BasicNumberOperations {
 	}
 
 	// detect symbols in string
-	public static ArrayList<Double> detectInteger(String str) {
+	public ArrayList<Double> detectInteger(String str) {
 		deleteSpace(str);
 		ArrayList<Double> intList = new ArrayList<Double>();
 
@@ -170,6 +171,8 @@ public class BasicNumberOperations {
 			} else if (c == '=') {
 				ast += " " + c;
 			} else if (c == '(') {
+				ast += c + " ";
+			} else if (c == ')') {
 				ast += c + " ";
 			} else {
 				ast += c;
