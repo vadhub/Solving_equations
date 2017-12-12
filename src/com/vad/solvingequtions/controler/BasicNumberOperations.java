@@ -31,8 +31,9 @@ public class BasicNumberOperations {
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
 			if (c == '(') {
-				detectInteger(str);				
 				System.out.println(detectInteger(str));
+				return detectInteger(str);				
+				
 			} else if (c == ')') {
 				break;
 			}
@@ -188,11 +189,13 @@ public class BasicNumberOperations {
 	public double mathOperations(String str1) {
 		double summ = 0;
 
-		ArrayList<Double> listNumbers = detectInteger(str1);
+		ArrayList<Double> listNumbers = null;
 		
 		if(detectOp(str1)==true){
-			listNumbers =detectO(str1);			
-		}		
+			listNumbers = detectO(str1);			
+		}else {
+		 listNumbers = detectInteger(str1);
+		}
 		
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
