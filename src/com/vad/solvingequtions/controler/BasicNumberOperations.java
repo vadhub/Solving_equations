@@ -42,10 +42,10 @@ public class BasicNumberOperations {
 	}
 
 	// detect symbol "("
-	public boolean detectC(String str) {
+	public boolean detectOp(String str) {
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			if (c == ')') {
+			if (c == '(') {
 				return true;
 			}
 		}
@@ -190,10 +190,10 @@ public class BasicNumberOperations {
 
 		ArrayList<Double> listNumbers = detectInteger(str1);
 		
-		if(detectC(str1)==true){
-			listNumbers =detectO(str1);
-		}
-
+		if(detectOp(str1)==true){
+			listNumbers =detectO(str1);			
+		}		
+		
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
 		}
