@@ -30,8 +30,8 @@ public class BasicNumberOperations {
 	public ArrayList<Double> detectO(String str) {
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			if (c == '(') {
-				System.out.println(detectInteger(str));
+			if (c == '(') {				
+				System.out.println(str);
 				return detectInteger(str);				
 				
 			} else if (c == ')') {
@@ -174,11 +174,12 @@ public class BasicNumberOperations {
 			} else if (c == '(') {
 				ast += c + " ";
 			} else if (c == ')') {
-				ast += c + " ";
+				ast +=  " " + c;
 			} else {
 				ast += c;
 			}
-		}
+		}		
+		System.out.println(ast);
 		addInt(ast, intList);
 		deleteZ(intList);
 
