@@ -3,7 +3,6 @@ package com.vad.solvingequtions.controler;
 import java.util.ArrayList;
 
 public class BasicNumberOperations {
-	
 	// delete '0'
 	public ArrayList<Double> deleteZ(ArrayList<Double> intList) {
 
@@ -30,10 +29,8 @@ public class BasicNumberOperations {
 	public ArrayList<Double> detectO(String str) {
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			if (c == '(') {				
-				System.out.println(str);
-				return detectInteger(str);				
-				
+			if (c == '(') {
+				return detectInteger(str);
 			} else if (c == ')') {
 				break;
 			}
@@ -107,6 +104,9 @@ public class BasicNumberOperations {
 		s = s.replace(" ", "");
 		return s;
 	}
+	//**********************************************************************************************
+	//creating new method for irrational equations********
+	//*****************************************************
 
 	// adding numbers into arraylist
 	public ArrayList<Double> addInt(String ast, ArrayList<Double> intList) {
@@ -143,8 +143,7 @@ public class BasicNumberOperations {
 			if (c == 'x') {
 
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub
-							+ Character.getNumericValue(str.charAt(i - 1));
+					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));
 				} else {
 					num++;
 				}
@@ -178,7 +177,7 @@ public class BasicNumberOperations {
 			} else {
 				ast += c;
 			}
-		}		
+		}
 		System.out.println(ast);
 		addInt(ast, intList);
 		deleteZ(intList);
@@ -193,7 +192,7 @@ public class BasicNumberOperations {
 		ArrayList<Double> listNumbers = null;
 		
 		if(detectOp(str1)==true){
-			listNumbers = detectO(str1);			
+			listNumbers = detectO(str1);
 		}else {
 		 listNumbers = detectInteger(str1);
 		}
