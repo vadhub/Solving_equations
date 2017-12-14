@@ -36,7 +36,6 @@ public class BasicNumberOperations {
 				addSq = addInt(s, addSq);
 				return addSq;
 		}
-			
 }
 		return null;
 
