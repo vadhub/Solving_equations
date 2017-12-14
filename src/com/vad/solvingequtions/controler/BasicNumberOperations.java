@@ -27,14 +27,17 @@ public class BasicNumberOperations {
 
 	// detect symbol "("
 	public ArrayList<Double> detectO(String str) {
+		String s = null;
+		ArrayList<Double> addSq = new ArrayList<Double>();
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			if (c == '(') {
-				return detectInteger(str);
-			} else if (c == ')') {
-				break;
-			}
+			if (c == '=') {
+				s += " " + c;
+				addSq = addInt(s, addSq);
+				return addSq;
 		}
+			
+}
 		return null;
 
 	}
@@ -104,10 +107,6 @@ public class BasicNumberOperations {
 		s = s.replace(" ", "");
 		return s;
 	}
-	//**********************************************************************************************
-	//creating new method for irrational equations********
-	//*****************************************************
-
 	// adding numbers into arraylist
 	public ArrayList<Double> addInt(String ast, ArrayList<Double> intList) {
 
