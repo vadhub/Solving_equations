@@ -27,17 +27,19 @@ public class BasicNumberOperations {
 
 	// detect symbol "("
 	public ArrayList<Double> detectO(String str) {
-		String s = null;
+		String s = "";
 		ArrayList<Double> addSq = new ArrayList<Double>();
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			if (c == '=') {
-				s += " " + c;
-				addSq = addInt(s, addSq);
-				return addSq;
-		}
-}
-		return null;
+			if (c == '=') {				
+			}else{
+				
+			}
+			addSq = detectInteger(s);
+			}
+		System.out.println(s);
+		System.out.println(s);
+		return addSq;
 
 	}
 
@@ -106,6 +108,7 @@ public class BasicNumberOperations {
 		s = s.replace(" ", "");
 		return s;
 	}
+
 	// adding numbers into arraylist
 	public ArrayList<Double> addInt(String ast, ArrayList<Double> intList) {
 
@@ -141,7 +144,8 @@ public class BasicNumberOperations {
 			if (c == 'x') {
 
 				if (Character.isDigit(str.charAt(i - 1))) {
-					numSub = numSub	+ Character.getNumericValue(str.charAt(i - 1));
+					numSub = numSub
+							+ Character.getNumericValue(str.charAt(i - 1));
 				} else {
 					num++;
 				}
@@ -171,7 +175,7 @@ public class BasicNumberOperations {
 			} else if (c == '(') {
 				ast += c + " ";
 			} else if (c == ')') {
-				ast +=  " " + c;
+				ast += " " + c;
 			} else {
 				ast += c;
 			}
@@ -188,13 +192,13 @@ public class BasicNumberOperations {
 		double summ = 0;
 
 		ArrayList<Double> listNumbers = null;
-		
-		if(detectOp(str1)==true){
+
+		if (detectOp(str1) == true) {
 			listNumbers = detectO(str1);
-		}else {
-		 listNumbers = detectInteger(str1);
+		} else {
+			listNumbers = detectInteger(str1);
 		}
-		
+
 		for (int i = 0; i < listNumbers.size(); i++) {
 			summ = summ + listNumbers.get(i);
 		}
@@ -204,9 +208,9 @@ public class BasicNumberOperations {
 		}
 
 		try {
-			return (summ*-1) / numX(str1);
+			return (summ * -1) / numX(str1);
 		} catch (Exception ex) {
-			return summ*-1;
+			return summ * -1;
 		}
 	}
 
