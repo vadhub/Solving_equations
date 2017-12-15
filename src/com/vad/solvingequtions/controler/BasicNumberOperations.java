@@ -31,12 +31,11 @@ public class BasicNumberOperations {
 		ArrayList<Double> addSq = new ArrayList<Double>();
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
-			if (c == '=') {				
-			}else{
-				
+			if (c == '=') {
+			} else {
 			}
 			addSq = detectInteger(s);
-			}
+		}
 		System.out.println(s);
 		System.out.println(s);
 		return addSq;
