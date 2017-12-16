@@ -1,6 +1,7 @@
 package com.vad.solvingequtions.controler;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BasicNumberOperations {
 	// delete '0'
@@ -28,11 +29,15 @@ public class BasicNumberOperations {
 	// detect symbol "("
 	public ArrayList<Double> detectO(String str) {
 		String s = "";
+		char c = ' ';
+		char ch = ' ';
 		ArrayList<Double> addSq = new ArrayList<Double>();
 		for (int i = 0; i < str.length(); i++) {
-			char c = str.charAt(i);
+			c = str.charAt(i);			
 			if (c == '=') {
+				c = Arrays.copyOfRange(c, i, i);
 			} else {
+				
 			}
 			addSq = detectInteger(s);
 		}
