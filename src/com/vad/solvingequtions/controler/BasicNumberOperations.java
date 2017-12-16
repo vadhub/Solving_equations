@@ -30,14 +30,14 @@ public class BasicNumberOperations {
 	public ArrayList<Double> detectO(String str) {
 		String s = "";
 		char c = ' ';
-		char ch = ' ';
+		ArrayList<Character> cha;
 		ArrayList<Double> addSq = new ArrayList<Double>();
 		for (int i = 0; i < str.length(); i++) {
-			c = str.charAt(i);			
-			if (c == '=') {
-				c = Arrays.copyOfRange(c, i, i);
+			c = str.charAt(i);
+			 cha = (ArrayList<Character>) Arrays.asList(str.charAt(i));		
+			if (c == '=') {				
 			} else {
-				
+				cha = (ArrayList<Character>) cha.subList(0, i);
 			}
 			addSq = detectInteger(s);
 		}
