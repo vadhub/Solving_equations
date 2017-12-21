@@ -5,9 +5,9 @@ import java.util.Arrays;
 
 public class BasicNumberOperations {
 	public double degree(double x, double i){
-		
+
 		return Math.pow( x, 1.0 / i );
-		
+
 	}
 	// delete '0'
 	public ArrayList<Double> deleteZ(ArrayList<Double> intList) {
@@ -39,8 +39,8 @@ public class BasicNumberOperations {
 		ArrayList<Double> addSq = new ArrayList<Double>();
 		for (int i = 0; i < str.length(); i++) {
 			c = str.charAt(i);
-			 cha = (ArrayList<Character>) Arrays.asList(str.charAt(i));		
-			if (c == '=') {				
+			 cha = (ArrayList<Character>) Arrays.asList(str.charAt(i));
+			if (c == '=') {
 			} else {
 				cha = (ArrayList<Character>) cha.subList(0, i);
 			}
