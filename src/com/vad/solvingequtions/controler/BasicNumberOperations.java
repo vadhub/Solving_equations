@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BasicNumberOperations {
+	public double degree(double x, double i){
+		
+		return Math.pow( x, 1.0 / i );
+		
+	}
 	// delete '0'
 	public ArrayList<Double> deleteZ(ArrayList<Double> intList) {
 
