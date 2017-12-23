@@ -1,7 +1,6 @@
 package com.vad.solvingequtions.controler;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class BasicNumberOperations {
 	public double degree(double x, double i){
@@ -33,22 +32,15 @@ public class BasicNumberOperations {
 
 	// detect symbol "("
 	public ArrayList<Double> detectO(String str) {
-		String s = "";
-		char c = ' ';
-		ArrayList<Character> cha;
-		ArrayList<Double> addSq = new ArrayList<Double>();
+		ArrayList<Double> dou = new ArrayList<Double>();
 		for (int i = 0; i < str.length(); i++) {
-			c = str.charAt(i);
-			 cha = (ArrayList<Character>) Arrays.asList(str.charAt(i));
+			char c = str.charAt(i);
 			if (c == '=') {
-			} else {
-				cha = (ArrayList<Character>) cha.subList(0, i);
+								
 			}
-			addSq = detectInteger(s);
 		}
-		System.out.println(s);
-		System.out.println(s);
-		return addSq;
+		return dou;
+		
 
 	}
 
@@ -189,7 +181,6 @@ public class BasicNumberOperations {
 				ast += c;
 			}
 		}
-		System.out.println(ast);
 		addInt(ast, intList);
 		deleteZ(intList);
 
